@@ -39,15 +39,38 @@ with the projects.
 The primary purpose of this repository is to make it easy to create
 the skeleton Java projects that are used to start your assignment.
 Scripts such as `createProject0.sh` will run the appropriate Maven
-commands to get you started.
+commands to get you started.  Each of these scripts takes a single
+argument which is your user id.  This one-word user id (mine is
+`whitlock`) is used to uniquely identify your code and is included in
+the name of the Java package for the project.
 
 ```sh
-$ ./createProject0.sh your-user-name
+$ ./createProject0.sh your-user-id
 ```
 
-This script will generate a new Maven project from its "archetype"
+This script will generate a new Maven project in a directory named
+`student` for [Project
+0](http://web.cecs.pdx.edu/~whitlock/pdf/Student.pdf), the example
+"Student" project.  You can then build this project using the Maven
+Wrapper included in the project.
+
+```sh
+$ cd student
+$ chmod +x mvnw        # Make the wrapper script executable
+$ mvnw verify
+```
+
+Note that the first time that you run Maven, it will download a whole
+ton of libraries.  You'll see lots of text fly by.
+
+If the build completes successful, you can use your favorite editor (I
+highly recommend IntelliJ) to work the project.
+
+### How can I commit my code to this repository?
 
 ### How can I push my code up to GitHub?
+
+If you simply make a clone of this repository on your local machine, you can 
 
 ### How can I get changes that other people make into my clone?
 
