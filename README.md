@@ -1,4 +1,4 @@
-# PortlandStateJavaGettingStarted
+# Getting Started with Advanced Programming with Java
 
 Helps students in Advanced Programming with Java get started with the
 programming assignments.  Most noteably, it makes it so students do
