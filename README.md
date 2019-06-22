@@ -28,11 +28,28 @@ directory created by cloning the repository.
 $ cd PortlandStateJavaGettingStarted
 ```
 
+### What do I need to do before I can use this repository?
+
+You'll need to install the [latest version of the Java Development
+Kit](https://jdk.java.net/) in order to run the Maven Wrapper and work
+with the projects.
+
 ### How do I create and run my own Java projects?
 
-### How can I get changes from this repository into my clone?
+The primary purpose of this repository is to make it easy to create
+the skeleton Java projects that are used to start your assignment.
+Scripts such as `createProject0.sh` will run the appropriate Maven
+commands to get you started.
+
+```sh
+$ ./createProject0.sh your-user-name
+```
+
+This script will generate a new Maven project from its "archetype"
 
 ### How can I push my code up to GitHub?
+
+### How can I get changes that other people make into my clone?
 
 
 ## How can I improve this repository?
