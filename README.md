@@ -76,9 +76,81 @@ highly recommend IntelliJ) to work the project.
 
 ### How can I commit my code to this repository?
 
+After creating a Maven project, you can add the code it to your local
+clone by adding the directory to git.
+
+```sh
+$ mvnw clean     # Remove files that shouldn't be commited to version control
+$ cd ..    # to PortlandStateJavaGettingStarted directory
+$ git add student
+$ git commit -m "Added source files for student project"
+```
+
+By maintaining your project files in version control, you can easily
+revert back to a known good version if something goes screwy.  You can
+also use [git's branching
+features](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
+to easily revisit (and revise) your source code for Project 1 even
+though you've started working on Project 2.
+
 ### How can I push my code up to GitHub?
 
-If you simply make a clone of this repository on your local machine, you can 
+If you simply make a clone of this GitHub repository on your local
+machine, you can commit changes to your local repository, but you
+can't "push" your changes to the repository hosted on GitHub.  This is
+because I own this GitHub repository and you do not have permission to
+push changes from your local repository into my repository.  Even if I
+did give you permission to push to my repository, I don't want the
+source code that you wrote for your projects to be available
+publically for everyone to see.
+
+However, it would be very uesful to leverage git (and GitHub) to
+easily move that code between multiple machines.  It would enable you
+to develop your code on your local machine and test it on the PSU CS
+Department's machines before you submit it.  This is possible to do
+with GitHub, but it requires some extra steps.  GitHub provides some
+[really good
+documentation](https://help.github.com/en/articles/duplicating-a-repository)
+on how to this and I'll summarize it here.
+
+First, create a [GitHub "student
+developer"](https://education.github.com/pack) account that gives you
+free private repositories.  Then [create a private GitHub
+repository](https://help.github.com/en/articles/creating-a-new-repository)
+for your source code for this course.  Note that you do **not** want
+to "Initialize this repository with a README".  You want to create a
+completely empty repository so that you can initially populate it from
+my repository.
+
+Now, here comes some of the magic.  First, make a "bare" clone of my
+repository.  This "bare" clone is disconnected from the remote
+repository hosted on GitHub.  (In this example, the repository is
+named "AdvancedProgramming".)  Note that the name of the directory is
+`PortlandStateJavaGettingStarted.git`; it is not the same as a regular
+clone of the repository.
+
+```sh
+$ git clone --bare git@github.com:DavidWhitlock/PortlandStateJavaGettingStarted.git
+```
+
+Then push the bare clone to your newly-created private repository.
+
+```sh
+$ cd PortlandStateJavaGettingStarted.git
+$ git push --mirror git@github.com:YourGitHubUser/AdvancedProgramming.git
+```
+
+If you view your repository on GitHub, you should see the changes
+mirrored from my repository.
+
+Now you can delete the bare clone and make a local clone your
+repository to work with.
+
+```sh
+$ cd ..
+$ rm -rf PortlandStateJavaGettingStarted.git
+$ git clone git@github.com:YourGitHubUser/AdvancedProgramming.git
+```
 
 ### How can I get changes that other people make into my clone?
 
