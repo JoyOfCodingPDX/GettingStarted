@@ -34,9 +34,17 @@ $ cd PortlandStateJavaGettingStarted
 
 This repository is kind of thrown together and it ought to evolve to
 meet the needs of the students who take Advanced Programming with
-Java.  To contribute to this repository (add new scripts, augment
-documentation, fix type-os, etc.), please make a (public)
+Java.  
+
+Feel free to [create issues](/issues) for this repository if you find
+something missing or confusing.
+
+It's even better, though, when someone contribute their own changes
+(add new scripts, augment documentation, fix type-os, etc.), to this
+repository.  Please make a (public)
 [fork](https://help.github.com/en/articles/fork-a-repo) of this
 repository in GitHub, make your changes in a branch of that
-repository, and created a pull request against this repository.  We
-can then have a discussion about your changes via GitHub.
+repository, and [create a pull
+request](https://help.github.com/en/articles/creating-a-pull-request-from-a-fork)
+against this repository.  We can then have a discussion about your
+changes via GitHub.
