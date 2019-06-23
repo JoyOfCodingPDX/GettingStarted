@@ -12,14 +12,68 @@ the programming projects.
 
 ## How do I use this repository?
 
-After [intalling
+In order to use this repository, you must [intall
 git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) on
-your local machine, run the following command to make a local clone of
-this repository:
+your local machine.  Next you need to make a clone of the repository.
+
+If you simply make a `git clone` of this GitHub repository on your
+local machine, you can commit changes to your local repository, but
+you can't "push" your changes to the repository hosted on GitHub.
+This is because I own this GitHub repository and you do not have
+permission to push changes from your local repository into my
+repository.  Even if I did give you permission to push to my
+repository, we don't want the source code that you wrote for your
+projects to be available publically for everyone to see.
+
+However, it would be very uesful to leverage git (and GitHub) to
+easily move that code between multiple machines.  It would enable you
+to develop your code on your local machine and test it on the PSU CS
+Department's machines before you submit it.  This is possible to do
+with GitHub, but it requires some extra steps.  GitHub provides some
+[really good
+documentation](https://help.github.com/en/articles/duplicating-a-repository)
+on how to this and I'll summarize it here.
+
+First, create a [GitHub "student
+developer"](https://education.github.com/pack) account that gives you
+free private repositories.  Then [create a private GitHub
+repository](https://help.github.com/en/articles/creating-a-new-repository)
+for your source code for this course.  (In this example, the
+repository is named "PortlandStateJavaSummer2019".)  Note that you do
+**not** want to "Initialize this repository with a README".  You want
+to create a completely empty repository so that you can initially
+populate it from my repository.
+
+Now, here comes some of the magic.  Make a "bare" clone of my
+repository.  This "bare" clone is disconnected from the remote
+repository hosted on GitHub.  Note that the name of the directory is
+`PortlandStateJavaGettingStarted.git`; it is not the same as a regular
+clone of the repository.
 
 ```sh
-$ git clone git@github.com:DavidWhitlock/PortlandStateJavaGettingStarted.git
+$ git clone --bare git@github.com:DavidWhitlock/PortlandStateJavaGettingStarted.git
 ```
+
+Then push the bare clone to your newly-created private repository.
+
+```sh
+$ cd PortlandStateJavaGettingStarted.git
+$ git push --mirror git@github.com:YourGitHubUser/PortlandStateJavaSummer2019.git
+```
+
+If you view your repository on GitHub, you should see the changes
+mirrored from my repository.
+
+Now you can delete the bare clone and make a local clone your
+repository to work with.
+
+```sh
+$ cd ..
+$ rm -rf PortlandStateJavaGettingStarted.git
+$ git clone git@github.com:YourGitHubUser/PortlandStateJavaSummer2019.git
+```
+
+### What do I need to do before I can use this repository?
 
 The following command lines assume that you are running in the
 directory created by cloning the repository.
@@ -27,8 +81,6 @@ directory created by cloning the repository.
 ```sh
 $ cd PortlandStateJavaGettingStarted
 ```
-
-### What do I need to do before I can use this repository?
 
 You'll need to install the [latest version of the Java Development
 Kit](https://jdk.java.net/) in order to run the Maven Wrapper and work
@@ -93,65 +145,6 @@ features](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Mergi
 to easily revisit (and revise) your source code for Project 1 even
 though you've started working on Project 2.
 
-### How can I push my code up to GitHub?
-
-If you simply make a clone of this GitHub repository on your local
-machine, you can commit changes to your local repository, but you
-can't "push" your changes to the repository hosted on GitHub.  This is
-because I own this GitHub repository and you do not have permission to
-push changes from your local repository into my repository.  Even if I
-did give you permission to push to my repository, I don't want the
-source code that you wrote for your projects to be available
-publically for everyone to see.
-
-However, it would be very uesful to leverage git (and GitHub) to
-easily move that code between multiple machines.  It would enable you
-to develop your code on your local machine and test it on the PSU CS
-Department's machines before you submit it.  This is possible to do
-with GitHub, but it requires some extra steps.  GitHub provides some
-[really good
-documentation](https://help.github.com/en/articles/duplicating-a-repository)
-on how to this and I'll summarize it here.
-
-First, create a [GitHub "student
-developer"](https://education.github.com/pack) account that gives you
-free private repositories.  Then [create a private GitHub
-repository](https://help.github.com/en/articles/creating-a-new-repository)
-for your source code for this course.  Note that you do **not** want
-to "Initialize this repository with a README".  You want to create a
-completely empty repository so that you can initially populate it from
-my repository.
-
-Now, here comes some of the magic.  First, make a "bare" clone of my
-repository.  This "bare" clone is disconnected from the remote
-repository hosted on GitHub.  (In this example, the repository is
-named "AdvancedProgramming".)  Note that the name of the directory is
-`PortlandStateJavaGettingStarted.git`; it is not the same as a regular
-clone of the repository.
-
-```sh
-$ git clone --bare git@github.com:DavidWhitlock/PortlandStateJavaGettingStarted.git
-```
-
-Then push the bare clone to your newly-created private repository.
-
-```sh
-$ cd PortlandStateJavaGettingStarted.git
-$ git push --mirror git@github.com:YourGitHubUser/AdvancedProgramming.git
-```
-
-If you view your repository on GitHub, you should see the changes
-mirrored from my repository.
-
-Now you can delete the bare clone and make a local clone your
-repository to work with.
-
-```sh
-$ cd ..
-$ rm -rf PortlandStateJavaGettingStarted.git
-$ git clone git@github.com:YourGitHubUser/AdvancedProgramming.git
-```
-
 ### How can I get changes that other people make into my clone?
 
 You can expect that the scripts and information in this repository
@@ -163,7 +156,7 @@ First, configure your repository to have this repository to be a
 "remote" named "upstream".
 
 ```sh
-$ cd AdvancedProgramming
+$ cd PortlandStateJavaSummer2019
 $ git remote add upstream git@github.com:DavidWhitlock/PortlandStateJavaGettingStarted.git
 ```
 
