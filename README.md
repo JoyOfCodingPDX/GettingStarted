@@ -154,6 +154,33 @@ $ git clone git@github.com:YourGitHubUser/AdvancedProgramming.git
 
 ### How can I get changes that other people make into my clone?
 
+You can expect that the scripts and information in this repository
+will change and evolve over time.  You may want these changes in your
+repository.  Here's what you need to do to incorporate changes made in
+this "upstream" repository into your own repository.
+
+First, configure your repository to have this repository to be a
+"remote" named "upstream".
+
+```sh
+$ cd AdvancedProgramming
+$ git remote add upstream git@github.com:DavidWhitlock/PortlandStateJavaGettingStarted.git
+```
+
+Then, you can "pull" and "merge" changes from the upstream repository
+in to your own local clone.
+
+```sh
+$ git pull upstream master
+```
+
+After you've resolved any conflicts caused by changes to your
+repository and changes to the upstream repository.  You can push those
+changes back to GitHub ("origin") with:
+
+```sh
+$ git push
+```
 
 ## How can I improve this repository?
 
