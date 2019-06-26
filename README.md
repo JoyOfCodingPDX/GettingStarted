@@ -51,7 +51,7 @@ repository hosted on GitHub.  Note that the name of the directory is
 clone of the repository.
 
 ```sh
-$ git clone --bare git@github.com:DavidWhitlock/PortlandStateJavaGettingStarted.git
+$ git clone --bare https://github.com/DavidWhitlock/PortlandStateJavaGettingStarted.git
 ```
 
 Then push the bare clone to your newly-created private repository.
