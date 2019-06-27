@@ -91,7 +91,8 @@ directory in your home directory.  This configuration enables Maven to
 find the artifacts used for the course.
 
 ```sh
-$ cp settings.xml ~/.m2
+$ mkdir ~/.m2
+$ cp settings.xml ~/.m2/
 ```
 
 ### How do I create and run my own Java projects?
