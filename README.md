@@ -134,7 +134,7 @@ clone by adding the directory to git.
 
 ```sh
 $ mvnw clean     # Remove files that shouldn't be commited to version control
-$ cd ..    # to PortlandStateJavaGettingStarted directory
+$ cd ..    # to PortlandStateJavaSummer2019 directory
 $ git add student
 $ git commit -m "Added source files for student project"
 ```
