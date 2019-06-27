@@ -24,3 +24,13 @@ hs_err_pid*
 
 # emacs files
 *.~*~
+
+# IntelliJ Files
+.idea
+*.iml
+
+# Maven files
+target
+
+# Mac OS file system files
+.DS_Store
