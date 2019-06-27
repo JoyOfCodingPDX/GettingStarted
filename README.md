@@ -118,7 +118,7 @@ Wrapper included in the project.
 ```sh
 $ cd student
 $ chmod +x mvnw        # Make the wrapper script executable
-$ mvnw verify
+$ ./mvnw verify
 ```
 
 Note that the first time that you run Maven, it will download a whole
@@ -133,7 +133,7 @@ After creating a Maven project, you can add the code it to your local
 clone by adding the directory to git.
 
 ```sh
-$ mvnw clean     # Remove files that shouldn't be commited to version control
+$ ./mvnw clean     # Remove files that shouldn't be commited to version control
 $ cd ..    # to PortlandStateJavaSummer2019 directory
 $ git add student
 $ git commit -m "Added source files for student project"
