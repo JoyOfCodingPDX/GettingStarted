@@ -10,6 +10,13 @@ Wrapper](https://github.com/takari/maven-wrapper) script which
 automatically downloads and installs the version of Maven needed for
 the programming projects.
 
+Prior to following these instructions, you may want to review the
+"Getting Started with Java"
+[slides](http://web.cecs.pdx.edu/~whitlock/pdf/Getting%20started%20with%20Java.pdf)
+and
+[screencast](https://www.youtube.com/watch?v=VZXEwcgigaw&list=SPyM7S4CZk9WPrtC8AclCNxOBA8buEJdib)
+from the [course's website](http://web.cecs.pdx.edu/~whitlock/).
+
 ## How do I use this repository?
 
 In order to use this repository, you must [intall
