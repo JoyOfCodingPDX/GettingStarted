@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+<!--
+
+Replace the strings "YourUserId" and "YourGitHubUser" in this file
+accordingly
+
+-->
+
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>CS410J</artifactId>
+    <groupId>edu.pdx.cs410J</groupId>
+    <version>Summer2019</version>
+  </parent>
+  <groupId>edu.pdx.cs410J.YourUserId</groupId>
+  <artifactId>PortlandStateJavaSummer2019</artifactId>
+  <version>Summer2019</version>
+
+  <packaging>pom</packaging>
+  <name>PSUJavaSummer2019</name>
+  <description>Source code written in the Summer 2019 offering of Advanced Programming with Java</description>
+  <url>http://YourGitHubUser.github.io/PortlandStateJavaSummer2019</url>
+
+  <modules>
+  </modules>
+
+  <inceptionYear>2019</inceptionYear>
+  <organization>
+    <name>Portland State University</name>
+    <url>http://www.pdx.edu</url>
+  </organization>
+  <issueManagement>
+    <system>github</system>
+    <url>https://github.com/YourGitHubUser/PortlandStateJavaSummer2019/issues</url>
+  </issueManagement>
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <id>whitlock</id>
+      <name>David Whitlock</name>
+      <email>whitlock@cs.pdx.edu</email>
+      <url>http://www.cs.pdx.edu/~whitlock</url>
+      <organization>PSU Department of Computer Science</organization>
+      <organizationUrl>http://www.cs.pdx.edu</organizationUrl>
+      <roles>
+        <role>Professor</role>
+      </roles>
+      <timezone>-7</timezone>
+    </developer>
+  </developers>
+  <scm>
+    <connection>scm:git:git@github.com:GitHubUserName/PortlandStateJavaSummer2019.git</connection>
+  </scm>
+  <repositories>
+    <repository>
+      <id>CS410J</id>
+      <name>CS410J Maven Repository</name>
+      <url>https://dl.bintray.com/davidwhitlock/maven</url>
+    </repository>
+  </repositories>
+  <distributionManagement>
+    <site>
+      <id>gh-pages</id>
+      <name>GitHub Pages</name>
+      <url>github:http://YourGitHubUser.github.io/PortlandStateJavaSummer2019/</url>
+    </site>
+  </distributionManagement>
+
+</project>

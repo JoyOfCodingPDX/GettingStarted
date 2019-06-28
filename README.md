@@ -183,6 +183,25 @@ changes back to GitHub ("origin") with:
 $ git push
 ```
 
+## How do I use the "parent POM"?
+
+This repository includes a "parent" [pom.xml](pom.xml) file.  You'll
+need to edit the `pom.xml` file to include your user id and GitHub
+user name.  As you create projects (such as Project 1), they will be
+added as sub-modules to the parent POM.
+
+Having a parent project (POM) for all of your projects is convenient
+because it lets you build all of your code in one invocation of Maven.
+While this is not strictly necessary, it does enable easy integration
+with continuous integration tools such as Travis CI.  Travis CI is
+free for public repositories, but they appear to have an [educational
+program](https://education.travis-ci.com/) that is free to students
+with a GitHub education account.
+
+The parent project also allows you to create a multi-module [Maven
+site](https://maven.apache.org/guides/mini/guide-site.html) for all of
+your projects.
+
 ## How can I improve this repository?
 
 This repository is kind of thrown together and it ought to evolve to
