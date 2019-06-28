@@ -34,7 +34,7 @@ function checkForJava() {
 }
 
 checkForMavenSettings() {
-    if [ ! -f $HOME/.m2/settings.xml ]; then
+    if [ ! -f "$HOME/.m2/settings.xml" ]; then
         echo "** settings.xml does not exist"
         echo "** Copy settings.xml into $HOME/.m2/settings.xml"
         return 1
@@ -42,7 +42,7 @@ checkForMavenSettings() {
 
     local url=https://dl.bintray.com/davidwhitlock/maven
     
-    if ! grep -q $url $HOME/.m2/settings.xml; then
+    if ! grep -q $url "$HOME/.m2/settings.xml"; then
         echo "** Your settings.xml file does not contain $url"
         echo "** Please place information from local settings.xml into $HOME/.m2/settings.xml"
         return 1
