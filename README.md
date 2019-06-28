@@ -189,7 +189,7 @@ This repository is kind of thrown together and it ought to evolve to
 meet the needs of the students who take Advanced Programming with
 Java.  
 
-Feel free to [create issues](/issues) for this repository if you find
+Feel free to [create issues](../../issues) for this repository if you find
 something missing or confusing.
 
 It's even better, though, when someone contribute their own changes
