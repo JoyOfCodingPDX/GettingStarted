@@ -65,7 +65,7 @@ Then push the bare clone to your newly-created private repository.
 
 ```sh
 $ cd PortlandStateJavaGettingStarted.git
-$ git push --mirror git@github.com:YourGitHubUser/PortlandStateJavaSummer2019.git
+$ git push --mirror https://github.com/YourGitHubUser/PortlandStateJavaSummer2019.git
 ```
 
 If you view your repository on GitHub, you should see the changes
@@ -77,7 +77,7 @@ repository to work with.
 ```sh
 $ cd ..
 $ rm -rf PortlandStateJavaGettingStarted.git
-$ git clone git@github.com:YourGitHubUser/PortlandStateJavaSummer2019.git
+$ git clone https://github.com/YourGitHubUser/PortlandStateJavaSummer2019.git
 ```
 
 ### What do I need to do before I can use this repository?
@@ -165,7 +165,7 @@ First, configure your repository to have this repository to be a
 
 ```sh
 $ cd PortlandStateJavaSummer2019
-$ git remote add upstream git@github.com:DavidWhitlock/PortlandStateJavaGettingStarted.git
+$ git remote add upstream https://github.com/DavidWhitlock/PortlandStateJavaGettingStarted.git
 ```
 
 Then, you can "pull" and "merge" changes from the upstream repository
