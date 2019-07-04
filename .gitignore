@@ -31,6 +31,7 @@ hs_err_pid*
 
 # Maven files
 target
+dependency-reduced-pom.xml
 
 # Mac OS file system files
 .DS_Store
