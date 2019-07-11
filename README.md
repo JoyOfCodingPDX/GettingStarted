@@ -153,6 +153,22 @@ features](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Mergi
 to easily revisit (and revise) your source code for Project 1 even
 though you've started working on Project 2.
 
+### How do I work with code from this repository using IntelliJ?
+
+[IntelliJ Idea](https://www.jetbrains.com/idea) is the recommended IDE
+for this course.  Opening up the `pom.xml` as a Project in IntelliJ
+will create a new IntelliJ workspace for that Maven project.  IntelliJ
+has excellent integration with GitHub and I recommend that you use
+IntelliJ's "Version Control" tools for committing changes to your code
+and pushing them to GitHub.
+
+Note that you must build the Maven project with `mvnw clean` **before
+you open the project in IntelliJ**.  If you do not build the Maven
+project first, none of the project's dependent libraries will be
+available to IntelliJ and your IDE will be very unhappy.  If you find
+yourself in this situation, close the IntelliJ project, and delete the
+`.iml` file and the `.idea` directory associated with Maven project.
+
 ### How can I get changes that other people make into my clone?
 
 You can expect that the scripts and information in this repository
