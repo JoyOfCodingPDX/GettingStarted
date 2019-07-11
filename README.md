@@ -116,6 +116,13 @@ the name of the Java package for the project.
 $ ./createProject0.sh your-user-id
 ```
 
+(Note that in this document, I always prefix executables with `./` to
+ensure that the executable can be found even if you don't have `.` on
+your `PATH`.  Note also that for people who are developing on Windows
+machines, there is a `createProject0.cmd` that does the same thing as
+the shell script, but doesn't have as nice error checking.  Students
+have not been able to get the shell script to work under cygwin.)
+
 This script will generate a new Maven project in a directory named
 `student` for [Project
 0](http://web.cecs.pdx.edu/~whitlock/pdf/Student.pdf), the example
