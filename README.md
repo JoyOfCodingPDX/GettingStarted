@@ -176,6 +176,27 @@ available to IntelliJ and your IDE will be very unhappy.  If you find
 yourself in this situation, close the IntelliJ project, and delete the
 `.iml` file and the `.idea` directory associated with Maven project.
 
+### How can I get a copy of this code on the CS Department's Linux machines?
+
+While your projects can be developed on any machine, they must be
+submitted on one of the CS Department's Linux machines.  This not only
+encourages you to build and test your code on the machines on which I
+will test your code, it is necessary because the `Submit` program
+sends an email through a PSU-managed SMTP server.
+
+GitHub makes it very easy to get a copy of your code on any machine.
+By making a clone of your repository on the CS Department's machine,
+you can be confident that you have all of your code and, as long as
+you have pushed all of your changes to GitHub, it will be the same
+code as you use on your development machine.
+
+After `ssh`ing to one of the CS Department's Linux machines, you can
+make a clone of your GitHub repository using with:
+
+```
+$ git clone https://github.com/YourGitHubId/PortlandStateJavaSummer2019.git
+```
+
 ### How can I get changes that other people make into my clone?
 
 You can expect that the scripts and information in this repository
