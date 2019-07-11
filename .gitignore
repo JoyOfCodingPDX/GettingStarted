@@ -35,3 +35,7 @@ dependency-reduced-pom.xml
 
 # Mac OS file system files
 .DS_Store
+
+# Temporary directories created by the koans
+*/app/config/file_hashes.dat
+*/app/data/
