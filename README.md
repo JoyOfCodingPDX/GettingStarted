@@ -34,7 +34,7 @@ repository.  Even if I did give you permission to push to my
 repository, we don't want the source code that you wrote for your
 projects to be available publically for everyone to see.
 
-However, it would be very uesful to leverage git (and GitHub) to
+However, it would be very useful to leverage git (and GitHub) to
 easily move that code between multiple machines.  It would enable you
 to develop your code on your local machine and test it on the PSU CS
 Department's machines before you submit it.  This is possible to do
