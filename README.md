@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/YourGitHubId/PortlandStateJavaSummer2019.svg?branch=master)](https://travis-ci.org/YourGitHubId/PortlandStateJavaSummer2019)
+[![Build Status](https://travis-ci.org/YourGitHubId/PortlandStateJavaWinter2020.svg?branch=master)](https://travis-ci.org/YourGitHubId/PortlandStateJavaWinter2020)
 
 # Getting Started with Advanced Programming with Java
 
@@ -48,7 +48,7 @@ developer"](https://education.github.com/pack) account that gives you
 free private repositories.  Then [create a private GitHub
 repository](https://help.github.com/en/articles/creating-a-new-repository)
 for your source code for this course.  (In this example, the
-repository is named "PortlandStateJavaSummer2019".)  Note that you do
+repository is named "PortlandStateJavaWinter2020".)  Note that you do
 **not** want to "Initialize this repository with a README".  You want
 to create a completely empty repository so that you can initially
 populate it from my repository.
@@ -67,7 +67,7 @@ Then push the bare clone to your newly-created private repository.
 
 ```sh
 $ cd PortlandStateJavaGettingStarted.git
-$ git push --mirror https://github.com/YourGitHubUser/PortlandStateJavaSummer2019.git
+$ git push --mirror https://github.com/YourGitHubUser/PortlandStateJavaWinter2020.git
 ```
 
 If you view your repository on GitHub, you should see the changes
@@ -79,7 +79,7 @@ repository to work with.
 ```sh
 $ cd ..
 $ rm -rf PortlandStateJavaGettingStarted.git
-$ git clone https://github.com/YourGitHubUser/PortlandStateJavaSummer2019.git
+$ git clone https://github.com/YourGitHubUser/PortlandStateJavaWinter2020.git
 ```
 
 ### What do I need to do before I can use this repository?
@@ -150,7 +150,7 @@ clone by adding the directory to git.
 
 ```sh
 $ ./mvnw clean     # Remove files that shouldn't be commited to version control
-$ cd ..    # to PortlandStateJavaSummer2019 directory
+$ cd ..    # to PortlandStateJavaWinter2020 directory
 $ git add student
 $ git commit -m "Added source files for student project"
 ```
@@ -196,7 +196,7 @@ After `ssh`ing to one of the CS Department's Linux machines, you can
 make a clone of your GitHub repository using with:
 
 ```
-$ git clone https://github.com/YourGitHubId/PortlandStateJavaSummer2019.git
+$ git clone https://github.com/YourGitHubId/PortlandStateJavaWinter2020.git
 ```
 
 ### How can I get changes that other people make into my clone?
@@ -210,7 +210,7 @@ First, configure your repository to have this repository to be a
 "remote" named "upstream".
 
 ```sh
-$ cd PortlandStateJavaSummer2019
+$ cd PortlandStateJavaWinter2020
 $ git remote add upstream https://github.com/DavidWhitlock/PortlandStateJavaGettingStarted.git
 ```
 

@@ -26,4 +26,4 @@ studentId=$1
   -DgroupId=edu.pdx.cs410J.${studentId} \
   -DartifactId=koans \
   -Dpackage=edu.pdx.cs410J.${studentId} \
-  -Dversion=Summer2019
+  -Dversion=Winter2020
