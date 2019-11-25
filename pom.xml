@@ -12,28 +12,28 @@ accordingly
   <parent>
     <artifactId>CS410J</artifactId>
     <groupId>edu.pdx.cs410J</groupId>
-    <version>Summer2019</version>
+    <version>Winter2020</version>
   </parent>
   <groupId>edu.pdx.cs410J.YourUserId</groupId>
-  <artifactId>PortlandStateJavaSummer2019</artifactId>
-  <version>Summer2019</version>
+  <artifactId>PortlandStateJavaWinter2020</artifactId>
+  <version>Winter2020</version>
 
   <packaging>pom</packaging>
-  <name>PSUJavaSummer2019</name>
-  <description>Source code written in the Summer 2019 offering of Advanced Programming with Java</description>
-  <url>http://YourGitHubUser.github.io/PortlandStateJavaSummer2019</url>
+  <name>PSUJavaWinter2020</name>
+  <description>Source code written in the Winter 2020 offering of Advanced Programming with Java</description>
+  <url>http://YourGitHubUser.github.io/PortlandStateJavaWinter2020</url>
 
   <modules>
   </modules>
 
-  <inceptionYear>2019</inceptionYear>
+  <inceptionYear>2020</inceptionYear>
   <organization>
     <name>Portland State University</name>
     <url>http://www.pdx.edu</url>
   </organization>
   <issueManagement>
     <system>github</system>
-    <url>https://github.com/YourGitHubUser/PortlandStateJavaSummer2019/issues</url>
+    <url>https://github.com/YourGitHubUser/PortlandStateJavaWinter2020/issues</url>
   </issueManagement>
   <licenses>
     <license>
@@ -57,7 +57,7 @@ accordingly
     </developer>
   </developers>
   <scm>
-    <connection>scm:git:git@github.com:GitHubUserName/PortlandStateJavaSummer2019.git</connection>
+    <connection>scm:git:git@github.com:GitHubUserName/PortlandStateJavaWinter2020.git</connection>
   </scm>
   <repositories>
     <repository>
@@ -70,7 +70,7 @@ accordingly
     <site>
       <id>gh-pages</id>
       <name>GitHub Pages</name>
-      <url>github:http://YourGitHubUser.github.io/PortlandStateJavaSummer2019/</url>
+      <url>github:http://YourGitHubUser.github.io/PortlandStateJavaWinter2020/</url>
     </site>
   </distributionManagement>
 

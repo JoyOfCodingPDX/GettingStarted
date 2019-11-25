@@ -5,9 +5,9 @@ set studentId=%1
 mvnw.cmd --batch-mode archetype:generate ^
   -DinteractiveMode=false ^
   -DarchetypeGroupId=edu.pdx.cs410J ^
-  -DarchetypeArtifactId=apptbook-archetype ^
+  -DarchetypeArtifactId=airline-archetype ^
   -DarchetypeVersion=Summer2019 ^
   -DgroupId=edu.pdx.cs410J.%studentId% ^
-  -DartifactId=apptbook ^
+  -DartifactId=airline ^
   -Dpackage=edu.pdx.cs410J.%studentId% ^
-  -Dversion=Summer2019
+  -Dversion=Winter2020
