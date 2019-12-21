@@ -91,7 +91,7 @@ The following command lines assume that you are running in the
 directory created by cloning the repository.
 
 ```sh
-$ cd PortlandStateJavaGettingStarted
+$ cd PortlandStateJavaWinter2020
 ```
 
 You'll need to install the [latest version of the Java Development
@@ -144,7 +144,8 @@ Note that the first time that you run Maven, it will download a whole
 ton of libraries.  You'll see lots of text fly by.
 
 If the build completes successful, you can use your favorite editor (I
-highly recommend IntelliJ) to work the project.
+highly recommend [IntelliJ](https://www.jetbrains.com/idea/)) to work 
+on the project.
 
 ### How can I commit my code to this repository?
 
