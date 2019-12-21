@@ -54,14 +54,17 @@ to create a completely empty repository so that you can initially
 populate it from my repository.
 
 Now, here comes some of the magic.  Make a "bare" clone of my
-repository.  This "bare" clone is disconnected from the remote
-repository hosted on GitHub.  Note that the name of the directory is
-`PortlandStateJavaGettingStarted.git`; it is not the same as a regular
-clone of the repository.
+repository.  
 
 ```sh
 $ git clone --bare https://github.com/DavidWhitlock/PortlandStateJavaGettingStarted.git
 ```
+
+Note that the name of the directory created by the bare clone is
+`PortlandStateJavaGettingStarted.git`; it is not the same as a regular
+clone of the repository.  This "bare" clone is disconnected from the remote
+repository hosted on GitHub, which is what we want because starting today your code
+will be different from mine.
 
 Then push the bare clone to your newly-created private repository.
 
