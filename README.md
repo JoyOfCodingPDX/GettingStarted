@@ -7,7 +7,7 @@ Java](http://web.cecs.pdx.edu/~whitlock/) get started with the
 programming assignments.  Most noteably, it makes it so students do
 not need install [Apache Maven](https://maven.apache.org/install.html)
 on their local machines (or the PSU machines) in order to create and
-build the programmming projects.  It makes liberal use of the [Maven
+build the programming projects.  It makes liberal use of the [Maven
 Wrapper](https://github.com/takari/maven-wrapper) script which
 automatically downloads and installs the version of Maven needed for
 the programming projects.
