@@ -23,6 +23,7 @@ studentId=$1
   -DinteractiveMode=false \
   -DarchetypeGroupId=edu.pdx.cs410J \
   -DarchetypeArtifactId=java-koans-archetype \
+  -DarchetypeVersion=Winter2020 \
   -DgroupId=edu.pdx.cs410J.${studentId} \
   -DartifactId=koans \
   -Dpackage=edu.pdx.cs410J.${studentId} \
