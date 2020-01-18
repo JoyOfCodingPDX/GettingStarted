@@ -252,6 +252,55 @@ The parent project also allows you to create a multi-module [Maven
 site](https://maven.apache.org/guides/mini/guide-site.html) for all of
 your projects.
 
+## How can I create a website for the projects in this repository?
+
+Running `mvn site` from the root directory of this repository will
+generate a website that provides lots of information (reports, etc.) 
+about the Maven projects.  Note that in order for your multi-project
+Maven site to generate correctly, the sub-projects must specify that
+their parent project is the `PortlandStateJavaWinter2020` project in
+your group:
+
+```
+  <parent>
+    <artifactId>PortlandStateJavaWinter2020</artifactId>
+    <groupId>edu.pdx.cs410J.whitlock</groupId>
+    <version>Winter2020</version>
+  </parent>
+```
+
+[GitHub Pages](https://guides.github.com/features/pages/) are web
+pages that are hosted by GitHub and can easily be published via
+GitHub.  You can post the website for your Maven projects by first
+creating a `gh-pages` branch of your repository and pushing it to
+GitHub:
+
+```
+$ git branch gh-pages
+$ git checkout gh-pages
+$ git push --set-upstream origin gh-pages
+$ git checkout master
+```
+
+The you can generate and publish your website using the below
+commands.  Note that before you can do this, you must replace
+instances of `YouGitHubUser` with your GitHub user name in the
+top-level (parent) `pom.xml` file.  (Note that it is essential that
+your GitHub id be **lowercase letters** in the
+`distributionManagement/url` section of the `pom.xml` file.)
+
+```
+$ ./mvnw site
+$ ./mvnw site:stage      # Gathers site files across multiple projects
+$ ./mvnw site:deploy     # Uploads to GitHub
+```
+
+You can open `target/staging/index.html` in your web browse to see
+what your site will look like.
+
+Verify that your website is available at a URL like:
+https://yourgithubuser.github.io/PortlandStateJavaWinter2020
+
 ## How can I improve this repository?
 
 This repository is kind of thrown together and it ought to evolve to
