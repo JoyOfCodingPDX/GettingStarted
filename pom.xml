@@ -57,7 +57,7 @@ accordingly
     </developer>
   </developers>
   <scm>
-    <connection>scm:git:git@github.com:GitHubUserName/PortlandStateJavaWinter2020.git</connection>
+    <connection>scm:git:git@github.com:YourGitHubUser/PortlandStateJavaWinter2020.git</connection>
   </scm>
   <repositories>
     <repository>
