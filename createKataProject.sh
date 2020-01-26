@@ -28,7 +28,7 @@ studentId=$2
 ./mvnw --batch-mode archetype:generate \
   -DinteractiveMode=false \
   -DarchetypeGroupId=edu.pdx.cs410J \
-  -DarchetypeArtifactId=student-archetype \
+  -DarchetypeArtifactId=kata-archetype \
   -DarchetypeVersion=Winter2020 \
   -DgroupId=edu.pdx.cs410J.${studentId} \
   -DartifactId=$projectName \
