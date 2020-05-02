@@ -34,7 +34,7 @@ repository.  Even if I did give you permission to push to my
 repository, we don't want the source code that you wrote for your
 projects to be available publically for everyone to see.
 
-However, it would be very useful to leverage git (and GitHub) to
+However, it is very useful to leverage git (and GitHub) to
 easily move that code between multiple machines.  It would enable you
 to develop your code on your local machine and test it on the PSU CS
 Department's machines before you submit it.  This is possible to do
@@ -51,10 +51,9 @@ for your source code for this course.  (In this example, the
 repository is named "PortlandStateJavaSummer2020".)  Note that you do
 **not** want to "Initialize this repository with a README".  You want
 to create a completely empty repository so that you can initially
-populate it from my repository.
+populate it from my (this) repository.
 
-Now, here comes some of the magic.  Make a "bare" clone of my
-repository.  
+Now, here comes some of the magic.  Make a "bare" clone of my repository.  
 
 ```sh
 $ git clone --bare https://github.com/DavidWhitlock/PortlandStateJavaGettingStarted.git
@@ -175,7 +174,7 @@ has excellent integration with GitHub and I recommend that you use
 IntelliJ's "Version Control" tools for committing changes to your code
 and pushing them to GitHub.
 
-Note that you must build the Maven project with `mvnw clean` **before
+Note that you must build the Maven project with `mvnw verify` **before
 you open the project in IntelliJ**.  If you do not build the Maven
 project first, none of the project's dependent libraries will be
 available to IntelliJ and your IDE will be very unhappy.  If you find
