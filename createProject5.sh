@@ -22,9 +22,9 @@ studentId=$1
 ./mvnw --batch-mode archetype:generate \
   -DinteractiveMode=false \
   -DarchetypeGroupId=edu.pdx.cs410J \
-  -DarchetypeArtifactId=airline-web-archetype \
+  -DarchetypeArtifactId=phonebill-web-archetype \
   -DarchetypeVersion=Summer2020 \
   -DgroupId=edu.pdx.cs410J.${studentId} \
-  -DartifactId=airline-web \
+  -DartifactId=phonebill-web \
   -Dpackage=edu.pdx.cs410J.${studentId} \
   -Dversion=Summer2020
