@@ -112,12 +112,14 @@ The primary purpose of this repository is to make it easy to create
 the skeleton Java projects that are used to start your assignment.
 Scripts such as `createProject0.sh` will run the appropriate Maven
 commands to get you started.  Each of these scripts takes a single
-argument which is your user id.  This one-word user id (mine is
+argument which is your MCECS user id.  This one-word user id (mine is
 `whitlock`) is used to uniquely identify your code and is included in
-the name of the Java package for the project.
+the name of the Java package for the project.  (It is importand that 
+you consistently use this user id in the course.  For instance, please
+use your MCECS user id when you run the `Survey` and `Submit` programs.
 
 ```sh
-$ ./createProject0.sh your-user-id
+$ ./createProject0.sh your-mcecs-user-id
 ```
 
 (Note that in this document, I always prefix executables with `./` to
