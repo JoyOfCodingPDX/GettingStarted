@@ -53,6 +53,14 @@ repository is named "PortlandStateJavaSummer2020".)  Note that you do
 to create a completely empty repository so that you can initially
 populate it from my (this) repository.
 
+Again, please ensure that all of your code for the assignments is in a 
+**private** GitHub repository.  GitHub makes it very easy for people to
+find your code and you do **not** want to have your work plagiarized.  
+After the course is over, if you want to make your repository public to
+help contribute to your coding portfolio, that's fine.  I do ask that 
+current students not leverage former students' code to inform their 
+projects.
+
 Now, here comes some of the magic.  Make a "bare" clone of my repository.  
 
 ```sh
