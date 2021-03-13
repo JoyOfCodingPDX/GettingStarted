@@ -6,8 +6,8 @@ mvnw.cmd --batch-mode archetype:generate ^
   -DinteractiveMode=false ^
   -DarchetypeGroupId=edu.pdx.cs410J ^
   -DarchetypeArtifactId=phonebill-archetype ^
-  -DarchetypeVersion=Summer2020 ^
+  -DarchetypeVersion=Summer2021 ^
   -DgroupId=edu.pdx.cs410J.%studentId% ^
   -DartifactId=phonebill ^
   -Dpackage=edu.pdx.cs410J.%studentId% ^
-  -Dversion=Summer2020
+  -Dversion=Summer2021

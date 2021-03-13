@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/YourGitHubId/PortlandStateJavaSummer2020.svg?branch=master)](https://travis-ci.org/YourGitHubId/PortlandStateJavaSummer2020)
+[![Build Status](https://travis-ci.org/YourGitHubId/PortlandStateJavaSummer2021.svg?branch=master)](https://travis-ci.org/YourGitHubId/PortlandStateJavaSummer2021)
 
 # Getting Started with Advanced Programming with Java
 
@@ -48,7 +48,7 @@ developer"](https://education.github.com/pack) account that gives you
 free private repositories.  Then [create a private GitHub
 repository](https://help.github.com/en/articles/creating-a-new-repository)
 for your source code for this course.  (In this example, the
-repository is named "PortlandStateJavaSummer2020".)  Note that you do
+repository is named "PortlandStateJavaSummer2021".)  Note that you do
 **not** want to "Initialize this repository with a README".  You want
 to create a completely empty repository so that you can initially
 populate it from my repository.
@@ -70,7 +70,7 @@ Then push the bare clone to your newly-created private repository.
 
 ```sh
 $ cd PortlandStateJavaGettingStarted.git
-$ git push --mirror https://github.com/YourGitHubUser/PortlandStateJavaSummer2020.git
+$ git push --mirror https://github.com/YourGitHubUser/PortlandStateJavaSummer2021.git
 ```
 
 If you view your repository on GitHub, you should see the changes
@@ -82,7 +82,7 @@ repository to work with.
 ```sh
 $ cd ..
 $ rm -rf PortlandStateJavaGettingStarted.git
-$ git clone https://github.com/YourGitHubUser/PortlandStateJavaSummer2020.git
+$ git clone https://github.com/YourGitHubUser/PortlandStateJavaSummer2021.git
 ```
 
 ### What do I need to do before I can use this repository?
@@ -91,7 +91,7 @@ The following command lines assume that you are running in the
 directory created by cloning the repository.
 
 ```sh
-$ cd PortlandStateJavaSummer2020
+$ cd PortlandStateJavaSummer2021
 ```
 
 You'll need to install the [latest version of the Java Development
@@ -154,7 +154,7 @@ clone by adding the directory to git.
 
 ```sh
 $ ./mvnw clean     # Remove files that shouldn't be commited to version control
-$ cd ..    # to PortlandStateJavaSummer2020 directory
+$ cd ..    # to PortlandStateJavaSummer2021 directory
 $ git add student
 $ git commit -m "Added source files for student project"
 ```
@@ -200,7 +200,7 @@ After `ssh`ing to one of the CS Department's Linux machines, you can
 make a clone of your GitHub repository using with:
 
 ```
-$ git clone https://github.com/YourGitHubId/PortlandStateJavaSummer2020.git
+$ git clone https://github.com/YourGitHubId/PortlandStateJavaSummer2021.git
 ```
 
 ### How can I get changes that other people make into my clone?
@@ -214,7 +214,7 @@ First, configure your repository to have this repository to be a
 "remote" named "upstream".
 
 ```sh
-$ cd PortlandStateJavaSummer2020
+$ cd PortlandStateJavaSummer2021
 $ git remote add upstream https://github.com/DavidWhitlock/PortlandStateJavaGettingStarted.git
 ```
 
@@ -258,14 +258,14 @@ Running `mvn site` from the root directory of this repository will
 generate a website that provides lots of information (reports, etc.) 
 about the Maven projects.  Note that in order for your multi-project
 Maven site to generate correctly, the sub-projects must specify that
-their parent project is the `PortlandStateJavaSummer2020` project in
+their parent project is the `PortlandStateJavaSummer2021` project in
 your group:
 
 ```
   <parent>
-    <artifactId>PortlandStateJavaSummer2020</artifactId>
+    <artifactId>PortlandStateJavaSummer2021</artifactId>
     <groupId>edu.pdx.cs410J.whitlock</groupId>
-    <version>Summer2020</version>
+    <version>Summer2021</version>
   </parent>
 ```
 
@@ -299,7 +299,7 @@ You can open `target/staging/index.html` in your web browse to see
 what your site will look like.
 
 Verify that your website is available at a URL like:
-https://yourgithubuser.github.io/PortlandStateJavaSummer2020
+https://yourgithubuser.github.io/PortlandStateJavaSummer2021
 
 ## How can I improve this repository?
 
