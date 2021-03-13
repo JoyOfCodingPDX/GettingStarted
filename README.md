@@ -34,7 +34,7 @@ repository.  Even if I did give you permission to push to my
 repository, we don't want the source code that you wrote for your
 projects to be available publically for everyone to see.
 
-However, it would be very useful to leverage git (and GitHub) to
+However, it is very useful to leverage git (and GitHub) to
 easily move that code between multiple machines.  It would enable you
 to develop your code on your local machine and test it on the PSU CS
 Department's machines before you submit it.  This is possible to do
@@ -51,10 +51,17 @@ for your source code for this course.  (In this example, the
 repository is named "PortlandStateJavaSummer2021".)  Note that you do
 **not** want to "Initialize this repository with a README".  You want
 to create a completely empty repository so that you can initially
-populate it from my repository.
+populate it from my (this) repository.
 
-Now, here comes some of the magic.  Make a "bare" clone of my
-repository.  
+Again, please ensure that all of your code for the assignments is in a 
+**private** GitHub repository.  GitHub makes it very easy for people to
+find your code and you do **not** want to have your work plagiarized.  
+After the course is over, if you want to make your repository public to
+help contribute to your coding portfolio, that's fine.  I do ask that 
+current students not leverage former students' code to inform their 
+projects.
+
+Now, here comes some of the magic.  Make a "bare" clone of my repository.  
 
 ```sh
 $ git clone --bare https://github.com/DavidWhitlock/PortlandStateJavaGettingStarted.git
@@ -113,12 +120,14 @@ The primary purpose of this repository is to make it easy to create
 the skeleton Java projects that are used to start your assignment.
 Scripts such as `createProject0.sh` will run the appropriate Maven
 commands to get you started.  Each of these scripts takes a single
-argument which is your user id.  This one-word user id (mine is
+argument which is your MCECS user id.  This one-word user id (mine is
 `whitlock`) is used to uniquely identify your code and is included in
-the name of the Java package for the project.
+the name of the Java package for the project.  (It is importand that 
+you consistently use this user id in the course.  For instance, please
+use your MCECS user id when you run the `Survey` and `Submit` programs.
 
 ```sh
-$ ./createProject0.sh your-user-id
+$ ./createProject0.sh your-mcecs-user-id
 ```
 
 (Note that in this document, I always prefix executables with `./` to
@@ -175,7 +184,7 @@ has excellent integration with GitHub and I recommend that you use
 IntelliJ's "Version Control" tools for committing changes to your code
 and pushing them to GitHub.
 
-Note that you must build the Maven project with `mvnw clean` **before
+Note that you must build the Maven project with `mvnw verify` **before
 you open the project in IntelliJ**.  If you do not build the Maven
 project first, none of the project's dependent libraries will be
 available to IntelliJ and your IDE will be very unhappy.  If you find
