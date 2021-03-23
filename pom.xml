@@ -10,13 +10,13 @@ accordingly
 
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <artifactId>CS410J</artifactId>
+    <artifactId>cs410j</artifactId>
     <groupId>edu.pdx.cs410J</groupId>
-    <version>Summer2021</version>
+    <version>2021.0.0</version>
   </parent>
   <groupId>edu.pdx.cs410J.YourUserId</groupId>
   <artifactId>PortlandStateJavaSummer2021</artifactId>
-  <version>Summer2021</version>
+  <version>2021.0.0</version>
 
   <packaging>pom</packaging>
   <name>PSUJavaSummer2021</name>
