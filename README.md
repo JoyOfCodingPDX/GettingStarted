@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/YourGitHubId/PortlandStateJavaSummer2021.svg?branch=master)](https://travis-ci.org/YourGitHubId/PortlandStateJavaSummer2021)
+![PortlandStateJavaWinter2020](https://github.com/YourGitHubId/PortlandStateJavaSummer2021/actions/workflows/maven.yml/badge.svg)
 
 # Getting Started with Advanced Programming with Java
 
@@ -231,7 +231,7 @@ Then, you can "pull" and "merge" changes from the upstream repository
 in to your own local clone.
 
 ```sh
-$ git pull upstream master
+$ git pull upstream main
 ```
 
 After you've resolved any conflicts caused by changes to your
@@ -288,7 +288,7 @@ GitHub:
 $ git branch gh-pages
 $ git checkout gh-pages
 $ git push --set-upstream origin gh-pages
-$ git checkout master
+$ git checkout main
 ```
 
 The you can generate and publish your website using the below
