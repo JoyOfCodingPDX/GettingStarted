@@ -11,7 +11,7 @@ accordingly
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <artifactId>cs410j</artifactId>
-    <groupId>edu.pdx.cs410J</groupId>
+    <groupId>io.github.davidwhitlock.cs410J</groupId>
     <version>2021.0.0</version>
   </parent>
   <groupId>edu.pdx.cs410J.YourUserId</groupId>

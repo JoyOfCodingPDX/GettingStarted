@@ -22,7 +22,7 @@ studentId=$2
 
 ./mvnw --batch-mode archetype:generate \
   -DinteractiveMode=false \
-  -DarchetypeGroupId=edu.pdx.cs410J \
+  -DarchetypeGroupId=io.github.davidwhitlock.cs410J \
   -DarchetypeArtifactId=kata-archetype \
   -DarchetypeVersion=2021.0.0 \
   -DgroupId=edu.pdx.cs410J.${studentId} \
