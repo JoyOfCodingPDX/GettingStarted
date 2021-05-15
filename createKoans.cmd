@@ -8,7 +8,7 @@ set studentId=%1
 
 mvnw.cmd --batch-mode archetype:generate ^
   -DinteractiveMode=false ^
-  -DarchetypeGroupId=edu.pdx.cs410J ^
+  -DarchetypeGroupId=io.github.davidwhitlock.cs410J ^
   -DarchetypeArtifactId=java-koans-archetype ^
   -DarchetypeVersion=2021.0.0 ^
   -DgroupId=edu.pdx.cs410J.%studentId% ^

@@ -105,15 +105,6 @@ You'll need to install the [latest version of the Java Development
 Kit](https://jdk.java.net/) in order to run the Maven Wrapper and work
 with the projects.
 
-You'll also need to copy the `settings.xml` file to the `.m2`
-directory in your home directory.  This configuration enables Maven to
-find the artifacts used for the course.
-
-```sh
-$ mkdir ~/.m2
-$ cp settings.xml ~/.m2/
-```
-
 ### How do I create and run my own Java projects?
 
 The primary purpose of this repository is to make it easy to create

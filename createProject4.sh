@@ -7,11 +7,6 @@ if ! checkForJava; then
     exit 1
 fi
 
-if ! checkForMavenSettings; then
-    echo "** Your Maven settings are not configured correctly in your environment"
-    exit 1
-fi
-
 if [ "$#" -ne 1 ]; then
     echo "** Missing your student id"
     exit 1
@@ -21,7 +16,7 @@ studentId=$1
 
 ./mvnw --batch-mode archetype:generate \
   -DinteractiveMode=false \
-  -DarchetypeGroupId=edu.pdx.cs410J \
+  -DarchetypeGroupId=io.github.davidwhitlock.cs410J \
   -DarchetypeArtifactId=apptbook-web-archetype \
   -DarchetypeVersion=2021.0.0 \
   -DgroupId=edu.pdx.cs410J.${studentId} \
