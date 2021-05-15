@@ -7,11 +7,6 @@ if ! checkForJava; then
     exit 1
 fi
 
-if ! checkForMavenSettings; then
-    echo "** Your Maven settings are not configured correctly in your environment"
-    exit 1
-fi
-
 if [ $# -lt 1 ]; then
   echo "** Missing your student id"
   exit 1

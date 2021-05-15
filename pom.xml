@@ -59,13 +59,6 @@ accordingly
   <scm>
     <connection>scm:git:git@github.com:YourGitHubUser/PortlandStateJavaSummer2021.git</connection>
   </scm>
-  <repositories>
-    <repository>
-      <id>CS410J</id>
-      <name>CS410J Maven Repository</name>
-      <url>https://dl.bintray.com/davidwhitlock/maven</url>
-    </repository>
-  </repositories>
   <distributionManagement>
     <site>
       <id>gh-pages</id>
