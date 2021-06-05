@@ -10,7 +10,7 @@ mvnw.cmd --batch-mode archetype:generate ^
   -DinteractiveMode=false ^
   -DarchetypeGroupId=io.github.davidwhitlock.cs410J ^
   -DarchetypeArtifactId=apptbook-web-archetype ^
-  -DarchetypeVersion=2021.1.1 ^
+  -DarchetypeVersion=2021.2.0 ^
   -DgroupId=edu.pdx.cs410J.%studentId% ^
   -DartifactId=apptbook-web ^
   -Dpackage=edu.pdx.cs410J.%studentId% ^
