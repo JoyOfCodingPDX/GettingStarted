@@ -10,7 +10,7 @@ mvnw.cmd --batch-mode archetype:generate ^
   -DinteractiveMode=false ^
   -DarchetypeGroupId=io.github.davidwhitlock.cs410J ^
   -DarchetypeArtifactId=kata-archetype ^
-  -DarchetypeVersion=2021.2.2-SNAPSHOT ^
+  -DarchetypeVersion=2021.3.0 ^
   -DgroupId=edu.pdx.cs410J.%studentId% ^
   -DartifactId=%projectName% ^
   -Dpackage=edu.pdx.cs410J.%studentId% ^
