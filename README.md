@@ -243,10 +243,9 @@ added as sub-modules to the parent POM.
 Having a parent project (POM) for all of your projects is convenient
 because it lets you build all of your code in one invocation of Maven.
 While this is not strictly necessary, it does enable easy integration
-with continuous integration tools such as Travis CI.  Travis CI is
-free for public repositories, but they appear to have an [educational
-program](https://education.travis-ci.com/) that is free to students
-with a GitHub education account.
+with continuous integration tools.  This repository is configured to use
+a [GitHub workflow to automatically build the project](.github/workflows/maven.yml)
+(including running tests) whenever a change is pushed to the `main` branch.
 
 The parent project also allows you to create a multi-module [Maven
 site](https://maven.apache.org/guides/mini/guide-site.html) for all of
