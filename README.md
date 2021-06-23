@@ -113,7 +113,7 @@ Scripts such as `createProject0.sh` will run the appropriate Maven
 commands to get you started.  Each of these scripts takes a single
 argument which is your MCECS user id.  This one-word user id (mine is
 `whitlock`) is used to uniquely identify your code and is included in
-the name of the Java package for the project.  (It is importand that 
+the name of the Java package for the project.  (It is important that 
 you consistently use this user id in the course.  For instance, please
 use your MCECS user id when you run the `Survey` and `Submit` programs.
 
@@ -132,7 +132,7 @@ This script will generate a new Maven project in a directory named
 `student` for [Project
 0](http://web.cecs.pdx.edu/~whitlock/pdf/Student.pdf), the example
 "Student" project.  You can then build this project using the Maven
-Wrapper included in the project.
+Wrapper (`mvnw` script) included in the project.
 
 ```sh
 $ cd student
@@ -179,8 +179,8 @@ Note that you must build the Maven project with `mvnw verify` **before
 you open the project in IntelliJ**.  If you do not build the Maven
 project first, none of the project's dependent libraries will be
 available to IntelliJ and your IDE will be very unhappy.  If you find
-yourself in this situation, close the IntelliJ project, and delete the
-`.iml` file and the `.idea` directory associated with Maven project.
+yourself in this situation, close the IntelliJ project, and delete all
+`.iml` files and the `.idea` directory associated with Maven project.
 
 ### How can I get a copy of this code on the CS Department's Linux machines?
 
@@ -283,7 +283,7 @@ $ git checkout main
 
 The you can generate and publish your website using the below
 commands.  Note that before you can do this, you must replace
-instances of `YouGitHubUser` with your GitHub user name in the
+instances of `YourGitHubUser` with your GitHub user name in the
 top-level (parent) `pom.xml` file.  (Note that it is essential that
 your GitHub id be **lowercase letters** in the
 `distributionManagement/url` section of the `pom.xml` file.)
