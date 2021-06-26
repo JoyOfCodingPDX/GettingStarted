@@ -61,6 +61,11 @@ help contribute to your coding portfolio, that's fine.  I do ask that
 current students not leverage former students' code to inform their 
 projects.
 
+The below `git` command line examples are expressed using UNIX syntax.  They
+are known to work on the CS Department's Linux machines and on MacOS.  Students
+who run on Windows may need to use "Git CMD" instead of "Git Bash" to get 
+authentication with GitHub to work with HTTPS.
+
 Now, here comes some of the magic.  Make a "bare" clone of my repository.  
 
 ```sh
@@ -115,7 +120,7 @@ argument which is your MCECS user id.  This one-word user id (mine is
 `whitlock`) is used to uniquely identify your code and is included in
 the name of the Java package for the project.  (It is important that 
 you consistently use this user id in the course.  For instance, please
-use your MCECS user id when you run the `Survey` and `Submit` programs.
+use your MCECS user id when you run the `Survey` and `Submit` programs.)
 
 ```sh
 $ ./createProject0.sh your-mcecs-user-id
@@ -132,7 +137,9 @@ This script will generate a new Maven project in a directory named
 `student` for [Project
 0](http://web.cecs.pdx.edu/~whitlock/pdf/Student.pdf), the example
 "Student" project.  You can then build this project using the Maven
-Wrapper (`mvnw` script) included in the project.
+Wrapper (`mvnw` script) included in the project.  (Students running on 
+Windows should invoke the `mvnw.cmd` script to build the Maven project.
+The UNIX `mvnw` script has been problematic on Windows, even in Git Bash.)
 
 ```sh
 $ cd student
