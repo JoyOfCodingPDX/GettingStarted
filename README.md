@@ -10,7 +10,8 @@ on their local machines (or the PSU machines) in order to create and
 build the programming projects.  It makes liberal use of the [Maven
 Wrapper](https://github.com/takari/maven-wrapper) script which
 automatically downloads and installs the version of Maven needed for
-the programming projects.
+the programming projects.  **You do not need to install Maven on your
+local development machine.**
 
 Prior to following these instructions, you may want to review the
 "Getting Started with Java"
@@ -107,8 +108,11 @@ $ cd PortlandStateJavaSummer2021
 ```
 
 You'll need to install the [latest version of the Java Development
-Kit](https://jdk.java.net/) in order to run the Maven Wrapper and work
-with the projects.
+Kit](https://adoptopenjdk.net/) in order to run the Maven Wrapper and work
+with the projects.  Windows users should download the "msi" (Microsoft Installer)
+binary for an easiest installation and configuration process.  During the 
+installation process, select "set the JAVA_HOME" environment variable in order
+for Maven to work correctly.
 
 ### How do I create and run my own Java projects?
 
