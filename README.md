@@ -56,11 +56,14 @@ populate it from my (this) repository.
 
 Again, please ensure that all of your code for the assignments is in a 
 **private** GitHub repository.  GitHub makes it very easy for people to
-find your code and you do **not** want to have your work plagiarized.  
+find your code, and you do **not** want to have your work plagiarized.  
 After the course is over, if you want to make your repository public to
 help contribute to your coding portfolio, that's fine.  I do ask that 
 current students not leverage former students' code to inform their 
-projects.
+projects.  If you have questions about your code that you'd like me to
+answer, please feel free to [make me a collaborator](https://docs.github.com/en/github/setting-up-and-managing-your-github-user-account/managing-access-to-your-personal-repositories/inviting-collaborators-to-a-personal-repository)
+on your private repository.  I will try my best to engage you in a 
+discussion about  your code.
 
 The below `git` command line examples are expressed using UNIX syntax.  They
 are known to work on the CS Department's Linux machines and on MacOS.  Students
