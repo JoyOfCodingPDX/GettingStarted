@@ -110,12 +110,50 @@ directory created by cloning the repository.
 $ cd PortlandStateJavaSummer2021
 ```
 
+### How do I use the Java Development Kit?
+
+The Java Development Kit (JDK) provides tools for compiling, packaging, and
+running Java applications.  
+
+This course requires at least Java 11.  You can determine which version of Java is configured in your environment
+by issuing the `java -version` command:
+
+```sh
+$ java -version
+openjdk version "16.0.1" 2021-04-20
+OpenJDK Runtime Environment (build 16.0.1+9-24)
+OpenJDK 64-Bit Server VM (build 16.0.1+9-24, mixed mode, sharing)
+```
+
+#### Configuring the JDK on the PSU Linux machines
+
+Regardless of where your code is developed, it will be tested on the [MCECS Linux machines](https://cat.pdx.edu/platforms/linux/) 
+(the machines in the `linux.cecs.pdx.edu` cluster).  Furthermore, projects can only be submitted
+from the PSU Linux machines, so you'll need to make sure that your environment on these machines
+is configured to run the right version of Java.
+
+There are a couple of ways to configure your MCECS Linux environment to use the JDK.  The easiest is
+to use the `addpkg` command, which provides a graphical user interface for selecting software packages
+to add to your execution path.  After launching the `addpkg` command, scroll down and select the `openjdk16`
+package, and click "OK".  You may need to log out of the machine and log back in for the changes to take effect.
+
+Alternatively, if you are familiar with configuring the UNIX execution PATH, you can configure the `JAVA_HOME`
+environment variable to refer to the directory in which the JDK is installed and then add `$JAVA_HOME/bin` to 
+your `PATH` environment variable.  Feel free to consult `/u/whitlock/.bashrc` for examples.
+
+#### Installing the JDK on your personal machine
+
+For most of the projects in this course, it is possible (although, not optimal) to develop your code using the
+tools on the MCECS Linux machines.  However, it is highly recommended to use your personal desktop or laptop to
+leverage tools like IntelliJ to author your projects. 
+
 You'll need to install the [latest version of the Java Development
 Kit](https://adoptopenjdk.net/) in order to run the Maven Wrapper and work
-with the projects.  Windows users should download the "msi" (Microsoft Installer)
-binary for an easiest installation and configuration process.  During the 
+with the projects.  (The "HotSpot" JVM should be fine for this course.)  
+Windows users should download the "msi" (Microsoft Installer)
+binary for an easy installation and configuration process.  During the 
 installation process, select "set the JAVA_HOME" environment variable in order
-for Maven to work correctly.
+for Maven to work correctly on the command line.
 
 ### How do I create and run my own Java projects?
 
