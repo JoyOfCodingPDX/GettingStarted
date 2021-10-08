@@ -28,4 +28,4 @@ studentId=$2
   -DgroupId=edu.pdx.cs410J.${studentId} \
   -DartifactId=$projectName \
   -Dpackage=edu.pdx.cs410J.${studentId} \
-  -Dversion=2021.0.0
+  -Dversion=2022.0.0

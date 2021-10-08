@@ -16,7 +16,7 @@ accordingly
   </parent>
   <groupId>edu.pdx.cs410J.YourUserId</groupId>
   <artifactId>PortlandStateJavaWinter2022</artifactId>
-  <version>2021.0.0</version>
+  <version>2022.0.0</version>
 
   <packaging>pom</packaging>
   <name>PSUJavaWinter2022</name>

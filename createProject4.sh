@@ -22,4 +22,4 @@ studentId=$1
   -DgroupId=edu.pdx.cs410J.${studentId} \
   -DartifactId=apptbook-web \
   -Dpackage=edu.pdx.cs410J.${studentId} \
-  -Dversion=2021.0.0
+  -Dversion=2022.0.0

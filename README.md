@@ -316,7 +316,7 @@ your group:
   <parent>
     <artifactId>PortlandStateJavaWinter2022</artifactId>
     <groupId>edu.pdx.cs410J.whitlock</groupId>
-    <version>2021.0.0</version>
+    <version>2022.0.0</version>
   </parent>
 ```
 
