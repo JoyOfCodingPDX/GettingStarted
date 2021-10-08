@@ -141,6 +141,36 @@ Alternatively, if you are familiar with configuring the UNIX execution PATH, you
 environment variable to refer to the directory in which the JDK is installed and then add `$JAVA_HOME/bin` to 
 your `PATH` environment variable.  Feel free to consult `/u/whitlock/.bashrc` for examples.
 
+#### Running the `survey.sh` script
+
+The reason that this course can scale to support so many students is that many of the time-consuming "overhead"
+activities have been automated.  For instance, extracting project submissions, running projects through the grading
+scripts, and recording grades are automated.  This frees up the instructor and the Graders to focus on more valuable
+activities like answering student questions and providing feedback.  The automation is enabled by conventions and 
+tools that standardize the structure of projects (using Maven) and the process for submitting the projects.
+
+An important initial step in this course it to run the `survey.sh` script.  This script executes a Java program that
+asks you some questions about yourself (such as your name, email address, and CECS login id) and saves that 
+information to a `me.xml` in the directory in which the script is run.  (It also emails the XML file to the Grader
+so that the Grader knows who you are, can contact you, and can record your grades.)  The information in this XML file
+is used by other scripts in this repository to create the initial files for your projects and for submitting your
+projects to the Grader.
+
+Note that the `survey.sh` script **must be executed on one of the PSU CECS Linux machines**.  It cannot be run on your
+laptop or local development machine.
+
+```sh
+$ ./survey.sh
+```
+
+After filling out the survey, commit the `me.xml` file to your git repository so it can be used by the submit script.
+
+```sh
+$ git add me.xml
+$ git commit -m "Added information about myself from the survey program"
+$ git push
+```
+
 #### Installing the JDK on your personal machine
 
 For most of the projects in this course, it is possible (although, not optimal) to develop your code using the
