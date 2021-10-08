@@ -1,5 +1,24 @@
 #!/bin/sh
 
+## Check to see if this script is run on one of the PSU CECS Linux machines
+
+function runningOnPSUMachine() {
+    psuHostname=$(hostname --long 2>&1 | grep "cs.pdx.edu")
+    if [[ -n "$psuHostname" ]]; then
+        echo "You are running on a PSU machine"
+    else
+	echo "This script must be run on a PSU Linux machine"
+	return 1
+    fi
+
+    if [[ -f "/u/whitlock/jars/grader.jar" ]]; then
+	echo "grader jar is present"
+    else
+	echo "Could not find the grader jar on $(psuHostname).  Did Dave forget to make it world-readable again?  Ask him."
+	return 1
+    fi
+}
+
 ## Check to see if the required version of Java is available on the
 ## command line PATH 
 ##
