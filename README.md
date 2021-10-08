@@ -1,4 +1,4 @@
-[![Java CI with Maven](https://github.com/YourGitHubId/PortlandStateJavaSummer2021/actions/workflows/maven.yml/badge.svg)](https://github.com/YourGitHubId/PortlandStateJavaSummer2021/actions/workflows/maven.yml)
+[![Java CI with Maven](https://github.com/YourGitHubId/PortlandStateJavaWinter2022/actions/workflows/maven.yml/badge.svg)](https://github.com/YourGitHubId/PortlandStateJavaWinter2022/actions/workflows/maven.yml)
 
 # Getting Started with Advanced Programming with Java
 
@@ -49,7 +49,7 @@ developer"](https://education.github.com/pack) account that gives you
 free private repositories.  Then [create a private GitHub
 repository](https://help.github.com/en/articles/creating-a-new-repository)
 for your source code for this course.  (In this example, the
-repository is named "PortlandStateJavaSummer2021".)  Note that you do
+repository is named "PortlandStateJavaWinter2022".)  Note that you do
 **not** want to "Initialize this repository with a README".  You want
 to create a completely empty repository so that you can initially
 populate it from my (this) repository.
@@ -86,7 +86,7 @@ Then push the bare clone to your newly-created private repository.
 
 ```sh
 $ cd PortlandStateJavaGettingStarted.git
-$ git push --mirror https://github.com/YourGitHubUser/PortlandStateJavaSummer2021.git
+$ git push --mirror https://github.com/YourGitHubUser/PortlandStateJavaWinter2022.git
 ```
 
 If you view your repository on GitHub, you should see the changes
@@ -98,7 +98,7 @@ repository to work with.
 ```sh
 $ cd ..
 $ rm -rf PortlandStateJavaGettingStarted.git
-$ git clone https://github.com/YourGitHubUser/PortlandStateJavaSummer2021.git
+$ git clone https://github.com/YourGitHubUser/PortlandStateJavaWinter2022.git
 ```
 
 ### What do I need to do before I can use this repository?
@@ -107,7 +107,7 @@ The following command lines assume that you are running in the
 directory created by cloning the repository.
 
 ```sh
-$ cd PortlandStateJavaSummer2021
+$ cd PortlandStateJavaWinter2022
 ```
 
 ### How do I use the Java Development Kit?
@@ -206,7 +206,7 @@ clone by adding the directory to git.
 
 ```sh
 $ ./mvnw clean     # Remove files that shouldn't be commited to version control
-$ cd ..    # to PortlandStateJavaSummer2021 directory
+$ cd ..    # to PortlandStateJavaWinter2022 directory
 $ git add student
 $ git commit -m "Added source files for student project"
 ```
@@ -252,7 +252,7 @@ After `ssh`ing to one of the CS Department's Linux machines, you can
 make a clone of your GitHub repository using with:
 
 ```
-$ git clone https://github.com/YourGitHubId/PortlandStateJavaSummer2021.git
+$ git clone https://github.com/YourGitHubId/PortlandStateJavaWinter2022.git
 ```
 
 ### How can I get changes that other people make into my clone?
@@ -266,7 +266,7 @@ First, configure your repository to have this repository to be a
 "remote" named "upstream".
 
 ```sh
-$ cd PortlandStateJavaSummer2021
+$ cd PortlandStateJavaWinter2022
 $ git remote add upstream https://github.com/DavidWhitlock/PortlandStateJavaGettingStarted.git
 ```
 
@@ -309,12 +309,12 @@ Running `mvn site` from the root directory of this repository will
 generate a website that provides lots of information (reports, etc.) 
 about the Maven projects.  Note that in order for your multi-project
 Maven site to generate correctly, the sub-projects must specify that
-their parent project is the `PortlandStateJavaSummer2021` project in
+their parent project is the `PortlandStateJavaWinter2022` project in
 your group:
 
 ```
   <parent>
-    <artifactId>PortlandStateJavaSummer2021</artifactId>
+    <artifactId>PortlandStateJavaWinter2022</artifactId>
     <groupId>edu.pdx.cs410J.whitlock</groupId>
     <version>2021.0.0</version>
   </parent>
@@ -335,7 +335,7 @@ $ git checkout main
 
 The you can generate and publish your website using the below
 commands.  Note that before you can do this, you must replace
-instances of `YourGitHubUser` with your GitHub user name in the
+instances of `YourGitHubUser` with your GitHub username in the
 top-level (parent) `pom.xml` file.  (Note that it is essential that
 your GitHub id be **lowercase letters** in the
 `distributionManagement/url` section of the `pom.xml` file.)
@@ -350,7 +350,7 @@ You can open `target/staging/index.html` in your web browse to see
 what your site will look like.
 
 Verify that your website is available at a URL like:
-https://yourgithubuser.github.io/PortlandStateJavaSummer2021
+https://yourgithubuser.github.io/PortlandStateJavaWinter2022
 
 ## How can I improve this repository?
 
@@ -361,7 +361,7 @@ Java.
 Feel free to [create issues](../../issues) for this repository if you find
 something missing or confusing.
 
-It's even better, though, when someone contribute their own changes
+It's even better, though, when someone contributes their own changes
 (add new scripts, augment documentation, fix type-os, etc.), to this
 repository.  Please make a (public)
 [fork](https://help.github.com/en/articles/fork-a-repo) of this

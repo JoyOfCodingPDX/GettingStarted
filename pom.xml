@@ -15,13 +15,13 @@ accordingly
     <version>2021.3.0</version>
   </parent>
   <groupId>edu.pdx.cs410J.YourUserId</groupId>
-  <artifactId>PortlandStateJavaSummer2021</artifactId>
+  <artifactId>PortlandStateJavaWinter2022</artifactId>
   <version>2021.0.0</version>
 
   <packaging>pom</packaging>
-  <name>PSUJavaSummer2021</name>
+  <name>PSUJavaWinter2022</name>
   <description>Source code written in the Summer 2021 offering of Advanced Programming with Java</description>
-  <url>http://YourGitHubUser.github.io/PortlandStateJavaSummer2021</url>
+  <url>http://YourGitHubUser.github.io/PortlandStateJavaWinter2022</url>
 
   <modules>
   </modules>
@@ -33,7 +33,7 @@ accordingly
   </organization>
   <issueManagement>
     <system>github</system>
-    <url>https://github.com/YourGitHubUser/PortlandStateJavaSummer2021/issues</url>
+    <url>https://github.com/YourGitHubUser/PortlandStateJavaWinter2022/issues</url>
   </issueManagement>
   <licenses>
     <license>
@@ -57,13 +57,13 @@ accordingly
     </developer>
   </developers>
   <scm>
-    <connection>scm:git:git@github.com:YourGitHubUser/PortlandStateJavaSummer2021.git</connection>
+    <connection>scm:git:git@github.com:YourGitHubUser/PortlandStateJavaWinter2022.git</connection>
   </scm>
   <distributionManagement>
     <site>
       <id>gh-pages</id>
       <name>GitHub Pages</name>
-      <url>github:http://YourGitHubUser.github.io/PortlandStateJavaSummer2021/</url>
+      <url>github:http://YourGitHubUser.github.io/PortlandStateJavaWinter2022/</url>
     </site>
   </distributionManagement>
 
