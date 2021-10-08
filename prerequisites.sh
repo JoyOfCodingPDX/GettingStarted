@@ -5,16 +5,16 @@
 function runningOnPSUMachine() {
     psuHostname=$(hostname --long 2>&1 | grep "cs.pdx.edu")
     if [[ -n "$psuHostname" ]]; then
-        echo "You are running on a PSU machine"
+        echo "You are running on PSU machine: ${psuHostname}"
     else
 	echo "This script must be run on a PSU Linux machine"
 	return 1
     fi
 
-    if [[ -f "/u/whitlock/jars/grader.jar" ]]; then
+    if [[ -r "/u/whitlock/jars/grader.jar" ]]; then
 	echo "grader jar is present"
     else
-	echo "Could not find the grader jar on $(psuHostname).  Did Dave forget to make it world-readable again?  Ask him."
+	echo "Could not find the grader jar on ${psuHostname}.  Did Dave forget to make it world-readable again?  Ask him."
 	return 1
     fi
 }
