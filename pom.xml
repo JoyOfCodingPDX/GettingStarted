@@ -56,6 +56,21 @@ accordingly
       <timezone>-7</timezone>
     </developer>
   </developers>
+
+  <repositories>
+    <repository>
+      <id>maven-snapshots</id>
+      <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+      <layout>default</layout>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+
   <scm>
     <connection>scm:git:git@github.com:YourGitHubUser/PortlandStateJavaWinter2022.git</connection>
   </scm>
