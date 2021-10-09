@@ -1,5 +1,17 @@
 #!/bin/sh
 
+## Load the login id from the me.xml file
+##
+## awk command from here: https://stackoverflow.com/questions/14054203/extract-xml-tag-value-using-awk-command
+
+function getLoginIdFromXmlFile() {
+    xmlFile="me.xml"
+    if [[ -r ${xmlFile} ]]; then
+	awk -F '[<>]' '/id/{print $3}' ${xmlFile}
+	return
+    fi
+}
+
 ## Check to see if this script is run on one of the PSU CECS Linux machines
 
 function runningOnPSUMachine() {
