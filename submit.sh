@@ -18,16 +18,22 @@ if ! checkForJava; then
 fi
 
 project=$1
-xmlFile=$(dirname "$0")/me.xml
-if [[ "$project" == "Project4"  ]]; then
-  directory="apptbook-web"
 
-elif [[ "$project" == "Project0"  ]]; then
+if [[ "$project" == "Project0"  ]]; then
   directory="student"
+
+elif [[ "$project" == "Project4"  ]]; then
+  directory="apptbook-web"
 
 else
   directory="apptbook"
 fi
 
-java -cp /u/whitlock/jars/grader.jar edu.pdx.cs410J.grader.Submit ${project} ${xmlFile} ${directory}/src
+top=$(dirname "$0")
+xmlFile=${top}/me.xml
+projectDirectory=${top}/${directory}
+
+${top}/mvnw --file ${projectDirectory}/pom.xml -Dgrader clean verify
+
+java -cp /u/whitlock/jars/grader.jar edu.pdx.cs410J.grader.Submit ${project} ${xmlFile} ${projectDirectory}/src
 
