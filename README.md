@@ -163,7 +163,7 @@ laptop or local development machine.
 $ ./survey.sh
 ```
 
-After filling out the survey, commit the `me.xml` file to your git repository so it can be used by the submit script.
+After filling out the survey, commit the `me.xml` file to your git repository, so it can be used by the submit script.
 
 ```sh
 $ git add me.xml
@@ -195,7 +195,7 @@ argument which is your MCECS user id.  This one-word user id (mine is
 `whitlock`) is used to uniquely identify your code and is included in
 the name of the Java package for the project.  (It is important that 
 you consistently use this user id in the course.  For instance, please
-use your MCECS user id when you run the `Survey` and `Submit` programs.)
+use your MCECS user id when you run the `survey.sh` and `submit.sh`scripts.)
 
 ```sh
 $ ./createProject0.sh your-mcecs-user-id
@@ -204,9 +204,11 @@ $ ./createProject0.sh your-mcecs-user-id
 (Note that in this document, I always prefix executables with `./` to
 ensure that the executable can be found even if you don't have `.` on
 your `PATH`.  Note also that for people who are developing on Windows
-machines, there is a `createProject0.cmd` that does the same thing as
+machines, there is a `createProject1.cmd` that does the same thing as
 the shell script, but doesn't have as nice error checking.  Students
-have not been able to get the shell script to work under cygwin.)
+have not been able to get the shell script to work under cygwin.  It
+is okay to create the project on Linux and then develop it on Windows,
+using GitHub to share code across machines.)
 
 This script will generate a new Maven project in a directory named
 `student` for [Project
@@ -236,7 +238,7 @@ clone by adding the directory to git.
 
 ```sh
 $ ./mvnw clean     # Remove files that shouldn't be commited to version control
-$ cd ..    # to PortlandStateJavaWinter2022 directory
+$ cd ..            # to PortlandStateJavaWinter2022 directory
 $ git add student
 $ git commit -m "Added source files for student project"
 ```
@@ -269,7 +271,7 @@ yourself in this situation, close the IntelliJ project, and delete all
 While your projects can be developed on any machine, they must be
 submitted on one of the CS Department's Linux machines.  This not only
 encourages you to build and test your code on the machines on which I
-will test your code, it is necessary because the `Submit` program
+will test your code, it is necessary because the `submit.sh` script
 sends an email through a PSU-managed SMTP server.
 
 GitHub makes it very easy to get a copy of your code on any machine.
