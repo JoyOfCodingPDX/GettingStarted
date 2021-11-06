@@ -335,6 +335,46 @@ The parent project also allows you to create a multi-module [Maven
 site](https://maven.apache.org/guides/mini/guide-site.html) for all of
 your projects.
 
+### What's the deal with warnings about an incorrect parent POM?
+
+As you create Maven projects in this repository, you may encounter warnings like this when running `mvnw`:
+
+```
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for edu.pdx.cs410J.whitlock:apptbook:jar:2022.0.0
+[WARNING] 'parent.relativePath' of POM edu.pdx.cs410J.whitlock:apptbook:2022.0.0 (PortlandStateJavaWinter2022/apptbook/pom.xml) points at edu.pdx.cs410J.whitlock:PortlandStateJavaWinter2022 instead of io.github.davidwhitlock.cs410J:cs410j, please verify your project structure @ line 3, column 11
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+```
+
+This is a side effect of the Maven projects that are created by the scripts and the archetypes they are created from.
+
+These warning are not problematic and you do **not** need to do anything about them.  However, they are annoying.
+
+In order to remove them, you'll need to adjust the `<parent>` section of the `pom.xml` file in your projects.  
+When created, the `pom.xml` specify a parent of _my_ top-level POM, something like
+
+```xml
+  <parent>
+    <artifactId>cs410j</artifactId>
+    <groupId>io.github.davidwhitlock.cs410J</groupId>
+    <version>2022.0.0</version>
+  </parent>
+```
+
+To remove this warning, you'll want to change it to _your_ top-level POM (whose parent is my top-level POM), something like:
+
+```xml
+  <parent>
+    <artifactId>PortlandStateJavaWinter2022</artifactId>
+    <groupId>edu.pdx.cs410J.your-mcecs-user-id</groupId>
+    <version>2022.0.0</version>
+  </parent>
+```
+
 ## How can I create a website for the projects in this repository?
 
 Running `mvn site` from the root directory of this repository will
