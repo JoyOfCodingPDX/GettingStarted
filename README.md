@@ -134,7 +134,7 @@ OpenJDK Runtime Environment (build 16.0.1+9-24)
 OpenJDK 64-Bit Server VM (build 16.0.1+9-24, mixed mode, sharing)
 ```
 
-#### Configuring the JDK on the PSU Linux machines
+#### How do I configure  the JDK on the PSU Linux machines?
 
 Regardless of where your code is developed, it will be tested on the [MCECS Linux machines](https://cat.pdx.edu/platforms/linux/) 
 (the machines in the `linux.cecs.pdx.edu` cluster).  Furthermore, projects can only be submitted
@@ -150,7 +150,7 @@ Alternatively, if you are familiar with configuring the UNIX execution PATH, you
 environment variable to refer to the directory in which the JDK is installed and then add `$JAVA_HOME/bin` to 
 your `PATH` environment variable.  Feel free to consult `/u/whitlock/.bashrc` for examples.
 
-#### Running the `survey.sh` script
+#### What is the `survey.sh` script?
 
 The reason that this course can scale to support so many students is that many of the time-consuming "overhead"
 activities have been automated.  For instance, extracting project submissions, running projects through the grading
@@ -180,7 +180,7 @@ $ git commit -m "Added information about myself from the survey program"
 $ git push
 ```
 
-#### Installing the JDK on your personal machine
+#### How do I install the JDK on my personal machine?
 
 For most of the projects in this course, it is possible (although, not optimal) to develop your code using the
 tools on the MCECS Linux machines.  However, it is highly recommended to use your personal desktop or laptop to
@@ -384,6 +384,65 @@ To remove this warning, you'll want to change it to _your_ top-level POM (whose 
   </parent>
 ```
 
+## How can I use a debugger to uncover the source of problems with my projects?
+
+Test-driven development encourages you to write code in small increments and provides you with a suite of tests that
+validate that your code still works as expected as you make changes.  However, sometimes a test will fail or the
+command line program will not behave as expected for reasons that aren't clear.  In these situations, a debugger
+may provide insight that allows you to resolve issues with your code.  Running the Java Virtual Machine
+(the `java` command line tool) with the appropriate options enables a debugger client (such as IntelliJ) to connect
+to the Virtual Machine.  In turn, this enables the developer to set breakpoints to pause program execution and
+inspect data/objects of running programs.  While using a debugger may take some getting used to, it is far faster
+and more powerful than sprinkling `println`s all over your code!
+
+IntelliJ offers some [very powerful features](https://www.jetbrains.com/help/idea/debugging-your-first-java-application.html)
+for debugging Java programs and has great support for running tests and `main` programs under a debugger.
+
+However, if you are executing Java programs from the command line (either running your `main` program directly or
+running automated tests using maven), you must configure the JVM to allow [IntelliJ to
+attach](https://www.jetbrains.com/help/idea/tutorial-remote-debug.html) to the "remote" Java process.
+
+In order to debug code running as an executable jar, you must specify the `-agentlib` option to the JVM in addition
+to the `-jar` option:
+
+```shell
+java -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=*:5005 -jar target/student-2022.0.0-SNAPSHOT.jar 
+```
+
+The above `-agentlib` option causes the JVM to output a (rather cryptic) informational message indicating that the JVM
+is listening on port `5005` for a debugger (such as IntelliJ) to attach.
+
+```shell
+Listening for transport dt_socket at address: 5005
+```
+
+For command line programs, it is important that the `suspend` configuration property have a value of `y`.  This
+instructs the JVM to not execute the `main` method _until_ a debugger has attached.  When the value of `suspend` is
+`n`, the program will begin execution and will likely complete before a debugger has attached. 
+
+Maven is a program written in Java that builds Java projects.  When the `mvnw` script is run, it runs Maven using a
+Java Virtual Machine.  If you want to attach a debugger to a Maven build that, say, has failing unit tests, you
+don't add the `-agentlib` option to the `mvnw` command line.  Instead, you specify the `-agentlib` option in the
+`MAVEN_OPTS` environment variable.  
+
+```shell
+# On UNIX
+export MAVEN_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=*:5005
+```
+
+```shell
+REM In Windows command environment 
+set MAVEN_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=*:5005
+```
+
+The `mvnw` script includes the value of `MAVEN_OPTS` when it assembles the `java` command line that ultimately runs
+Maven.
+
+When enabling Maven to be debugged, you may want to consider using `suspend=n`.  You'll likely have time to connect a
+debugger to the Maven process before the code you want to debug (unit/integration tests) is invoked by the Maven build.
+In particular, you'll probably want to use `suspend=n` when Maven is used to run the Jetty web server in the REST
+project. 
+
 ## How can I create a website for the projects in this repository?
 
 Running `mvn site` from the root directory of this repository will
@@ -393,7 +452,7 @@ Maven site to generate correctly, the sub-projects must specify that
 their parent project is the `PortlandStateJavaWinter2022` project in
 your group:
 
-```
+```xml
   <parent>
     <artifactId>PortlandStateJavaWinter2022</artifactId>
     <groupId>edu.pdx.cs410J.whitlock</groupId>
@@ -414,7 +473,7 @@ $ git push --set-upstream origin gh-pages
 $ git checkout main
 ```
 
-The you can generate and publish your website using the below
+Then, you can generate and publish your website using the below
 commands.  Note that before you can do this, you must replace
 instances of `YourGitHubUser` with your GitHub username in the
 top-level (parent) `pom.xml` file.  (Note that it is essential that
