@@ -134,7 +134,7 @@ OpenJDK Runtime Environment (build 16.0.1+9-24)
 OpenJDK 64-Bit Server VM (build 16.0.1+9-24, mixed mode, sharing)
 ```
 
-#### How do I configure  the JDK on the PSU Linux machines?
+#### How do I configure the JDK on the PSU Linux machines?
 
 Regardless of where your code is developed, it will be tested on the [MCECS Linux machines](https://cat.pdx.edu/platforms/linux/) 
 (the machines in the `linux.cecs.pdx.edu` cluster).  Furthermore, projects can only be submitted
