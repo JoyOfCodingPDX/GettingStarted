@@ -22,10 +22,19 @@ from the [course's website](http://web.cecs.pdx.edu/~whitlock/).
 
 ## How do I use this repository?
 
-In order to use this repository, you must [intall
+In order to use this repository, you must have a Git environment available on your development machine.
+I recommend [intalling
 git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) on
-your local machine.  Next you need to make a clone of the repository.
+your development machine to gain experience with the `git` command line tools (or the [GitHub 
+Desktop](https://desktop.github.com/) tools).  If you are not able to get Git working on your development
+machine, [IntelliJ has really great support for Git](https://www.jetbrains.com/help/idea/using-git-integration.html)
+and makes it easy to perform fundamental clone/commit/push/pull Git operations.  (Note that IntelliJ
+does not make it easy to perform the "bare clone" steps described below.  If you're exclusively using IntelliJ
+for Git on your development machine, you should perform the "bare clone" steps on the PSU Linux machines to
+populate your development Git repository.)
 
+After you have configured Git on your development machine, you need to make a clone of the repository in which
+you can do your work.
 If you simply make a `git clone` of this GitHub repository on your
 local machine, you can commit changes to your local repository, but
 you can't "push" your changes to the repository hosted on GitHub.
@@ -33,7 +42,7 @@ This is because I own this GitHub repository and you do not have
 permission to push changes from your local repository into my
 repository.  Even if I did give you permission to push to my
 repository, we don't want the source code that you wrote for your
-projects to be available publically for everyone to see.
+projects to be available publicly for everyone to see.
 
 However, it is very useful to leverage git (and GitHub) to
 easily move that code between multiple machines.  It would enable you
