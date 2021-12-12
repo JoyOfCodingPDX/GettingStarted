@@ -1,26 +1,31 @@
 #!/bin/bash
 
-source checkForJava.sh
+source prerequisites.sh
 
 if ! checkForJava; then
     echo "** Java is not configured correctly in your environment"
     exit 1
 fi
 
-if [ $# -lt 1 ]; then
-  echo "** Missing your student id"
-  exit 1
+if [[ $# -gt 0 ]]; then
+    loginId=$1
+
+else
+    loginId=$(getLoginIdFromXmlFile)
+    if [[ -z "${loginId}" ]]; then
+	echo "** Could not load login id from me.xml"
+	exit 1
+    fi	
 fi
 
-
-studentId=$1
+echo "** Creating project for ${loginId}"
 
 ./mvnw --batch-mode archetype:generate \
   -DinteractiveMode=false \
   -DarchetypeGroupId=io.github.davidwhitlock.cs410J \
   -DarchetypeArtifactId=student-archetype \
-  -DarchetypeVersion=2021.3.0 \
-  -DgroupId=edu.pdx.cs410J.${studentId} \
+  -DarchetypeVersion=2022.0.0 \
+  -DgroupId=edu.pdx.cs410J.${loginId} \
   -DartifactId=student \
-  -Dpackage=edu.pdx.cs410J.${studentId} \
-  -Dversion=2021.0.0
+  -Dpackage=edu.pdx.cs410J.${loginId} \
+  -Dversion=2022.0.0

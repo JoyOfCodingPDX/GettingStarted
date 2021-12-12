@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source checkForJava.sh
+source prerequisites.sh
 
 if ! checkForJava; then
     echo "** Java is not configured correctly in your environment"
@@ -24,8 +24,8 @@ studentId=$2
   -DinteractiveMode=false \
   -DarchetypeGroupId=io.github.davidwhitlock.cs410J \
   -DarchetypeArtifactId=kata-archetype \
-  -DarchetypeVersion=2021.3.0 \
+  -DarchetypeVersion=2022.0.0 \
   -DgroupId=edu.pdx.cs410J.${studentId} \
   -DartifactId=$projectName \
   -Dpackage=edu.pdx.cs410J.${studentId} \
-  -Dversion=2021.0.0
+  -Dversion=2022.0.0

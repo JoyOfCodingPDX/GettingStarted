@@ -1,4 +1,4 @@
-[![Java CI with Maven](https://github.com/YourGitHubId/PortlandStateJavaSummer2021/actions/workflows/maven.yml/badge.svg)](https://github.com/YourGitHubId/PortlandStateJavaSummer2021/actions/workflows/maven.yml)
+[![Java CI with Maven](https://github.com/YourGitHubId/PortlandStateJavaWinter2022/actions/workflows/maven.yml/badge.svg)](https://github.com/YourGitHubId/PortlandStateJavaWinter2022/actions/workflows/maven.yml)
 
 # Getting Started with Advanced Programming with Java
 
@@ -22,10 +22,19 @@ from the [course's website](http://web.cecs.pdx.edu/~whitlock/).
 
 ## How do I use this repository?
 
-In order to use this repository, you must [intall
+In order to use this repository, you must have a Git environment available on your development machine.
+I recommend [intalling
 git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) on
-your local machine.  Next you need to make a clone of the repository.
+your development machine to gain experience with the `git` command line tools (or the [GitHub 
+Desktop](https://desktop.github.com/) tools).  If you are not able to get Git working on your development
+machine, [IntelliJ has really great support for Git](https://www.jetbrains.com/help/idea/using-git-integration.html)
+and makes it easy to perform fundamental clone/commit/push/pull Git operations.  (Note that IntelliJ
+does not make it easy to perform the "bare clone" steps described below.  If you're exclusively using IntelliJ
+for Git on your development machine, you should perform the "bare clone" steps on the PSU Linux machines to
+populate your development Git repository.)
 
+After you have configured Git on your development machine, you need to make a clone of the repository in which
+you can do your work.
 If you simply make a `git clone` of this GitHub repository on your
 local machine, you can commit changes to your local repository, but
 you can't "push" your changes to the repository hosted on GitHub.
@@ -33,7 +42,7 @@ This is because I own this GitHub repository and you do not have
 permission to push changes from your local repository into my
 repository.  Even if I did give you permission to push to my
 repository, we don't want the source code that you wrote for your
-projects to be available publically for everyone to see.
+projects to be available publicly for everyone to see.
 
 However, it is very useful to leverage git (and GitHub) to
 easily move that code between multiple machines.  It would enable you
@@ -49,7 +58,7 @@ developer"](https://education.github.com/pack) account that gives you
 free private repositories.  Then [create a private GitHub
 repository](https://help.github.com/en/articles/creating-a-new-repository)
 for your source code for this course.  (In this example, the
-repository is named "PortlandStateJavaSummer2021".)  Note that you do
+repository is named "PortlandStateJavaWinter2022".)  Note that you do
 **not** want to "Initialize this repository with a README".  You want
 to create a completely empty repository so that you can initially
 populate it from my (this) repository.
@@ -86,7 +95,7 @@ Then push the bare clone to your newly-created private repository.
 
 ```sh
 $ cd PortlandStateJavaGettingStarted.git
-$ git push --mirror https://github.com/YourGitHubUser/PortlandStateJavaSummer2021.git
+$ git push --mirror https://github.com/YourGitHubUser/PortlandStateJavaWinter2022.git
 ```
 
 If you view your repository on GitHub, you should see the changes
@@ -98,7 +107,7 @@ repository to work with.
 ```sh
 $ cd ..
 $ rm -rf PortlandStateJavaGettingStarted.git
-$ git clone https://github.com/YourGitHubUser/PortlandStateJavaSummer2021.git
+$ git clone https://github.com/YourGitHubUser/PortlandStateJavaWinter2022.git
 ```
 
 ### What do I need to do before I can use this repository?
@@ -107,7 +116,7 @@ The following command lines assume that you are running in the
 directory created by cloning the repository.
 
 ```sh
-$ cd PortlandStateJavaSummer2021
+$ cd PortlandStateJavaWinter2022
 ```
 
 ### How do I use the Java Development Kit?
@@ -125,7 +134,7 @@ OpenJDK Runtime Environment (build 16.0.1+9-24)
 OpenJDK 64-Bit Server VM (build 16.0.1+9-24, mixed mode, sharing)
 ```
 
-#### Configuring the JDK on the PSU Linux machines
+#### How do I configure the JDK on the PSU Linux machines?
 
 Regardless of where your code is developed, it will be tested on the [MCECS Linux machines](https://cat.pdx.edu/platforms/linux/) 
 (the machines in the `linux.cecs.pdx.edu` cluster).  Furthermore, projects can only be submitted
@@ -141,7 +150,37 @@ Alternatively, if you are familiar with configuring the UNIX execution PATH, you
 environment variable to refer to the directory in which the JDK is installed and then add `$JAVA_HOME/bin` to 
 your `PATH` environment variable.  Feel free to consult `/u/whitlock/.bashrc` for examples.
 
-#### Installing the JDK on your personal machine
+#### What is the `survey.sh` script?
+
+The reason that this course can scale to support so many students is that many of the time-consuming "overhead"
+activities have been automated.  For instance, extracting project submissions, running projects through the grading
+scripts, and recording grades are automated.  This frees up the instructor and the Graders to focus on more valuable
+activities like answering student questions and providing feedback.  The automation is enabled by conventions and 
+tools that standardize the structure of projects (using Maven) and the process for submitting the projects.
+
+An important initial step in this course it to run the `survey.sh` script.  This script executes a Java program that
+asks you some questions about yourself (such as your name, email address, and CECS login id) and saves that 
+information to a `me.xml` in the directory in which the script is run.  (It also emails the XML file to the Grader
+so that the Grader knows who you are, can contact you, and can record your grades.)  The information in this XML file
+is used by other scripts in this repository to create the initial files for your projects and for submitting your
+projects to the Grader.
+
+Note that the `survey.sh` script **must be executed on one of the PSU CECS Linux machines**.  It cannot be run on your
+laptop or local development machine.
+
+```sh
+$ ./survey.sh
+```
+
+After filling out the survey, commit the `me.xml` file to your git repository, so it can be used by the submit script.
+
+```sh
+$ git add me.xml
+$ git commit -m "Added information about myself from the survey program"
+$ git push
+```
+
+#### How do I install the JDK on my personal machine?
 
 For most of the projects in this course, it is possible (although, not optimal) to develop your code using the
 tools on the MCECS Linux machines.  However, it is highly recommended to use your personal desktop or laptop to
@@ -165,7 +204,7 @@ argument which is your MCECS user id.  This one-word user id (mine is
 `whitlock`) is used to uniquely identify your code and is included in
 the name of the Java package for the project.  (It is important that 
 you consistently use this user id in the course.  For instance, please
-use your MCECS user id when you run the `Survey` and `Submit` programs.)
+use your MCECS user id when you run the `survey.sh` and `submit.sh`scripts.)
 
 ```sh
 $ ./createProject0.sh your-mcecs-user-id
@@ -174,9 +213,11 @@ $ ./createProject0.sh your-mcecs-user-id
 (Note that in this document, I always prefix executables with `./` to
 ensure that the executable can be found even if you don't have `.` on
 your `PATH`.  Note also that for people who are developing on Windows
-machines, there is a `createProject0.cmd` that does the same thing as
+machines, there is a `createProject1.cmd` that does the same thing as
 the shell script, but doesn't have as nice error checking.  Students
-have not been able to get the shell script to work under cygwin.)
+have not been able to get the shell script to work under cygwin.  It
+is okay to create the project on Linux and then develop it on Windows,
+using GitHub to share code across machines.)
 
 This script will generate a new Maven project in a directory named
 `student` for [Project
@@ -206,7 +247,7 @@ clone by adding the directory to git.
 
 ```sh
 $ ./mvnw clean     # Remove files that shouldn't be commited to version control
-$ cd ..    # to PortlandStateJavaSummer2021 directory
+$ cd ..            # to PortlandStateJavaWinter2022 directory
 $ git add student
 $ git commit -m "Added source files for student project"
 ```
@@ -239,7 +280,7 @@ yourself in this situation, close the IntelliJ project, and delete all
 While your projects can be developed on any machine, they must be
 submitted on one of the CS Department's Linux machines.  This not only
 encourages you to build and test your code on the machines on which I
-will test your code, it is necessary because the `Submit` program
+will test your code, it is necessary because the `submit.sh` script
 sends an email through a PSU-managed SMTP server.
 
 GitHub makes it very easy to get a copy of your code on any machine.
@@ -252,7 +293,7 @@ After `ssh`ing to one of the CS Department's Linux machines, you can
 make a clone of your GitHub repository using with:
 
 ```
-$ git clone https://github.com/YourGitHubId/PortlandStateJavaSummer2021.git
+$ git clone https://github.com/YourGitHubId/PortlandStateJavaWinter2022.git
 ```
 
 ### How can I get changes that other people make into my clone?
@@ -266,7 +307,7 @@ First, configure your repository to have this repository to be a
 "remote" named "upstream".
 
 ```sh
-$ cd PortlandStateJavaSummer2021
+$ cd PortlandStateJavaWinter2022
 $ git remote add upstream https://github.com/DavidWhitlock/PortlandStateJavaGettingStarted.git
 ```
 
@@ -303,20 +344,119 @@ The parent project also allows you to create a multi-module [Maven
 site](https://maven.apache.org/guides/mini/guide-site.html) for all of
 your projects.
 
+### What's the deal with warnings about an incorrect parent POM?
+
+As you create Maven projects in this repository, you may encounter warnings like this when running `mvnw`:
+
+```
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for edu.pdx.cs410J.whitlock:apptbook:jar:2022.0.0
+[WARNING] 'parent.relativePath' of POM edu.pdx.cs410J.whitlock:apptbook:2022.0.0 (PortlandStateJavaWinter2022/apptbook/pom.xml) points at edu.pdx.cs410J.whitlock:PortlandStateJavaWinter2022 instead of io.github.davidwhitlock.cs410J:cs410j, please verify your project structure @ line 3, column 11
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+```
+
+This is a side effect of the Maven projects that are created by the scripts and the archetypes they are created from.
+
+These warning are not problematic and you do **not** need to do anything about them.  However, they are annoying.
+
+In order to remove them, you'll need to adjust the `<parent>` section of the `pom.xml` file in your projects.  
+When created, the `pom.xml` specify a parent of _my_ top-level POM, something like
+
+```xml
+  <parent>
+    <artifactId>cs410j</artifactId>
+    <groupId>io.github.davidwhitlock.cs410J</groupId>
+    <version>2022.0.0</version>
+  </parent>
+```
+
+To remove this warning, you'll want to change it to _your_ top-level POM (whose parent is my top-level POM), something like:
+
+```xml
+  <parent>
+    <artifactId>PortlandStateJavaWinter2022</artifactId>
+    <groupId>edu.pdx.cs410J.your-mcecs-user-id</groupId>
+    <version>2022.0.0</version>
+  </parent>
+```
+
+## How can I use a debugger to uncover the source of problems with my projects?
+
+Test-driven development encourages you to write code in small increments and provides you with a suite of tests that
+validate that your code still works as expected as you make changes.  However, sometimes a test will fail or the
+command line program will not behave as expected for reasons that aren't clear.  In these situations, a debugger
+may provide insight that allows you to resolve issues with your code.  Running the Java Virtual Machine
+(the `java` command line tool) with the appropriate options enables a debugger client (such as IntelliJ) to connect
+to the Virtual Machine.  In turn, this enables the developer to set breakpoints to pause program execution and
+inspect data/objects of running programs.  While using a debugger may take some getting used to, it is far faster
+and more powerful than sprinkling `println`s all over your code!
+
+IntelliJ offers some [very powerful features](https://www.jetbrains.com/help/idea/debugging-your-first-java-application.html)
+for debugging Java programs and has great support for running tests and `main` programs under a debugger.
+
+However, if you are executing Java programs from the command line (either running your `main` program directly or
+running automated tests using maven), you must configure the JVM to allow [IntelliJ to
+attach](https://www.jetbrains.com/help/idea/tutorial-remote-debug.html) to the "remote" Java process.
+
+In order to debug code running as an executable jar, you must specify the `-agentlib` option to the JVM in addition
+to the `-jar` option:
+
+```shell
+java -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=*:5005 -jar target/student-2022.0.0.jar 
+```
+
+The above `-agentlib` option causes the JVM to output a (rather cryptic) informational message indicating that the JVM
+is listening on port `5005` for a debugger (such as IntelliJ) to attach.
+
+```shell
+Listening for transport dt_socket at address: 5005
+```
+
+For command line programs, it is important that the `suspend` configuration property have a value of `y`.  This
+instructs the JVM to not execute the `main` method _until_ a debugger has attached.  When the value of `suspend` is
+`n`, the program will begin execution and will likely complete before a debugger has attached. 
+
+Maven is a program written in Java that builds Java projects.  When the `mvnw` script is run, it runs Maven using a
+Java Virtual Machine.  If you want to attach a debugger to a Maven build that, say, has failing unit tests, you
+don't add the `-agentlib` option to the `mvnw` command line.  Instead, you specify the `-agentlib` option in the
+`MAVEN_OPTS` environment variable.  
+
+```shell
+# On UNIX
+export MAVEN_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=*:5005
+```
+
+```shell
+REM In Windows command environment 
+set MAVEN_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=*:5005
+```
+
+The `mvnw` script includes the value of `MAVEN_OPTS` when it assembles the `java` command line that ultimately runs
+Maven.
+
+When enabling Maven to be debugged, you may want to consider using `suspend=n`.  You'll likely have time to connect a
+debugger to the Maven process before the code you want to debug (unit/integration tests) is invoked by the Maven build.
+In particular, you'll probably want to use `suspend=n` when Maven is used to run the Jetty web server in the REST
+project. 
+
 ## How can I create a website for the projects in this repository?
 
 Running `mvn site` from the root directory of this repository will
 generate a website that provides lots of information (reports, etc.) 
 about the Maven projects.  Note that in order for your multi-project
 Maven site to generate correctly, the sub-projects must specify that
-their parent project is the `PortlandStateJavaSummer2021` project in
+their parent project is the `PortlandStateJavaWinter2022` project in
 your group:
 
-```
+```xml
   <parent>
-    <artifactId>PortlandStateJavaSummer2021</artifactId>
-    <groupId>edu.pdx.cs410J.whitlock</groupId>
-    <version>2021.0.0</version>
+    <artifactId>PortlandStateJavaWinter2022</artifactId>
+    <groupId>edu.pdx.cs410J.your-mcecs-user-id</groupId>
+    <version>2022.0.0</version>
   </parent>
 ```
 
@@ -333,9 +473,9 @@ $ git push --set-upstream origin gh-pages
 $ git checkout main
 ```
 
-The you can generate and publish your website using the below
+Then, you can generate and publish your website using the below
 commands.  Note that before you can do this, you must replace
-instances of `YourGitHubUser` with your GitHub user name in the
+instances of `YourGitHubUser` with your GitHub username in the
 top-level (parent) `pom.xml` file.  (Note that it is essential that
 your GitHub id be **lowercase letters** in the
 `distributionManagement/url` section of the `pom.xml` file.)
@@ -350,7 +490,7 @@ You can open `target/staging/index.html` in your web browse to see
 what your site will look like.
 
 Verify that your website is available at a URL like:
-https://yourgithubuser.github.io/PortlandStateJavaSummer2021
+https://yourgithubuser.github.io/PortlandStateJavaWinter2022
 
 ## How can I improve this repository?
 
@@ -361,7 +501,7 @@ Java.
 Feel free to [create issues](../../issues) for this repository if you find
 something missing or confusing.
 
-It's even better, though, when someone contribute their own changes
+It's even better, though, when someone contributes their own changes
 (add new scripts, augment documentation, fix type-os, etc.), to this
 repository.  Please make a (public)
 [fork](https://help.github.com/en/articles/fork-a-repo) of this

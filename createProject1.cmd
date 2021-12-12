@@ -10,11 +10,11 @@ mvnw.cmd --batch-mode archetype:generate ^
   -DinteractiveMode=false ^
   -DarchetypeGroupId=io.github.davidwhitlock.cs410J ^
   -DarchetypeArtifactId=apptbook-archetype ^
-  -DarchetypeVersion=2021.3.1 ^
+  -DarchetypeVersion=2022.0.0 ^
   -DgroupId=edu.pdx.cs410J.%studentId% ^
   -DartifactId=apptbook ^
   -Dpackage=edu.pdx.cs410J.%studentId% ^
-  -Dversion=2021.0.0
+  -Dversion=2022.0.0
 
 exit 0
 
