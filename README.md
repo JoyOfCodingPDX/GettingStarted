@@ -406,7 +406,7 @@ In order to debug code running as an executable jar, you must specify the `-agen
 to the `-jar` option:
 
 ```shell
-java -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=*:5005 -jar target/student-2022.0.0-SNAPSHOT.jar 
+java -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=*:5005 -jar target/student-2022.0.0.jar 
 ```
 
 The above `-agentlib` option causes the JVM to output a (rather cryptic) informational message indicating that the JVM
@@ -455,7 +455,7 @@ your group:
 ```xml
   <parent>
     <artifactId>PortlandStateJavaWinter2022</artifactId>
-    <groupId>edu.pdx.cs410J.whitlock</groupId>
+    <groupId>edu.pdx.cs410J.your-mcecs-user-id</groupId>
     <version>2022.0.0</version>
   </parent>
 ```
