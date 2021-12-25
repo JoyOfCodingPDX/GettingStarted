@@ -7,8 +7,8 @@
 function getLoginIdFromXmlFile() {
     xmlFile="me.xml"
     if [[ -r ${xmlFile} ]]; then
-	awk -F '[<>]' '/id/{print $3}' ${xmlFile}
-	return
+      awk -F '[<>]' '/id/{print $3}' ${xmlFile} | head -1
+      return
     fi
 }
 
