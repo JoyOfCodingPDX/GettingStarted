@@ -18,7 +18,7 @@ else
     fi
 fi
 
-echo "** Creating project for ${loginId}
+echo "** Creating project for ${loginId}"
 
 ./mvnw --batch-mode archetype:generate \
   -DinteractiveMode=false \
