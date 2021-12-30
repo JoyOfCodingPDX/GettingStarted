@@ -150,36 +150,6 @@ Alternatively, if you are familiar with configuring the UNIX execution PATH, you
 environment variable to refer to the directory in which the JDK is installed and then add `$JAVA_HOME/bin` to 
 your `PATH` environment variable.  Feel free to consult `/u/whitlock/.bashrc` for examples.
 
-#### What is the `survey.sh` script?
-
-The reason that this course can scale to support so many students is that many of the time-consuming "overhead"
-activities have been automated.  For instance, extracting project submissions, running projects through the grading
-scripts, and recording grades are automated.  This frees up the instructor and the Graders to focus on more valuable
-activities like answering student questions and providing feedback.  The automation is enabled by conventions and 
-tools that standardize the structure of projects (using Maven) and the process for submitting the projects.
-
-An important initial step in this course it to run the `survey.sh` script.  This script executes a Java program that
-asks you some questions about yourself (such as your name, email address, and CECS login id) and saves that 
-information to a `me.xml` in the directory in which the script is run.  (It also emails the XML file to the Grader
-so that the Grader knows who you are, can contact you, and can record your grades.)  The information in this XML file
-is used by other scripts in this repository to create the initial files for your projects and for submitting your
-projects to the Grader.
-
-Note that the `survey.sh` script **must be executed on one of the PSU CECS Linux machines**.  It cannot be run on your
-laptop or local development machine.
-
-```sh
-$ ./survey.sh
-```
-
-After filling out the survey, commit the `me.xml` file to your git repository, so it can be used by the submit script.
-
-```sh
-$ git add me.xml
-$ git commit -m "Added information about myself from the survey program"
-$ git push
-```
-
 #### How do I install the JDK on my personal machine?
 
 For most of the projects in this course, it is possible (although, not optimal) to develop your code using the
@@ -325,6 +295,60 @@ changes back to GitHub ("origin") with:
 ```sh
 $ git push
 ```
+
+## How do I submit my projects?
+
+The reason that this course can scale to support so many students is that many of the time-consuming "overhead"
+activities have been automated.  For instance, extracting project submissions, running projects through the grading
+scripts, and recording grades are automated.  This frees up the instructor and the Graders to focus on more valuable
+activities like answering student questions and providing feedback.  The automation is enabled by conventions and
+tools that standardize the structure of projects (using Maven) and the process for submitting the projects.
+
+### Configuring information about yourself
+
+An important initial step in this course it to run the `survey.sh` script.  This script executes a Java program that
+asks you some questions about yourself (such as your name, email address, and CECS login id) and saves that
+information to a `me.xml` in the directory in which the script is run.  (It also emails the XML file to the Grader
+so that the Grader knows who you are, can contact you, and can record your grades.)  The information in this XML file
+is used by other scripts in this repository to create the initial files for your projects and for submitting your
+projects to the Grader.
+
+Note that the `survey.sh` script **must be executed on one of the PSU CECS Linux machines**.  It cannot be run on your
+laptop or local development machine.
+
+From the top-level directory of your, run the `survey.sh` script.  It will ask you to enter some information about
+yourself.  This information is used to submit your projects and record your grades. 
+
+```sh
+$ ./survey.sh
+```
+
+After filling out the survey, commit the `me.xml` file to your git repository, so it can be used by the `submit.sh` script.
+
+```sh
+$ git add me.xml
+$ git commit -m "Added information about myself from the survey program"
+$ git push
+```
+
+### Submitting your projects for grading
+
+Projects are submitted using the `submit.sh` script.  Project code is not submitted through Canvas or by emailing the
+instructor.  This script invokes a Java program that zips up the source code and emails it to the Grader.  Like the
+`survey.sh` script, it can only be run on the PSU CECS Linux machines.  This script also builds the project using
+`mvn -Dgrader clean verify` to validate that the code that you are about to submit compiles, the tests succeed, and
+that the tests provide sufficient code coverage.
+
+The `submit.sh` script takes one argument, the name of the Project to submit.  The Project name (number) will determine
+the directory that contains the project's code.  For instance, you can submit Project 1 by running the following command
+from the top-level directory of your git repository clone:
+
+```shell
+$ ./submit.sh Project1
+```
+
+You will be prompted to confirm the files that you want to submit.  The script may take a moment or two to zip the source
+files and email them to the Grader.
 
 ## How do I use the "parent POM"?
 
