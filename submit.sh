@@ -23,10 +23,10 @@ if [[ "$project" == "Project0"  ]]; then
   directory="student"
 
 elif [[ "$project" == "Project4"  ]]; then
-  directory="apptbook-web"
+  directory="airline-web"
 
 else
-  directory="apptbook"
+  directory="airline"
 fi
 
 top=$(dirname "$0")

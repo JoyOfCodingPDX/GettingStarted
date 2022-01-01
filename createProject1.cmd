@@ -9,10 +9,10 @@ set studentId=%1
 mvnw.cmd --batch-mode archetype:generate ^
   -DinteractiveMode=false ^
   -DarchetypeGroupId=io.github.davidwhitlock.cs410J ^
-  -DarchetypeArtifactId=apptbook-archetype ^
+  -DarchetypeArtifactId=airline-archetype ^
   -DarchetypeVersion=2022.0.0 ^
   -DgroupId=edu.pdx.cs410J.%studentId% ^
-  -DartifactId=apptbook ^
+  -DartifactId=airline ^
   -Dpackage=edu.pdx.cs410J.%studentId% ^
   -Dversion=2022.0.0
 
