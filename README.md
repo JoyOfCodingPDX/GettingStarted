@@ -164,6 +164,33 @@ binary for an easy installation and configuration process.  During the
 installation process, select "set the JAVA_HOME" environment variable in order
 for Maven to work correctly on the command line.
 
+### How do I configure information about myself?
+
+An important initial step in this course it to run the `survey.sh` script.  This script executes a Java program that
+asks you some questions about yourself (such as your name, email address, and CECS login id) and saves that
+information to a `me.xml` in the directory in which the script is run.  (It also emails the XML file to the Grader
+so that the Grader knows who you are, can contact you, and can record your grades.)  The information in this XML file
+is used by other scripts in this repository to create the initial files for your projects and for submitting your
+projects to the Grader.
+
+Note that the `survey.sh` script **must be executed on one of the PSU CECS Linux machines**.  It cannot be run on your
+laptop or local development machine.
+
+From the top-level directory of your, run the `survey.sh` script.  It will ask you to enter some information about
+yourself.  This information is used to submit your projects and record your grades.
+
+```sh
+$ ./survey.sh
+```
+
+After filling out the survey, commit the `me.xml` file to your git repository, so it can be used by the `submit.sh` script.
+
+```sh
+$ git add me.xml
+$ git commit -m "Added information about myself from the survey program"
+$ git push
+```
+
 ### How do I create and run my own Java projects?
 
 The primary purpose of this repository is to make it easy to create
@@ -174,10 +201,10 @@ argument which is your MCECS user id.  This one-word user id (mine is
 `whitlock`) is used to uniquely identify your code and is included in
 the name of the Java package for the project.  (It is important that 
 you consistently use this user id in the course.  For instance, please
-use your MCECS user id when you run the `survey.sh` and `submit.sh`scripts.)
+use your MCECS user id when you run the `survey.sh`script.)
 
 ```sh
-$ ./createProject0.sh your-mcecs-user-id
+$ ./createProject0.sh
 ```
 
 (Note that in this document, I always prefix executables with `./` to
@@ -303,35 +330,6 @@ activities have been automated.  For instance, extracting project submissions, r
 scripts, and recording grades are automated.  This frees up the instructor and the Graders to focus on more valuable
 activities like answering student questions and providing feedback.  The automation is enabled by conventions and
 tools that standardize the structure of projects (using Maven) and the process for submitting the projects.
-
-### Configuring information about yourself
-
-An important initial step in this course it to run the `survey.sh` script.  This script executes a Java program that
-asks you some questions about yourself (such as your name, email address, and CECS login id) and saves that
-information to a `me.xml` in the directory in which the script is run.  (It also emails the XML file to the Grader
-so that the Grader knows who you are, can contact you, and can record your grades.)  The information in this XML file
-is used by other scripts in this repository to create the initial files for your projects and for submitting your
-projects to the Grader.
-
-Note that the `survey.sh` script **must be executed on one of the PSU CECS Linux machines**.  It cannot be run on your
-laptop or local development machine.
-
-From the top-level directory of your, run the `survey.sh` script.  It will ask you to enter some information about
-yourself.  This information is used to submit your projects and record your grades. 
-
-```sh
-$ ./survey.sh
-```
-
-After filling out the survey, commit the `me.xml` file to your git repository, so it can be used by the `submit.sh` script.
-
-```sh
-$ git add me.xml
-$ git commit -m "Added information about myself from the survey program"
-$ git push
-```
-
-### Submitting your projects for grading
 
 Projects are submitted using the `submit.sh` script.  Project code is not submitted through Canvas or by emailing the
 instructor.  This script invokes a Java program that zips up the source code and emails it to the Grader.  Like the
