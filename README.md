@@ -386,7 +386,7 @@ This is a side effect of the Maven projects that are created by the scripts and 
 These warning are not problematic and you do **not** need to do anything about them.  However, they are annoying.
 
 In order to remove them, you'll need to adjust the `<parent>` section of the `pom.xml` file in your projects.  
-When created, the `pom.xml` specify a parent of _my_ top-level POM, something like
+When created, the `pom.xml` files for the projects specify a parent of _my_ top-level POM, something like
 
 ```xml
   <parent>
@@ -396,7 +396,8 @@ When created, the `pom.xml` specify a parent of _my_ top-level POM, something li
   </parent>
 ```
 
-To remove this warning, you'll want to change it to _your_ top-level POM (whose parent is my top-level POM), something like:
+To remove this warning, you'll want to change the parent of the assignment's POM to _your_ top-level POM (whose *parent*
+is my top-level POM) to something like:
 
 ```xml
   <parent>
@@ -405,6 +406,10 @@ To remove this warning, you'll want to change it to _your_ top-level POM (whose 
     <version>2022.0.0</version>
   </parent>
 ```
+
+Note that you should only make this change to the `pom.xml` files for the projects that you create (like `koans`).  
+The `<parent>` of the top-level `pom.xml` should still refer to my `cs410j` POM.  This allows you to inherit Maven
+plugin settings that are necessary for the course assignments.
 
 ## How can I use a debugger to uncover the source of problems with my projects?
 
