@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source $(dirname "$0")/prerequisites.sh
+source "$(dirname "$0")/prerequisites.sh"
 
 if ! runningOnPSUMachine; then
     echo "** This script can only be run on a PSU CECS Linux Machine"
@@ -18,15 +18,27 @@ if ! checkForJava; then
 fi
 
 project=$1
+submitClass="Submit"
 
 if [[ "$project" == "Project0"  ]]; then
   directory="student"
 
+elif [[ "$project" == "koans"  ]]; then
+  directory="koans"
+
 elif [[ "$project" == "Project4"  ]]; then
   directory="airline-web"
 
+elif [[ "$project" == "Project6"  ]]; then
+  directory="airline-android"
+  submitClass="SubmitAndroidProject"
+
 else
   directory="airline"
+fi
+
+if [ $# -gt 1 ]; then
+  comment="-comment $2"
 fi
 
 top=$(dirname "$0")
@@ -35,5 +47,5 @@ projectDirectory=${top}/${directory}
 
 ${top}/mvnw --file ${projectDirectory}/pom.xml -Dgrader clean verify
 
-java -cp /u/whitlock/jars/grader.jar edu.pdx.cs410J.grader.Submit ${project} ${xmlFile} ${projectDirectory}/src
+java -cp /u/whitlock/jars/grader.jar edu.pdx.cs410J.grader.${submitClass} ${comment} "${project}" "${xmlFile}" "${projectDirectory}/src"
 
