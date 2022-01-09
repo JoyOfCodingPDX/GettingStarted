@@ -345,8 +345,13 @@ from the top-level directory of your git repository clone:
 $ ./submit.sh Project1
 ```
 
-You will be prompted to confirm the files that you want to submit.  The script may take a moment or two to zip the source
-files and email them to the Grader.
+You will be prompted to confirm the files that you want to submit.
+
+You will also be asked to provide a rough estimate of the number of hours you spent working on the project.  This 
+optional information will be recorded and reported to future students in aggregate to give them an idea of how much
+time they should plan to spend on projects.  The estimated hours you report will have no bearing on your grade.      
+
+The script may take a moment or two to zip the source files and email them to the Grader.
 
 ## How do I use the "parent POM"?
 
