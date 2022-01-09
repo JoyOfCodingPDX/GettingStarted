@@ -19,12 +19,14 @@ fi
 
 project=$1
 submitClass="Submit"
+mavenGoals="clean verify"
 
 if [[ "$project" == "Project0"  ]]; then
   directory="student"
 
 elif [[ "$project" == "koans"  ]]; then
   directory="koans"
+  mavenGoals="clean exec:java"
 
 elif [[ "$project" == "Project4"  ]]; then
   directory="airline-web"
@@ -44,8 +46,11 @@ fi
 top=$(dirname "$0")
 xmlFile=${top}/me.xml
 projectDirectory=${top}/${directory}
+pomFile=${projectDirectory}/pom.xml
 
-${top}/mvnw --file ${projectDirectory}/pom.xml -Dgrader clean verify
+if [ -f $pomFile ]; then
+  ${top}/mvnw --file ${projectDirectory}/pom.xml -Dgrader ${mavenGoals}
+fi
 
 java -cp /u/whitlock/jars/grader.jar edu.pdx.cs410J.grader.${submitClass} ${comment} "${project}" "${xmlFile}" "${projectDirectory}/src"
 
