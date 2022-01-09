@@ -49,7 +49,10 @@ projectDirectory=${top}/${directory}
 pomFile=${projectDirectory}/pom.xml
 
 if [ -f $pomFile ]; then
-  ${top}/mvnw --file ${projectDirectory}/pom.xml -Dgrader ${mavenGoals}
+  cd ${projectDirectory}
+  chmod +x ./mvnw
+  ./mvnw -Pgrader ${mavenGoals}
+  cd -
 fi
 
 java -cp /u/whitlock/jars/grader.jar edu.pdx.cs410J.grader.${submitClass} ${comment} "${project}" "${xmlFile}" "${projectDirectory}/src"
