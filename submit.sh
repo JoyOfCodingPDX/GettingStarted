@@ -28,7 +28,7 @@ elif [[ "$project" == "koans"  ]]; then
   directory="koans"
   mavenGoals="clean exec:java"
 
-elif [[ "$project" == "Project4"  ]]; then
+elif [[ "$project" == "Project5"  ]]; then
   directory="airline-web"
 
 elif [[ "$project" == "Project6"  ]]; then
