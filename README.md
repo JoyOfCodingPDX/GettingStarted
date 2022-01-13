@@ -77,7 +77,10 @@ discussion about  your code.
 The below `git` command line examples are expressed using UNIX syntax.  They
 are known to work on the CS Department's Linux machines and on MacOS.  Students
 who run on Windows may need to use "Git CMD" instead of "Git Bash" to get 
-authentication with GitHub to work with HTTPS.
+authentication with GitHub to work with HTTPS.  (Note that GitHub will no longer authenticate HTTPS with 
+username/password credentials.  Authenticating with [ssh keys](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)
+or with [personal access tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+is recommended.)
 
 Now, here comes some of the magic.  Make a "bare" clone of my repository.  
 
@@ -271,6 +274,10 @@ project first, none of the project's dependent libraries will be
 available to IntelliJ and your IDE will be very unhappy.  If you find
 yourself in this situation, close the IntelliJ project, and delete all
 `.iml` files and the `.idea` directory associated with Maven project.
+
+Note also that the first time you open up IntelliJ, you must [configure the Java Development Kit
+(JDK)](https://www.jetbrains.com/help/idea/sdk.html#jdk).  Otherwise, IntelliJ will complain that it cannot find classes
+like `java.lang.String`.  There will be a lot of red in the IDE.
 
 ### How can I get a copy of this code on the CS Department's Linux machines?
 
