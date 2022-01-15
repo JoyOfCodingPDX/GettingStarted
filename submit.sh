@@ -40,7 +40,10 @@ else
 fi
 
 if [ $# -gt 1 ]; then
-  comment="-comment $2"
+  comment=$2
+
+else
+  comment=""
 fi
 
 top=$(dirname "$0")
@@ -55,5 +58,5 @@ if [ -f $pomFile ]; then
   cd -
 fi
 
-java -cp /u/whitlock/jars/grader.jar edu.pdx.cs410J.grader.${submitClass} ${comment} "${project}" "${xmlFile}" "${projectDirectory}/src"
+java -cp /u/whitlock/jars/grader.jar edu.pdx.cs410J.grader.${submitClass} -comment "${comment}" "${project}" "${xmlFile}" "${projectDirectory}/src"
 
