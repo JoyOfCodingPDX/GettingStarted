@@ -4,8 +4,8 @@
 
 This repository helps students in [Advanced Programming with
 Java](http://web.cecs.pdx.edu/~whitlock/) get started with the
-programming assignments.  Most noteably, it makes it so students do
-not need install [Apache Maven](https://maven.apache.org/install.html)
+programming assignments.  Most notably, it makes it so students do
+not need to install [Apache Maven](https://maven.apache.org/install.html)
 on their local machines (or the PSU machines) in order to create and
 build the programming projects.  It makes liberal use of the [Maven
 Wrapper](https://github.com/takari/maven-wrapper) script which
@@ -23,7 +23,7 @@ from the [course's website](http://web.cecs.pdx.edu/~whitlock/).
 ## How do I use this repository?
 
 In order to use this repository, you must have a Git environment available on your development machine.
-I recommend [intalling
+I recommend [installing
 git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) on
 your development machine to gain experience with the `git` command line tools (or the [GitHub 
 Desktop](https://desktop.github.com/) tools).  If you are not able to get Git working on your development
@@ -38,7 +38,7 @@ you can do your work.
 If you simply make a `git clone` of this GitHub repository on your
 local machine, you can commit changes to your local repository, but
 you can't "push" your changes to the repository hosted on GitHub.
-This is because I own this GitHub repository and you do not have
+This is because I own this GitHub repository, and you do not have
 permission to push changes from your local repository into my
 repository.  Even if I did give you permission to push to my
 repository, we don't want the source code that you wrote for your
@@ -51,7 +51,7 @@ Department's machines before you submit it.  This is possible to do
 with GitHub, but it requires some extra steps.  GitHub provides some
 [really good
 documentation](https://help.github.com/en/articles/duplicating-a-repository)
-on how to this and I'll summarize it here.
+on how to this, and I'll summarize it here.
 
 First, create a [GitHub "student
 developer"](https://education.github.com/pack) account that gives you
@@ -75,14 +75,14 @@ on your private repository.  I will try my best to engage you in a
 discussion about  your code.
 
 The below `git` command line examples are expressed using UNIX syntax.  They
-are known to work on the CS Department's Linux machines and on MacOS.  Students
+are known to work on the CS Department's Linux machines and on macOS.  Students
 who run on Windows may need to use "Git CMD" instead of "Git Bash" to get 
 authentication with GitHub to work with HTTPS.  (Note that GitHub will no longer authenticate HTTPS with 
 username/password credentials.  Authenticating with [ssh keys](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)
 or with [personal access tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 is recommended.)
 
-Now, here comes some of the magic.  Make a "bare" clone of my repository.  
+Now, here comes some magic.  Make a "bare" clone of my repository.  
 
 ```sh
 $ git clone --bare https://github.com/DavidWhitlock/PortlandStateJavaGettingStarted.git
@@ -156,7 +156,7 @@ your `PATH` environment variable.  Feel free to consult `/u/whitlock/.bashrc` fo
 #### How do I install the JDK on my personal machine?
 
 For most of the projects in this course, it is possible (although, not optimal) to develop your code using the
-tools on the MCECS Linux machines.  However, it is highly recommended to use your personal desktop or laptop to
+tools on the MCECS Linux machines.  However, it is highly recommended using your personal desktop or laptop to
 leverage tools like IntelliJ to author your projects. 
 
 You'll need to install the [latest version of the Java Development
@@ -170,13 +170,13 @@ for Maven to work correctly on the command line.
 ### How do I configure information about myself?
 
 An important initial step in this course it to run the `survey.sh` script.  This script executes a Java program that
-asks you some questions about yourself (such as your name, email address, and CECS login id) and saves that
+asks you some questions about yourself (such as your name, email address, and MCECS login id) and saves that
 information to a `me.xml` in the directory in which the script is run.  (It also emails the XML file to the Grader
 so that the Grader knows who you are, can contact you, and can record your grades.)  The information in this XML file
 is used by other scripts in this repository to create the initial files for your projects and for submitting your
 projects to the Grader.
 
-Note that the `survey.sh` script **must be executed on one of the PSU CECS Linux machines**.  It cannot be run on your
+Note that the `survey.sh` script **must be executed on one of the PSU MCECS Linux machines**.  It cannot be run on your
 laptop or local development machine.
 
 From the top-level directory of your, run the `survey.sh` script.  It will ask you to enter some information about
@@ -246,14 +246,14 @@ After creating a Maven project, you can add the code it to your local
 clone by adding the directory to git.
 
 ```sh
-$ ./mvnw clean     # Remove files that shouldn't be commited to version control
+$ ./mvnw clean     # Remove files that shouldn't be committed to version control
 $ cd ..            # to PortlandStateJavaWinter2022 directory
 $ git add student
 $ git commit -m "Added source files for student project"
 ```
 
 By maintaining your project files in version control, you can easily
-revert back to a known good version if something goes screwy.  You can
+revert to a known good version if something goes screwy.  You can
 also use [git's branching
 features](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
 to easily revisit (and revise) your source code for Project 1 even
@@ -334,13 +334,13 @@ $ git push
 
 The reason that this course can scale to support so many students is that many of the time-consuming "overhead"
 activities have been automated.  For instance, extracting project submissions, running projects through the grading
-scripts, and recording grades are automated.  This frees up the instructor and the Graders to focus on more valuable
+scripts, and recording grades are automated.  This automation frees up the instructor and the Graders to focus on more valuable
 activities like answering student questions and providing feedback.  The automation is enabled by conventions and
 tools that standardize the structure of projects (using Maven) and the process for submitting the projects.
 
 Projects are submitted using the `submit.sh` script.  Project code is not submitted through Canvas or by emailing the
 instructor.  This script invokes a Java program that zips up the source code and emails it to the Grader.  Like the
-`survey.sh` script, it can only be run on the PSU CECS Linux machines.  This script also builds the project using
+`survey.sh` script, it can only be run on the PSU MCECS Linux machines.  This script also builds the project using
 `mvn -Dgrader clean verify` to validate that the code that you are about to submit compiles, the tests succeed, and
 that the tests provide sufficient code coverage.  Make sure that all of your code compiles before you submit it.
 The Grader will not to attempt to debug your code.  Your grade will be reduced significantly if your code does not
@@ -373,7 +373,7 @@ $ ./submit.sh Project1 "I did not have time to get one-digit hours working"
 
 This repository includes a "parent" [pom.xml](pom.xml) file.  You'll
 need to edit the `pom.xml` file to include your user id and GitHub
-user name.  As you create projects (such as Project 1), they will be
+username.  As you create projects (such as Project 1), they will be
 added as sub-modules to the parent POM.
 
 Having a parent project (POM) for all of your projects is convenient
@@ -404,7 +404,7 @@ As you create Maven projects in this repository, you may encounter warnings like
 
 This is a side effect of the Maven projects that are created by the scripts and the archetypes they are created from.
 
-These warning are not problematic and you do **not** need to do anything about them.  However, they are annoying.
+These warning are not problematic, and you do **not** need to do anything about them.  However, they are annoying.
 
 In order to remove them, you'll need to adjust the `<parent>` section of the `pom.xml` file in your projects.  
 When created, the `pom.xml` files for the projects specify a parent of _my_ top-level POM, something like
@@ -542,7 +542,7 @@ https://yourgithubuser.github.io/PortlandStateJavaWinter2022
 
 ## How can I improve this repository?
 
-This repository is kind of thrown together and it ought to evolve to
+This repository is kind of thrown together, and it ought to evolve to
 meet the needs of the students who take Advanced Programming with
 Java.  
 
