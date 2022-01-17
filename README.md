@@ -279,6 +279,9 @@ Note also that the first time you open up IntelliJ, you must [configure the Java
 (JDK)](https://www.jetbrains.com/help/idea/sdk.html#jdk).  Otherwise, IntelliJ will complain that it cannot find classes
 like `java.lang.String`.  There will be a lot of red in the IDE.
 
+Some students have used [IntelliJ to run Maven commands](https://www.jetbrains.com/help/idea/work-with-maven-goals.html)
+which alleviated the need for them to install a JDK and Git in their local development environment. 
+
 ### How can I get a copy of this code on the CS Department's Linux machines?
 
 While your projects can be developed on any machine, they must be
