@@ -20,6 +20,7 @@ fi
 project=$1
 submitClass="Submit"
 mavenGoals="clean verify"
+srcDirectory="src"
 
 if [[ "$project" == "Project0"  ]]; then
   directory="student"
@@ -34,6 +35,7 @@ elif [[ "$project" == "Project5"  ]]; then
 elif [[ "$project" == "Project6"  ]]; then
   directory="airline-android"
   submitClass="SubmitAndroidProject"
+  srcDirectory="app"
 
 else
   directory="airline"
@@ -58,5 +60,5 @@ if [ -f $pomFile ]; then
   cd -
 fi
 
-java -cp /u/whitlock/jars/grader.jar edu.pdx.cs410J.grader.${submitClass} -comment "${comment}" "${project}" "${xmlFile}" "${projectDirectory}/src"
+java -cp /u/whitlock/jars/grader.jar edu.pdx.cs410J.grader.${submitClass} -comment "${comment}" "${project}" "${xmlFile}" "${projectDirectory}/${srcDirectory}"
 
