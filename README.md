@@ -1,4 +1,4 @@
-[![Java CI with Maven](https://github.com/YourGitHubId/PortlandStateJavaWinter2022/actions/workflows/maven.yml/badge.svg)](https://github.com/YourGitHubId/PortlandStateJavaWinter2022/actions/workflows/maven.yml)
+[![Java CI with Maven](https://github.com/YourGitHubId/PortlandStateJavaSummer2022/actions/workflows/maven.yml/badge.svg)](https://github.com/YourGitHubId/PortlandStateJavaSummer2022/actions/workflows/maven.yml)
 
 # Getting Started with Advanced Programming with Java
 
@@ -58,7 +58,7 @@ developer"](https://education.github.com/pack) account that gives you
 free private repositories.  Then [create a private GitHub
 repository](https://help.github.com/en/articles/creating-a-new-repository)
 for your source code for this course.  (In this example, the
-repository is named "PortlandStateJavaWinter2022".)  Note that you do
+repository is named "PortlandStateJavaSummer2022".)  Note that you do
 **not** want to "Initialize this repository with a README".  You want
 to create a completely empty repository so that you can initially
 populate it from my (this) repository.
@@ -98,7 +98,7 @@ Then push the bare clone to your newly-created private repository.
 
 ```sh
 $ cd PortlandStateJavaGettingStarted.git
-$ git push --mirror https://github.com/YourGitHubUser/PortlandStateJavaWinter2022.git
+$ git push --mirror https://github.com/YourGitHubUser/PortlandStateJavaSummer2022.git
 ```
 
 If you view your repository on GitHub, you should see the changes
@@ -110,7 +110,7 @@ repository to work with.
 ```sh
 $ cd ..
 $ rm -rf PortlandStateJavaGettingStarted.git
-$ git clone https://github.com/YourGitHubUser/PortlandStateJavaWinter2022.git
+$ git clone https://github.com/YourGitHubUser/PortlandStateJavaSummer2022.git
 ```
 
 ### What do I need to do before I can use this repository?
@@ -119,7 +119,7 @@ The following command lines assume that you are running in the
 directory created by cloning the repository.
 
 ```sh
-$ cd PortlandStateJavaWinter2022
+$ cd PortlandStateJavaSummer2022
 ```
 
 ### How do I use the Java Development Kit?
@@ -247,7 +247,7 @@ clone by adding the directory to git.
 
 ```sh
 $ ./mvnw clean     # Remove files that shouldn't be committed to version control
-$ cd ..            # to PortlandStateJavaWinter2022 directory
+$ cd ..            # to PortlandStateJavaSummer2022 directory
 $ git add student
 $ git commit -m "Added source files for student project"
 ```
@@ -300,7 +300,7 @@ After `ssh`ing to one of the CS Department's Linux machines, you can
 make a clone of your GitHub repository using with:
 
 ```
-$ git clone https://github.com/YourGitHubId/PortlandStateJavaWinter2022.git
+$ git clone https://github.com/YourGitHubId/PortlandStateJavaSummer2022.git
 ```
 
 ### How can I get changes that other people make into my clone?
@@ -314,7 +314,7 @@ First, configure your repository to have this repository to be a
 "remote" named "upstream".
 
 ```sh
-$ cd PortlandStateJavaWinter2022
+$ cd PortlandStateJavaSummer2022
 $ git remote add upstream https://github.com/DavidWhitlock/PortlandStateJavaGettingStarted.git
 ```
 
@@ -397,7 +397,7 @@ As you create Maven projects in this repository, you may encounter warnings like
 ```
 [WARNING] 
 [WARNING] Some problems were encountered while building the effective model for edu.pdx.cs410J.whitlock:airline:jar:2022.0.0
-[WARNING] 'parent.relativePath' of POM edu.pdx.cs410J.whitlock:airline:2022.0.0 (PortlandStateJavaWinter2022/airline/pom.xml) points at edu.pdx.cs410J.whitlock:PortlandStateJavaWinter2022 instead of io.github.davidwhitlock.cs410J:cs410j, please verify your project structure @ line 3, column 11
+[WARNING] 'parent.relativePath' of POM edu.pdx.cs410J.whitlock:airline:2022.0.0 (PortlandStateJavaSummer2022/airline/pom.xml) points at edu.pdx.cs410J.whitlock:PortlandStateJavaSummer2022 instead of io.github.davidwhitlock.cs410J:cs410j, please verify your project structure @ line 3, column 11
 [WARNING] 
 [WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
 [WARNING] 
@@ -425,7 +425,7 @@ is my top-level POM) to something like:
 
 ```xml
   <parent>
-    <artifactId>PortlandStateJavaWinter2022</artifactId>
+    <artifactId>PortlandStateJavaSummer2022</artifactId>
     <groupId>edu.pdx.cs410J.your-mcecs-user-id</groupId>
     <version>2022.0.0</version>
   </parent>
@@ -500,12 +500,12 @@ Running `mvn site` from the root directory of this repository will
 generate a website that provides lots of information (reports, etc.) 
 about the Maven projects.  Note that in order for your multi-project
 Maven site to generate correctly, the sub-projects must specify that
-their parent project is the `PortlandStateJavaWinter2022` project in
+their parent project is the `PortlandStateJavaSummer2022` project in
 your group:
 
 ```xml
   <parent>
-    <artifactId>PortlandStateJavaWinter2022</artifactId>
+    <artifactId>PortlandStateJavaSummer2022</artifactId>
     <groupId>edu.pdx.cs410J.your-mcecs-user-id</groupId>
     <version>2022.0.0</version>
   </parent>
@@ -541,7 +541,7 @@ You can open `target/staging/index.html` in your web browse to see
 what your site will look like.
 
 Verify that your website is available at a URL like:
-https://yourgithubuser.github.io/PortlandStateJavaWinter2022
+https://yourgithubuser.github.io/PortlandStateJavaSummer2022
 
 ## How can I improve this repository?
 
