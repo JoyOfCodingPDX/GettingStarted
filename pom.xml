@@ -21,7 +21,7 @@ accordingly
   <packaging>pom</packaging>
   <name>PSUJavaSummer2022</name>
   <description>Source code written in the Winter 2022 offering of Advanced Programming with Java</description>
-  <url>http://YourGitHubUser.github.io/PortlandStateJavaSummer2022</url>
+  <url>http://YourGitHubUserInLowerCase.github.io/PortlandStateJavaSummer2022</url>
 
   <modules>
   </modules>
@@ -82,7 +82,7 @@ accordingly
     <site>
       <id>gh-pages</id>
       <name>GitHub Pages</name>
-      <url>github:http://YourGitHubUser.github.io/PortlandStateJavaSummer2022/</url>
+      <url>github:http://YourGitHubUserInLowerCase.github.io/PortlandStateJavaSummer2022/</url>
     </site>
   </distributionManagement>
 

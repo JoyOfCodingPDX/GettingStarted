@@ -514,12 +514,16 @@ your group:
 [GitHub Pages](https://guides.github.com/features/pages/) are web
 pages that are hosted by GitHub and can easily be published via
 GitHub.  You can post the website for your Maven projects by first
-creating a `gh-pages` branch of your repository and pushing it to
-GitHub:
+creating a `gh-pages` branch (from the initial revision of the 
+repository), removing the `README.md` file on that branch (because
+it will take precedence over the generated `index.html` file) and
+pushing it to GitHub:
 
 ```
+$ git checkout 62fc42c5b0cf4ddddf78e7568b008bedc9037b38
 $ git branch gh-pages
-$ git checkout gh-pages
+$ git rm README.md
+$ git commit -m "Remove README.md on gh-pages branch" README.md
 $ git push --set-upstream origin gh-pages
 $ git checkout main
 ```
