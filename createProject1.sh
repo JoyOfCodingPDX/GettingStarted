@@ -23,9 +23,9 @@ echo "** Creating project for ${loginId}"
 ./mvnw --batch-mode archetype:generate \
   -DinteractiveMode=false \
   -DarchetypeGroupId=io.github.davidwhitlock.cs410J \
-  -DarchetypeArtifactId=airline-archetype \
+  -DarchetypeArtifactId=phonebill-archetype \
   -DarchetypeVersion=2022.1.0-SNAPSHOT \
   -DgroupId=edu.pdx.cs410J.${loginId} \
-  -DartifactId=airline \
+  -DartifactId=phonebill \
   -Dpackage=edu.pdx.cs410J.${loginId} \
   -Dversion=2022.0.0
