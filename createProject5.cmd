@@ -10,7 +10,7 @@ mvnw.cmd --batch-mode archetype:generate ^
   -DinteractiveMode=false ^
   -DarchetypeGroupId=io.github.davidwhitlock.cs410J ^
   -DarchetypeArtifactId=airline-web-archetype ^
-  -DarchetypeVersion=2022.0.0 ^
+  -DarchetypeVersion=2022.1.0-SNAPSHOT ^
   -DgroupId=edu.pdx.cs410J.%studentId% ^
   -DartifactId=airline-web ^
   -Dpackage=edu.pdx.cs410J.%studentId% ^

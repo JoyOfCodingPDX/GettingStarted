@@ -24,7 +24,7 @@ echo "** Creating project for ${loginId}"
   -DinteractiveMode=false \
   -DarchetypeGroupId=io.github.davidwhitlock.cs410J \
   -DarchetypeArtifactId=airline-archetype \
-  -DarchetypeVersion=2022.0.0 \
+  -DarchetypeVersion=2022.1.0-SNAPSHOT \
   -DgroupId=edu.pdx.cs410J.${loginId} \
   -DartifactId=airline \
   -Dpackage=edu.pdx.cs410J.${loginId} \
