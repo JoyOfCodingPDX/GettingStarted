@@ -160,7 +160,7 @@ tools on the MCECS Linux machines.  However, it is highly recommended using your
 leverage tools like IntelliJ to author your projects. 
 
 You'll need to install the [latest version of the Java Development
-Kit](https://adoptopenjdk.net/) in order to run the Maven Wrapper and work
+Kit](https://adoptium.net) in order to run the Maven Wrapper and work
 with the projects.  (The "HotSpot" JVM should be fine for this course.)  
 Windows users should download the "msi" (Microsoft Installer)
 binary for an easy installation and configuration process.  During the 
