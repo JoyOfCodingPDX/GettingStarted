@@ -20,13 +20,13 @@ accordingly
 
   <packaging>pom</packaging>
   <name>PSUJavaSummer2022</name>
-  <description>Source code written in the Winter 2022 offering of Advanced Programming with Java</description>
+  <description>Source code written in the Summer 2022 offering of Advanced Programming with Java</description>
   <url>http://YourGitHubUserInLowerCase.github.io/PortlandStateJavaSummer2022</url>
 
   <modules>
   </modules>
 
-  <inceptionYear>2021</inceptionYear>
+  <inceptionYear>2022</inceptionYear>
   <organization>
     <name>Portland State University</name>
     <url>http://www.pdx.edu</url>
