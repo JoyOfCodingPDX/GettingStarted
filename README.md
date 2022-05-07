@@ -372,6 +372,17 @@ If your project has missing functionality or if there is anything you'd like the
 $ ./submit.sh Project1 "I did not have time to get one-digit hours working"
 ```
 
+After your code has been successfully submitted, the `submit.sh` script will
+[tag](https://git-scm.com/book/en/v2/Git-Basics-Tagging) the current revision of 
+your git repository. The name of the tag indicates which project was submitted and
+the date/time it was submitted.  For example, submitting Project1 at 9 AM on May 1st
+would tag the current revision of the repository with `submit-Project1-20220501T09:00:58`.
+This tag allows you create a [branch](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
+from the specific revision of your code that was submitted, which makes debugging problems
+in submitted code much easier.  Note that the `submit.sh` will issue an error if there are
+uncommitted changes in your local clone of the repository.  So, be sure to commit all of
+your changes before submitting. 
+
 ## How do I use the "parent POM"?
 
 This repository includes a "parent" [pom.xml](pom.xml) file.  You'll
