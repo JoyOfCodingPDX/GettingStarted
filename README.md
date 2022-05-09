@@ -198,7 +198,7 @@ $ git push
 
 The primary purpose of this repository is to make it easy to create
 the skeleton Java projects that are used to start your assignment.
-Scripts such as `createProject0.sh` will run the appropriate Maven
+Scripts such as `createStudentProject.sh` will run the appropriate Maven
 commands to get you started.  Each of these scripts takes a single
 argument which is your MCECS user id.  This one-word user id (mine is
 `whitlock`) is used to uniquely identify your code and is included in
@@ -207,13 +207,13 @@ you consistently use this user id in the course.  For instance, please
 use your MCECS user id when you run the `survey.sh`script.)
 
 ```sh
-$ ./createProject0.sh
+$ ./createStudentProject.sh
 ```
 
 (Note that in this document, I always prefix executables with `./` to
 ensure that the executable can be found even if you don't have `.` on
 your `PATH`.  Note also that for people who are developing on Windows
-machines, there is a `createProject1.cmd` that does the same thing as
+machines, there is a `createStudentProject.cmd` that does the same thing as
 the shell script, but doesn't have as nice error checking.  Students
 have not been able to get the shell script to work under cygwin.  It
 is okay to create the project on Linux and then develop it on Windows,
