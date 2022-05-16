@@ -383,6 +383,26 @@ in submitted code much easier.  Note that the `submit.sh` will issue an error if
 uncommitted changes in your local clone of the repository.  So, be sure to commit all of
 your changes before submitting. 
 
+### About how long do the projects take to complete?
+
+Starting in the Winter of 2022, we started gathering data from students
+regarding the approximate number of hours they spend working on each project.
+The following is a summary of the data gathered to date.  
+
+|  | App Classes | Text File | Pretty Print | REST | Android |
+| :--- | ---: | ---: | ---: | ---: | ---: |
+| Count | 21 | 20 | 19 | 17 | 17 |
+| Average | 17 hours | 16 hours | 18 hours | 26 hours | 25 hours |
+| Maximum | 48 hours | 30 hours | 30 hours | 70 hours | 48 hours |
+| Top 25% | 21 hours | 21 hours | 24 hours | 30 hours | 30 hours |
+| Median | 14 hours | 15 hours | 16 hours | 20 hours | 25 hours |
+| Bottom 25% | 10 hours | 10 hours | 13 hours | 15 hours | 20 hours |
+| Minimum | 7 hours | 5 hours | 8 hours | 8 hours | 14 hours |
+
+You may want to consider it as you plan your projects.  Recall, though, that
+this data is self-reported.  Your experience might be different from that
+of previous students.
+
 ## How do I use the "parent POM"?
 
 This repository includes a "parent" [pom.xml](pom.xml) file.  You'll
