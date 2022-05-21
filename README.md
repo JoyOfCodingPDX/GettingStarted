@@ -363,7 +363,16 @@ You will also be asked to provide a rough estimate of the number of hours you sp
 optional information will be recorded and reported to future students in aggregate to give them an idea of how much
 time they should plan to spend on projects.  The estimated hours you report will have no bearing on your grade.      
 
-The script may take a moment or two to zip the source files and email them to the Grader.
+The script may take a moment or two to zip the source files and email them to the Grader.   You will receive a
+receipt email telling you which files were sent.
+
+Some additional notes:
+
+  * Only source files can be submitted.  You can submit `.java`, `.xml`, and `.txt` files beneath the `src` directory of your Maven project.
+    * Yes, your README can be loaded from a text file in `src/main/resources`.
+    * No, you can't submit a modified `pom.xml`.  So, you can't add dependencies (like third-party libraries that do command line parsing).
+  * Multiple submissions before the due date are allowed, but only your most recent submission will be graded. Remember that there are a lot of you and the Grader has to un-jar each of your submissions. You don't want to waste the grader's time with superfluous submissions.  The active word in "grader" is "GRADE".
+  * No late work will be accepted.  Each submission has a time stamp on it, so we know if you're late.
 
 If your project has missing functionality or if there is anything you'd like the Grader to know about your project, the
 `submit.sh` script supports an addition second argument that records a comment for your submission. 
