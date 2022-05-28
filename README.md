@@ -229,7 +229,6 @@ The UNIX `mvnw` script has been problematic on Windows, even in Git Bash.)
 
 ```sh
 $ cd student
-$ chmod +x mvnw        # Make the wrapper script executable
 $ ./mvnw verify
 ```
 

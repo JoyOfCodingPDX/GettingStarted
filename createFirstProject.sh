@@ -18,14 +18,4 @@ else
     fi
 fi
 
-echo "** Creating project for ${loginId}"
-
-./mvnw --batch-mode archetype:generate \
-  -DinteractiveMode=false \
-  -DarchetypeGroupId=io.github.davidwhitlock.cs410J \
-  -DarchetypeArtifactId=phonebill-archetype \
-  -DarchetypeVersion=2022.1.0-SNAPSHOT \
-  -DgroupId=edu.pdx.cs410J.${loginId} \
-  -DartifactId=phonebill \
-  -Dpackage=edu.pdx.cs410J.${loginId} \
-  -Dversion=2022.0.0
+createProjectFromArchetype ${loginId} "phonebill"
