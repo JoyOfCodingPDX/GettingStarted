@@ -21,11 +21,6 @@
         <ribbonOrientation>right</ribbonOrientation>
         <ribbonColor>black</ribbonColor>
       </gitHub>
-      <twitter>
-        <user>agilevalentine</user>
-        <!--        <showUser>true</showUser>-->
-        <!--        <showFollowers>true</showFollowers>-->
-      </twitter>
     </fluidoSkin>
   </custom>
 </project>
