@@ -20,5 +20,8 @@ java -cp /u/whitlock/jars/grader.jar edu.pdx.cs410J.grader.Survey
 
 echo ""
 echo "** Thank you for filling out the survey"
-echo "** Don't forget to add me.xml to your git repository"
+
+git add me.xml
+
 echo ""
+echo "** Don't forget to commit me.xml to your git repository"
