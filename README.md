@@ -495,14 +495,14 @@ attach](https://www.jetbrains.com/help/idea/tutorial-remote-debug.html) to the "
 In order to debug code running as an executable jar, you must specify the `-agentlib` option to the JVM in addition
 to the `-jar` option:
 
-```shell
+```
 java -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=*:5005 -jar target/student-2022.0.0.jar 
 ```
 
 The above `-agentlib` option causes the JVM to output a (rather cryptic) informational message indicating that the JVM
 is listening on port `5005` for a debugger (such as IntelliJ) to attach.
 
-```shell
+```
 Listening for transport dt_socket at address: 5005
 ```
 
