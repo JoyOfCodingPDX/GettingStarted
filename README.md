@@ -576,8 +576,8 @@ your GitHub id be **lowercase letters** in the
 
 ```
 $ ./mvnw site
-$ ./mvnw site:stage      # Gathers site files across multiple projects
-$ ./mvnw site:deploy     # Uploads to GitHub
+$ ./mvnw site:stage                  # Gathers site files across multiple projects
+$ ./mvnw scm-publish:publish-scm     # Uploads to GitHub
 ```
 
 You can open `target/staging/index.html` in your web browse to see
