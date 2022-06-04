@@ -10,7 +10,7 @@ mvnw.cmd --batch-mode archetype:generate ^
   -DinteractiveMode=false ^
   -DarchetypeGroupId=io.github.davidwhitlock.cs410J ^
   -DarchetypeArtifactId=phonebill-archetype ^
-  -DarchetypeVersion=2022.1.0-SNAPSHOT ^
+  -DarchetypeVersion=2022.1.0 ^
   -DgroupId=edu.pdx.cs410J.%studentId% ^
   -DartifactId=phonebill ^
   -Dpackage=edu.pdx.cs410J.%studentId% ^
