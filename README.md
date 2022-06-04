@@ -1,4 +1,4 @@
-[![Java CI with Maven](https://github.com/YourGitHubId/PortlandStateJavaWinter2022/actions/workflows/maven.yml/badge.svg)](https://github.com/YourGitHubId/PortlandStateJavaWinter2022/actions/workflows/maven.yml)
+[![Java CI with Maven](https://github.com/YourGitHubId/PortlandStateJavaSummer2022/actions/workflows/maven.yml/badge.svg)](https://github.com/YourGitHubId/PortlandStateJavaSummer2022/actions/workflows/maven.yml)
 
 # Getting Started with Advanced Programming with Java
 
@@ -58,7 +58,7 @@ developer"](https://education.github.com/pack) account that gives you
 free private repositories.  Then [create a private GitHub
 repository](https://help.github.com/en/articles/creating-a-new-repository)
 for your source code for this course.  (In this example, the
-repository is named "PortlandStateJavaWinter2022".)  Note that you do
+repository is named "PortlandStateJavaSummer2022".)  Note that you do
 **not** want to "Initialize this repository with a README".  You want
 to create a completely empty repository so that you can initially
 populate it from my (this) repository.
@@ -98,7 +98,7 @@ Then push the bare clone to your newly-created private repository.
 
 ```sh
 $ cd PortlandStateJavaGettingStarted.git
-$ git push --mirror https://github.com/YourGitHubUser/PortlandStateJavaWinter2022.git
+$ git push --mirror https://github.com/YourGitHubUser/PortlandStateJavaSummer2022.git
 ```
 
 If you view your repository on GitHub, you should see the changes
@@ -110,7 +110,7 @@ repository to work with.
 ```sh
 $ cd ..
 $ rm -rf PortlandStateJavaGettingStarted.git
-$ git clone https://github.com/YourGitHubUser/PortlandStateJavaWinter2022.git
+$ git clone https://github.com/YourGitHubUser/PortlandStateJavaSummer2022.git
 ```
 
 ### What do I need to do before I can use this repository?
@@ -119,7 +119,7 @@ The following command lines assume that you are running in the
 directory created by cloning the repository.
 
 ```sh
-$ cd PortlandStateJavaWinter2022
+$ cd PortlandStateJavaSummer2022
 ```
 
 ### How do I use the Java Development Kit?
@@ -160,7 +160,7 @@ tools on the MCECS Linux machines.  However, it is highly recommended using your
 leverage tools like IntelliJ to author your projects. 
 
 You'll need to install the [latest version of the Java Development
-Kit](https://adoptopenjdk.net/) in order to run the Maven Wrapper and work
+Kit](https://adoptium.net) in order to run the Maven Wrapper and work
 with the projects.  (The "HotSpot" JVM should be fine for this course.)  
 Windows users should download the "msi" (Microsoft Installer)
 binary for an easy installation and configuration process.  During the 
@@ -198,7 +198,7 @@ $ git push
 
 The primary purpose of this repository is to make it easy to create
 the skeleton Java projects that are used to start your assignment.
-Scripts such as `createProject0.sh` will run the appropriate Maven
+Scripts such as `createStudentProject.sh` will run the appropriate Maven
 commands to get you started.  Each of these scripts takes a single
 argument which is your MCECS user id.  This one-word user id (mine is
 `whitlock`) is used to uniquely identify your code and is included in
@@ -207,13 +207,13 @@ you consistently use this user id in the course.  For instance, please
 use your MCECS user id when you run the `survey.sh`script.)
 
 ```sh
-$ ./createProject0.sh
+$ ./createStudentProject.sh
 ```
 
 (Note that in this document, I always prefix executables with `./` to
 ensure that the executable can be found even if you don't have `.` on
 your `PATH`.  Note also that for people who are developing on Windows
-machines, there is a `createProject1.cmd` that does the same thing as
+machines, there is a `createStudentProject.cmd` that does the same thing as
 the shell script, but doesn't have as nice error checking.  Students
 have not been able to get the shell script to work under cygwin.  It
 is okay to create the project on Linux and then develop it on Windows,
@@ -229,7 +229,6 @@ The UNIX `mvnw` script has been problematic on Windows, even in Git Bash.)
 
 ```sh
 $ cd student
-$ chmod +x mvnw        # Make the wrapper script executable
 $ ./mvnw verify
 ```
 
@@ -247,7 +246,7 @@ clone by adding the directory to git.
 
 ```sh
 $ ./mvnw clean     # Remove files that shouldn't be committed to version control
-$ cd ..            # to PortlandStateJavaWinter2022 directory
+$ cd ..            # to PortlandStateJavaSummer2022 directory
 $ git add student
 $ git commit -m "Added source files for student project"
 ```
@@ -300,7 +299,7 @@ After `ssh`ing to one of the CS Department's Linux machines, you can
 make a clone of your GitHub repository using with:
 
 ```
-$ git clone https://github.com/YourGitHubId/PortlandStateJavaWinter2022.git
+$ git clone https://github.com/YourGitHubId/PortlandStateJavaSummer2022.git
 ```
 
 ### How can I get changes that other people make into my clone?
@@ -314,7 +313,7 @@ First, configure your repository to have this repository to be a
 "remote" named "upstream".
 
 ```sh
-$ cd PortlandStateJavaWinter2022
+$ cd PortlandStateJavaSummer2022
 $ git remote add upstream https://github.com/DavidWhitlock/PortlandStateJavaGettingStarted.git
 ```
 
@@ -363,7 +362,16 @@ You will also be asked to provide a rough estimate of the number of hours you sp
 optional information will be recorded and reported to future students in aggregate to give them an idea of how much
 time they should plan to spend on projects.  The estimated hours you report will have no bearing on your grade.      
 
-The script may take a moment or two to zip the source files and email them to the Grader.
+The script may take a moment or two to zip the source files and email them to the Grader.   You will receive a
+receipt email telling you which files were sent.
+
+Some additional notes:
+
+  * Only source files can be submitted.  You can submit `.java`, `.xml`, and `.txt` files beneath the `src` directory of your Maven project.
+    * Yes, your README can be loaded from a text file in `src/main/resources`.
+    * No, you can't submit a modified `pom.xml`.  So, you can't add dependencies (like third-party libraries that do command line parsing).
+  * Multiple submissions before the due date are allowed, but only your most recent submission will be graded. Remember that there are a lot of you and the Grader has to un-jar each of your submissions. You don't want to waste the grader's time with superfluous submissions.  The active word in "grader" is "GRADE".
+  * No late work will be accepted.  Each submission has a time stamp on it, so we know if you're late.
 
 If your project has missing functionality or if there is anything you'd like the Grader to know about your project, the
 `submit.sh` script supports an addition second argument that records a comment for your submission. 
@@ -371,6 +379,37 @@ If your project has missing functionality or if there is anything you'd like the
 ```shell
 $ ./submit.sh Project1 "I did not have time to get one-digit hours working"
 ```
+
+After your code has been successfully submitted, the `submit.sh` script will
+[tag](https://git-scm.com/book/en/v2/Git-Basics-Tagging) the current revision of 
+your git repository. The name of the tag indicates which project was submitted and
+the date/time it was submitted.  For example, submitting Project1 at 9 AM on May 1st
+would tag the current revision of the repository with `submit-Project1-20220501T09:00:58`.
+This tag allows you to create a [branch](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
+from the specific revision of your code that was submitted, which makes debugging problems
+in submitted code much easier.  Note that the `submit.sh` will issue an error if there are
+uncommitted changes in your local clone of the repository.  So, be sure to commit all of
+your changes before submitting. 
+
+### About how long do the projects take to complete?
+
+Starting in the Winter of 2022, we started gathering data from students
+regarding the approximate number of hours they spend working on each project.
+The following is a summary of the data gathered to date.  
+
+|  | App Classes | Text File | Pretty Print | REST | Android |
+| :--- | ---: | ---: | ---: | ---: | ---: |
+| Count | 21 | 20 | 19 | 17 | 17 |
+| Average | 17 hours | 16 hours | 18 hours | 26 hours | 25 hours |
+| Maximum | 48 hours | 30 hours | 30 hours | 70 hours | 48 hours |
+| Top 25% | 21 hours | 21 hours | 24 hours | 30 hours | 30 hours |
+| Median | 14 hours | 15 hours | 16 hours | 20 hours | 25 hours |
+| Bottom 25% | 10 hours | 10 hours | 13 hours | 15 hours | 20 hours |
+| Minimum | 7 hours | 5 hours | 8 hours | 8 hours | 14 hours |
+
+You may want to consider it as you plan your projects.  Recall, though, that
+this data is self-reported.  Your experience might be different from that
+of previous students.
 
 ## How do I use the "parent POM"?
 
@@ -396,8 +435,8 @@ As you create Maven projects in this repository, you may encounter warnings like
 
 ```
 [WARNING] 
-[WARNING] Some problems were encountered while building the effective model for edu.pdx.cs410J.whitlock:airline:jar:2022.0.0
-[WARNING] 'parent.relativePath' of POM edu.pdx.cs410J.whitlock:airline:2022.0.0 (PortlandStateJavaWinter2022/airline/pom.xml) points at edu.pdx.cs410J.whitlock:PortlandStateJavaWinter2022 instead of io.github.davidwhitlock.cs410J:cs410j, please verify your project structure @ line 3, column 11
+[WARNING] Some problems were encountered while building the effective model for edu.pdx.cs410J.whitlock:phonebill:jar:2022.0.0
+[WARNING] 'parent.relativePath' of POM edu.pdx.cs410J.whitlock:phonebill:2022.0.0 (PortlandStateJavaSummer2022/phonebill/pom.xml) points at edu.pdx.cs410J.whitlock:PortlandStateJavaSummer2022 instead of io.github.davidwhitlock.cs410J:cs410j, please verify your project structure @ line 3, column 11
 [WARNING] 
 [WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
 [WARNING] 
@@ -416,7 +455,7 @@ When created, the `pom.xml` files for the projects specify a parent of _my_ top-
   <parent>
     <artifactId>cs410j</artifactId>
     <groupId>io.github.davidwhitlock.cs410J</groupId>
-    <version>2022.0.0</version>
+    <version>2022.1.0</version>
   </parent>
 ```
 
@@ -425,7 +464,7 @@ is my top-level POM) to something like:
 
 ```xml
   <parent>
-    <artifactId>PortlandStateJavaWinter2022</artifactId>
+    <artifactId>PortlandStateJavaSummer2022</artifactId>
     <groupId>edu.pdx.cs410J.your-mcecs-user-id</groupId>
     <version>2022.0.0</version>
   </parent>
@@ -456,14 +495,14 @@ attach](https://www.jetbrains.com/help/idea/tutorial-remote-debug.html) to the "
 In order to debug code running as an executable jar, you must specify the `-agentlib` option to the JVM in addition
 to the `-jar` option:
 
-```shell
+```
 java -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=*:5005 -jar target/student-2022.0.0.jar 
 ```
 
 The above `-agentlib` option causes the JVM to output a (rather cryptic) informational message indicating that the JVM
 is listening on port `5005` for a debugger (such as IntelliJ) to attach.
 
-```shell
+```
 Listening for transport dt_socket at address: 5005
 ```
 
@@ -500,12 +539,12 @@ Running `mvn site` from the root directory of this repository will
 generate a website that provides lots of information (reports, etc.) 
 about the Maven projects.  Note that in order for your multi-project
 Maven site to generate correctly, the sub-projects must specify that
-their parent project is the `PortlandStateJavaWinter2022` project in
+their parent project is the `PortlandStateJavaSummer2022` project in
 your group:
 
 ```xml
   <parent>
-    <artifactId>PortlandStateJavaWinter2022</artifactId>
+    <artifactId>PortlandStateJavaSummer2022</artifactId>
     <groupId>edu.pdx.cs410J.your-mcecs-user-id</groupId>
     <version>2022.0.0</version>
   </parent>
@@ -514,12 +553,16 @@ your group:
 [GitHub Pages](https://guides.github.com/features/pages/) are web
 pages that are hosted by GitHub and can easily be published via
 GitHub.  You can post the website for your Maven projects by first
-creating a `gh-pages` branch of your repository and pushing it to
-GitHub:
+creating a `gh-pages` branch (from the initial revision of the 
+repository), removing the `README.md` file on that branch (because
+it will take precedence over the generated `index.html` file) and
+pushing it to GitHub:
 
 ```
+$ git checkout 62fc42c5b0cf4ddddf78e7568b008bedc9037b38
 $ git branch gh-pages
-$ git checkout gh-pages
+$ git rm README.md
+$ git commit -m "Remove README.md on gh-pages branch" README.md
 $ git push --set-upstream origin gh-pages
 $ git checkout main
 ```
@@ -533,15 +576,15 @@ your GitHub id be **lowercase letters** in the
 
 ```
 $ ./mvnw site
-$ ./mvnw site:stage      # Gathers site files across multiple projects
-$ ./mvnw site:deploy     # Uploads to GitHub
+$ ./mvnw site:stage                  # Gathers site files across multiple projects
+$ ./mvnw scm-publish:publish-scm     # Uploads to GitHub
 ```
 
 You can open `target/staging/index.html` in your web browse to see
 what your site will look like.
 
 Verify that your website is available at a URL like:
-https://yourgithubuser.github.io/PortlandStateJavaWinter2022
+https://yourgithubuser.github.io/PortlandStateJavaSummer2022
 
 ## How can I improve this repository?
 

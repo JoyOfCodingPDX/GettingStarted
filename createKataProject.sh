@@ -20,12 +20,4 @@ fi
 projectName=$1
 teamName=$2
 
-./mvnw --batch-mode archetype:generate \
-  -DinteractiveMode=false \
-  -DarchetypeGroupId=io.github.davidwhitlock.cs410J \
-  -DarchetypeArtifactId=kata-archetype \
-  -DarchetypeVersion=2022.0.0 \
-  -DgroupId=edu.pdx.cs410J.${teamName} \
-  -DartifactId=$projectName \
-  -Dpackage=edu.pdx.cs410J.${teamName} \
-  -Dversion=2022.0.0
+createProjectFromArchetype ${teamName} "kata" ${projectName}

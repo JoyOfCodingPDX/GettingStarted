@@ -12,28 +12,28 @@ accordingly
   <parent>
     <artifactId>cs410j</artifactId>
     <groupId>io.github.davidwhitlock.cs410J</groupId>
-    <version>2022.0.0</version>
+    <version>2022.1.0</version>
   </parent>
   <groupId>edu.pdx.cs410J.YourUserId</groupId>
-  <artifactId>PortlandStateJavaWinter2022</artifactId>
+  <artifactId>PortlandStateJavaSummer2022</artifactId>
   <version>2022.0.0</version>
 
   <packaging>pom</packaging>
-  <name>PSUJavaWinter2022</name>
-  <description>Source code written in the Winter 2022 offering of Advanced Programming with Java</description>
-  <url>http://YourGitHubUser.github.io/PortlandStateJavaWinter2022</url>
+  <name>PSUJavaSummer2022</name>
+  <description>Source code written in the Summer 2022 offering of Advanced Programming with Java</description>
+  <url>http://YourGitHubUserInLowerCase.github.io/PortlandStateJavaSummer2022</url>
 
   <modules>
   </modules>
 
-  <inceptionYear>2021</inceptionYear>
+  <inceptionYear>2022</inceptionYear>
   <organization>
     <name>Portland State University</name>
     <url>http://www.pdx.edu</url>
   </organization>
   <issueManagement>
     <system>github</system>
-    <url>https://github.com/YourGitHubUser/PortlandStateJavaWinter2022/issues</url>
+    <url>https://github.com/YourGitHubUser/PortlandStateJavaSummer2022/issues</url>
   </issueManagement>
   <licenses>
     <license>
@@ -72,7 +72,7 @@ accordingly
   </repositories>
 
   <scm>
-    <connection>scm:git:git@github.com:YourGitHubUser/PortlandStateJavaWinter2022.git</connection>
+    <connection>scm:git:http://YourGitHubUser/PortlandStateJavaSummer2022.git</connection>
   </scm>
   <distributionManagement>
     <snapshotRepository>
@@ -82,7 +82,7 @@ accordingly
     <site>
       <id>gh-pages</id>
       <name>GitHub Pages</name>
-      <url>github:http://YourGitHubUser.github.io/PortlandStateJavaWinter2022/</url>
+      <url>scm:git:http://YourGitHubUser/PortlandStateJavaSummer2022.git</url>
     </site>
   </distributionManagement>
 

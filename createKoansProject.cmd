@@ -10,7 +10,7 @@ mvnw.cmd --batch-mode archetype:generate ^
   -DinteractiveMode=false ^
   -DarchetypeGroupId=io.github.davidwhitlock.cs410J ^
   -DarchetypeArtifactId=java-koans-archetype ^
-  -DarchetypeVersion=2022.0.0 ^
+  -DarchetypeVersion=2022.1.0 ^
   -DgroupId=edu.pdx.cs410J.%studentId% ^
   -DartifactId=koans ^
   -Dpackage=edu.pdx.cs410J.%studentId% ^

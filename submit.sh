@@ -30,15 +30,15 @@ elif [[ "$project" == "koans"  ]]; then
   mavenGoals="clean exec:java"
 
 elif [[ "$project" == "Project5"  ]]; then
-  directory="airline-web"
+  directory="phonebill-web"
 
 elif [[ "$project" == "Project6"  ]]; then
-  directory="airline-android"
+  directory="phonebill-android"
   submitClass="SubmitAndroidProject"
   srcDirectory="app"
 
 else
-  directory="airline"
+  directory="phonebill"
 fi
 
 if [ $# -gt 1 ]; then
@@ -53,6 +53,14 @@ xmlFile=${top}/me.xml
 projectDirectory=${top}/${directory}
 pomFile=${projectDirectory}/pom.xml
 
+localChanges=`git status --porcelain ${projectDirectory}`
+if [[ ${localChanges} ]]; then
+  echo "** There are local modifications that haven't been committed"
+  echo ${localChanges}
+  echo "** Please commit or revert these changes before submitting"
+  exit 1
+fi
+
 if [ -f $pomFile ]; then
   cd ${projectDirectory}
   chmod +x ./mvnw
@@ -62,3 +70,8 @@ fi
 
 java -cp /u/whitlock/jars/grader.jar edu.pdx.cs410J.grader.${submitClass} -comment "${comment}" "${project}" "${xmlFile}" "${projectDirectory}/${srcDirectory}"
 
+submitTime=`date +%Y%m%dT%I%M%S`
+tag="submit-${project}-${submitTime}"
+rev=`git rev-parse --short HEAD`
+echo "** Tagging HEAD revision ${rev} with \"${tag}\""
+git tag --annotate ${tag} -m "${project} submitted on ${submitTime}"

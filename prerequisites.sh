@@ -63,3 +63,28 @@ function checkForJava() {
         fi
     fi
 }
+
+function createProjectFromArchetype() {
+    loginId=$1
+    archetypeName=$2
+
+    if [[ $# -gt 2 ]]; then
+	projectName=$3
+    else 
+	projectName=${archetypeName}
+    fi
+
+    echo "** Creating ${archetypeName} project for ${loginId}"
+
+    ./mvnw --batch-mode archetype:generate \
+	   -DinteractiveMode=false \
+	   -DarchetypeGroupId=io.github.davidwhitlock.cs410J \
+	   -DarchetypeArtifactId=${archetypeName}-archetype \
+	   -DarchetypeVersion=2022.1.0 \
+	   -DgroupId=edu.pdx.cs410J.${loginId} \
+	   -DartifactId=${projectName} \
+	   -Dpackage=edu.pdx.cs410J.${loginId} \
+	   -Dversion=2022.0.0
+
+    chmod +x ${projectName}/mvnw
+}
