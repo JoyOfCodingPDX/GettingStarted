@@ -80,7 +80,7 @@ function createProjectFromArchetype() {
 	   -DinteractiveMode=false \
 	   -DarchetypeGroupId=io.github.davidwhitlock.cs410J \
 	   -DarchetypeArtifactId=${archetypeName}-archetype \
-	   -DarchetypeVersion=2022.1.0 \
+	   -DarchetypeVersion=2022.2.0 \
 	   -DgroupId=edu.pdx.cs410J.${loginId} \
 	   -DartifactId=${projectName} \
 	   -Dpackage=edu.pdx.cs410J.${loginId} \
