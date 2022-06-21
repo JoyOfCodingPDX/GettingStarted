@@ -72,7 +72,7 @@ accordingly
   </repositories>
 
   <scm>
-    <connection>scm:git:http://YourGitHubUser/PortlandStateJavaSummer2022.git</connection>
+    <connection>scm:git:git@github.com:YourGithubUser/PortlandStateJavaSummer2022.git</connection>
   </scm>
   <distributionManagement>
     <snapshotRepository>
@@ -82,7 +82,7 @@ accordingly
     <site>
       <id>gh-pages</id>
       <name>GitHub Pages</name>
-      <url>scm:git:http://YourGitHubUser/PortlandStateJavaSummer2022.git</url>
+      <url>scm:git:git@github.com:YourGithubUser/PortlandStateJavaSummer2022.git</url>
     </site>
   </distributionManagement>
 
