@@ -564,7 +564,7 @@ $ git checkout 62fc42c5b0cf4ddddf78e7568b008bedc9037b38
 $ git branch gh-pages
 $ git rm README.md
 $ git add .gitignore
-$ git commit -m "Remove README.md on gh-pages branch" README.md
+$ git commit -m "Remove README.md and update .gitignore on gh-pages branch" README.md
 $ git push --set-upstream origin gh-pages
 $ git checkout main
 ```
