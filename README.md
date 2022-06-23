@@ -85,7 +85,7 @@ is recommended.)
 Now, here comes some magic.  Make a "bare" clone of my repository.  
 
 ```sh
-$ git clone --bare https://github.com/DavidWhitlock/PortlandStateJavaGettingStarted.git
+$ git clone --bare git@github.com:DavidWhitlock/PortlandStateJavaGettingStarted.git
 ```
 
 Note that the name of the directory created by the bare clone is
@@ -98,7 +98,7 @@ Then push the bare clone to your newly-created private repository.
 
 ```sh
 $ cd PortlandStateJavaGettingStarted.git
-$ git push --mirror https://github.com/YourGitHubUser/PortlandStateJavaSummer2022.git
+$ git push --mirror git@github.com:YourGithubUser/PortlandStateJavaSummer2022.git
 ```
 
 If you view your repository on GitHub, you should see the changes
@@ -110,7 +110,7 @@ repository to work with.
 ```sh
 $ cd ..
 $ rm -rf PortlandStateJavaGettingStarted.git
-$ git clone https://github.com/YourGitHubUser/PortlandStateJavaSummer2022.git
+$ git clone git@github.com:YourGithubUser/PortlandStateJavaSummer2022.git
 ```
 
 ### What do I need to do before I can use this repository?
@@ -299,7 +299,7 @@ After `ssh`ing to one of the CS Department's Linux machines, you can
 make a clone of your GitHub repository using with:
 
 ```
-$ git clone https://github.com/YourGitHubId/PortlandStateJavaSummer2022.git
+$ git clone git@github.com:YourGithubUser/PortlandStateJavaSummer2022.git
 ```
 
 ### How can I get changes that other people make into my clone?
@@ -314,7 +314,7 @@ First, configure your repository to have this repository to be a
 
 ```sh
 $ cd PortlandStateJavaSummer2022
-$ git remote add upstream https://github.com/DavidWhitlock/PortlandStateJavaGettingStarted.git
+$ git remote add upstream git@github.com:DavidWhitlock/PortlandStateJavaGettingStarted.git
 ```
 
 Then, you can "pull" and "merge" changes from the upstream repository
