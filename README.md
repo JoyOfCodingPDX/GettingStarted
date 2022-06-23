@@ -179,7 +179,7 @@ projects to the Grader.
 Note that the `survey.sh` script **must be executed on one of the PSU MCECS Linux machines**.  It cannot be run on your
 laptop or local development machine.
 
-From the top-level directory of your, run the `survey.sh` script.  It will ask you to enter some information about
+From the top-level directory of your local repository, run the `survey.sh` script.  It will ask you to enter some information about
 yourself.  This information is used to submit your projects and record your grades.
 
 ```sh
