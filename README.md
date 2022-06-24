@@ -85,7 +85,7 @@ is recommended.)
 Now, here comes some magic.  Make a "bare" clone of my repository.  
 
 ```sh
-$ git clone --bare git@github.com:DavidWhitlock/PortlandStateJavaGettingStarted.git
+$ git clone --bare https://github.com/DavidWhitlock/PortlandStateJavaGettingStarted.git
 ```
 
 Note that the name of the directory created by the bare clone is
@@ -98,7 +98,7 @@ Then push the bare clone to your newly-created private repository.
 
 ```sh
 $ cd PortlandStateJavaGettingStarted.git
-$ git push --mirror git@github.com:YourGithubUser/PortlandStateJavaSummer2022.git
+$ git push --mirror https://github.com/YourGitHubUser/PortlandStateJavaSummer2022.git
 ```
 
 If you view your repository on GitHub, you should see the changes
@@ -110,7 +110,7 @@ repository to work with.
 ```sh
 $ cd ..
 $ rm -rf PortlandStateJavaGettingStarted.git
-$ git clone git@github.com:YourGithubUser/PortlandStateJavaSummer2022.git
+$ git clone https://github.com/YourGitHubUser/PortlandStateJavaSummer2022.git
 ```
 
 ### What do I need to do before I can use this repository?
@@ -179,7 +179,7 @@ projects to the Grader.
 Note that the `survey.sh` script **must be executed on one of the PSU MCECS Linux machines**.  It cannot be run on your
 laptop or local development machine.
 
-From the top-level directory of your, run the `survey.sh` script.  It will ask you to enter some information about
+From the top-level directory of your local repository, run the `survey.sh` script.  It will ask you to enter some information about
 yourself.  This information is used to submit your projects and record your grades.
 
 ```sh
@@ -299,7 +299,7 @@ After `ssh`ing to one of the CS Department's Linux machines, you can
 make a clone of your GitHub repository using with:
 
 ```
-$ git clone git@github.com:YourGithubUser/PortlandStateJavaSummer2022.git
+$ git clone https://github.com/YourGitHubId/PortlandStateJavaSummer2022.git
 ```
 
 ### How can I get changes that other people make into my clone?
@@ -314,7 +314,7 @@ First, configure your repository to have this repository to be a
 
 ```sh
 $ cd PortlandStateJavaSummer2022
-$ git remote add upstream git@github.com:DavidWhitlock/PortlandStateJavaGettingStarted.git
+$ git remote add upstream https://github.com/DavidWhitlock/PortlandStateJavaGettingStarted.git
 ```
 
 Then, you can "pull" and "merge" changes from the upstream repository
@@ -557,30 +557,14 @@ creating a `gh-pages` branch (from the initial revision of the
 repository), removing the `README.md` file on that branch (because
 it will take precedence over the generated `index.html` file), 
 removing `*.zip` from `.gitignore` (because the Maven process will add
-.zip files to the `gh-pages` branch) and pushing it to GitHub:
+.zip files to the `gh-pages` branch) and pushing it to GitHub.
 
-```
-$ git checkout 62fc42c5b0cf4ddddf78e7568b008bedc9037b38
-$ git branch gh-pages
-$ git rm README.md
-$ git add .gitignore
-$ git commit -m "Remove README.md and update .gitignore on gh-pages branch" README.md
-$ git push --set-upstream origin gh-pages
-$ git checkout main
-```
-
-Then, you can generate and publish your website using the below
-commands.  Note that before you can do this, you must replace
+Then, you can generate and publish your website using the `gh-pages-deploy.sh`
+script. Note that before you can do this, you must replace
 instances of `YourGitHubUser` with your GitHub username in the
 top-level (parent) `pom.xml` file.  (Note that it is essential that
 your GitHub id be **lowercase letters** in the
 `distributionManagement/url` section of the `pom.xml` file.)
-
-```
-$ ./mvnw site
-$ ./mvnw site:stage                  # Gathers site files across multiple projects
-$ ./mvnw scm-publish:publish-scm     # Uploads to GitHub
-```
 
 You can open `target/staging/index.html` in your web browse to see
 what your site will look like.
