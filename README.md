@@ -20,6 +20,26 @@ and
 [screencast](https://www.youtube.com/watch?v=VZXEwcgigaw&list=SPyM7S4CZk9WPrtC8AclCNxOBA8buEJdib)
 from the [course's website](http://web.cecs.pdx.edu/~whitlock/).
 
+# Contents
+1. [How do I use this repository?](#how-do-i-use-this-repository)
+    1. [What do I need to do before I can use this repository?](#what-do-i-need-to-do-before-i-can-use-this-repository)
+    2. [How do I use the Java Development Kit?](#how-do-i-use-the-java-development-kit)
+        1. [How do I configure the JDK on the PSU Linux machines?](#how-do-i-configure-the-jdk-on-the-psu-linux-machines)
+        2. [How do I install the JDK on my personal machine?](#how-do-i-install-the-jdk-on-my-personal-machine)
+    3. [How do I configure information about myself?](#how-do-i-configure-information-about-myself)
+    4. [How do I create and run my own Java projects?](#how-do-i-create-and-run-my-own-java-projects)
+    5. [How can I commit my code to this repository?](#how-can-i-commit-my-code-to-this-repository)
+    6. [How do I work with code from this repository using IntelliJ?](#how-do-i-work-with-code-from-this-repository-using-intellij)
+    7. [How can I get a copy of this code on the CS Department's Linux machines?](#how-can-i-get-a-copy-of-this-code-on-the-cs-departments-linux-machines)
+    8. [How can I get changes that other people make into my clone?](#how-can-i-get-changes-that-other-people-make-into-my-clone)
+2. [How do I submit my projects?](#how-do-i-submit-my-projects)
+    1. [About how long do the projects take to complete?](#about-how-long-do-the-projects-take-to-complete)
+3. [How do I use the "parent POM"?](#how-do-i-use-the-parent-pom)
+    1. [What's the deal with warnings about an incorrect parent POM?](#whats-the-deal-with-warnings-about-an-incorrect-parent-pom)
+4. [How can I use a debugger to uncover the source of problems with my projects?](#how-can-i-use-a-debugger-to-uncover-the-source-of-problems-with-my-projects)
+5. [How can I create a website for the projects in this repository?](#how-can-i-create-a-website-for-the-projects-in-this-repository)
+6. [How can I improve this repository?](#how-can-i-improve-this-repository)
+
 ## How do I use this repository?
 
 In order to use this repository, you must have a Git environment available on your development machine.
