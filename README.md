@@ -561,6 +561,7 @@ pushing it to GitHub:
 ```
 $ git checkout 62fc42c5b0cf4ddddf78e7568b008bedc9037b38
 $ git branch gh-pages
+$ git checkout gh-pages
 $ git rm README.md
 $ git commit -m "Remove README.md on gh-pages branch" README.md
 $ git push --set-upstream origin gh-pages
@@ -570,9 +571,7 @@ $ git checkout main
 Then, you can generate and publish your website using the below
 commands.  Note that before you can do this, you must replace
 instances of `YourGitHubUser` with your GitHub username in the
-top-level (parent) `pom.xml` file.  (Note that it is essential that
-your GitHub id be **lowercase letters** in the
-`distributionManagement/url` section of the `pom.xml` file.)
+top-level (parent) `pom.xml` file.
 
 ```
 $ ./mvnw site
