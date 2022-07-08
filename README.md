@@ -391,7 +391,7 @@ in submitted code much easier.  Note that the `submit.sh` will issue an error if
 uncommitted changes in your local clone of the repository.  So, be sure to commit all of
 your changes before submitting. 
 
-Once the `submit.sh` has completed, and the tag for the repository has been created. The tag will need to be pushed to the remote repository (your Github repository). 
+Once the `submit.sh` has completed, and the tag for the repository has been created, the tag will need to be pushed to the remote repository (your Github repository). 
 
 To push all tags:
 ```shell
