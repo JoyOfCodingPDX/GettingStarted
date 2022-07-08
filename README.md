@@ -391,6 +391,18 @@ in submitted code much easier.  Note that the `submit.sh` will issue an error if
 uncommitted changes in your local clone of the repository.  So, be sure to commit all of
 your changes before submitting. 
 
+Once the `submit.sh` has completed, and the tag for the repository has been created. The tag will need to be pushed to the remote repository (your Github repository). 
+
+To push all tags:
+```shell
+$ git push --tags
+```
+
+To push individual tag:
+```shell
+$ git push origin submit-Project1-20220501T09:00:58
+```
+
 ### About how long do the projects take to complete?
 
 Starting in the Winter of 2022, we started gathering data from students
