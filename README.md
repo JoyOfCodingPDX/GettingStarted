@@ -1,4 +1,4 @@
-[![Java CI with Maven](https://github.com/YourGitHubId/PortlandStateJavaSummer2022/actions/workflows/maven.yml/badge.svg)](https://github.com/YourGitHubId/PortlandStateJavaSummer2022/actions/workflows/maven.yml)
+[![Java CI with Maven](https://github.com/YourGitHubId/PortlandStateJavaWinter2023/actions/workflows/maven.yml/badge.svg)](https://github.com/YourGitHubId/PortlandStateJavaWinter2023/actions/workflows/maven.yml)
 
 # Getting Started with Advanced Programming with Java
 
@@ -58,7 +58,7 @@ developer"](https://education.github.com/pack) account that gives you
 free private repositories.  Then [create a private GitHub
 repository](https://help.github.com/en/articles/creating-a-new-repository)
 for your source code for this course.  (In this example, the
-repository is named "PortlandStateJavaSummer2022".)  Note that you do
+repository is named "PortlandStateJavaWinter2023".)  Note that you do
 **not** want to "Initialize this repository with a README".  You want
 to create a completely empty repository so that you can initially
 populate it from my (this) repository.
@@ -98,7 +98,7 @@ Then push the bare clone to your newly-created private repository.
 
 ```sh
 $ cd PortlandStateJavaGettingStarted.git
-$ git push --mirror https://github.com/YourGitHubUser/PortlandStateJavaSummer2022.git
+$ git push --mirror https://github.com/YourGitHubUser/PortlandStateJavaWinter2023.git
 ```
 
 If you view your repository on GitHub, you should see the changes
@@ -110,7 +110,7 @@ repository to work with.
 ```sh
 $ cd ..
 $ rm -rf PortlandStateJavaGettingStarted.git
-$ git clone https://github.com/YourGitHubUser/PortlandStateJavaSummer2022.git
+$ git clone https://github.com/YourGitHubUser/PortlandStateJavaWinter2023.git
 ```
 
 ### What do I need to do before I can use this repository?
@@ -119,7 +119,7 @@ The following command lines assume that you are running in the
 directory created by cloning the repository.
 
 ```sh
-$ cd PortlandStateJavaSummer2022
+$ cd PortlandStateJavaWinter2023
 ```
 
 ### How do I use the Java Development Kit?
@@ -246,7 +246,7 @@ clone by adding the directory to git.
 
 ```sh
 $ ./mvnw clean     # Remove files that shouldn't be committed to version control
-$ cd ..            # to PortlandStateJavaSummer2022 directory
+$ cd ..            # to PortlandStateJavaWinter2023 directory
 $ git add student
 $ git commit -m "Added source files for student project"
 ```
@@ -299,7 +299,7 @@ After `ssh`ing to one of the CS Department's Linux machines, you can
 make a clone of your GitHub repository using with:
 
 ```
-$ git clone https://github.com/YourGitHubId/PortlandStateJavaSummer2022.git
+$ git clone https://github.com/YourGitHubId/PortlandStateJavaWinter2023.git
 ```
 
 ### How can I get changes that other people make into my clone?
@@ -313,7 +313,7 @@ First, configure your repository to have this repository to be a
 "remote" named "upstream".
 
 ```sh
-$ cd PortlandStateJavaSummer2022
+$ cd PortlandStateJavaWinter2023
 $ git remote add upstream https://github.com/DavidWhitlock/PortlandStateJavaGettingStarted.git
 ```
 
@@ -384,7 +384,7 @@ After your code has been successfully submitted, the `submit.sh` script will
 [tag](https://git-scm.com/book/en/v2/Git-Basics-Tagging) the current revision of 
 your git repository. The name of the tag indicates which project was submitted and
 the date/time it was submitted.  For example, submitting Project1 at 9 AM on May 1st
-would tag the current revision of the repository with `submit-Project1-20220501T09:00:58`.
+would tag the current revision of the repository with `submit-Project1-20230501T09:00:58`.
 This tag allows you to create a [branch](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
 from the specific revision of your code that was submitted, which makes debugging problems
 in submitted code much easier.  Note that the `submit.sh` will issue an error if there are
@@ -400,7 +400,7 @@ $ git push --tags
 
 To push individual tag:
 ```shell
-$ git push origin submit-Project1-20220501T09:00:58
+$ git push origin submit-Project1-20230501T09:00:58
 ```
 
 ### About how long do the projects take to complete?
@@ -449,8 +449,8 @@ As you create Maven projects in this repository, you may encounter warnings like
 
 ```
 [WARNING] 
-[WARNING] Some problems were encountered while building the effective model for edu.pdx.cs410J.whitlock:phonebill:jar:2022.0.0
-[WARNING] 'parent.relativePath' of POM edu.pdx.cs410J.whitlock:phonebill:2022.0.0 (PortlandStateJavaSummer2022/phonebill/pom.xml) points at edu.pdx.cs410J.whitlock:PortlandStateJavaSummer2022 instead of io.github.davidwhitlock.cs410J:cs410j, please verify your project structure @ line 3, column 11
+[WARNING] Some problems were encountered while building the effective model for edu.pdx.cs410J.whitlock:phonebill:jar:2023.0.0
+[WARNING] 'parent.relativePath' of POM edu.pdx.cs410J.whitlock:phonebill:2023.0.0 (PortlandStateJavaWinter2023/phonebill/pom.xml) points at edu.pdx.cs410J.whitlock:PortlandStateJavaWinter2023 instead of io.github.davidwhitlock.cs410J:cs410j, please verify your project structure @ line 3, column 11
 [WARNING] 
 [WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
 [WARNING] 
@@ -469,7 +469,7 @@ When created, the `pom.xml` files for the projects specify a parent of _my_ top-
   <parent>
     <artifactId>cs410j</artifactId>
     <groupId>io.github.davidwhitlock.cs410J</groupId>
-    <version>2022.1.0</version>
+    <version>2023.0.0-SNAPSHOT</version>
   </parent>
 ```
 
@@ -478,9 +478,9 @@ is my top-level POM) to something like:
 
 ```xml
   <parent>
-    <artifactId>PortlandStateJavaSummer2022</artifactId>
+    <artifactId>PortlandStateJavaWinter2023</artifactId>
     <groupId>edu.pdx.cs410J.your-mcecs-user-id</groupId>
-    <version>2022.0.0</version>
+    <version>2023.0.0</version>
   </parent>
 ```
 
@@ -510,7 +510,7 @@ In order to debug code running as an executable jar, you must specify the `-agen
 to the `-jar` option:
 
 ```
-java -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=*:5005 -jar target/student-2022.0.0.jar 
+java -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=*:5005 -jar target/student-2023.0.0.jar 
 ```
 
 The above `-agentlib` option causes the JVM to output a (rather cryptic) informational message indicating that the JVM
@@ -553,14 +553,14 @@ Running `mvn site` from the root directory of this repository will
 generate a website that provides lots of information (reports, etc.) 
 about the Maven projects.  Note that in order for your multi-project
 Maven site to generate correctly, the sub-projects must specify that
-their parent project is the `PortlandStateJavaSummer2022` project in
+their parent project is the `PortlandStateJavaWinter2023` project in
 your group:
 
 ```xml
   <parent>
-    <artifactId>PortlandStateJavaSummer2022</artifactId>
+    <artifactId>PortlandStateJavaWinter2023</artifactId>
     <groupId>edu.pdx.cs410J.your-mcecs-user-id</groupId>
-    <version>2022.0.0</version>
+    <version>2023.0.0</version>
   </parent>
 ```
 
@@ -597,7 +597,7 @@ You can open `target/staging/index.html` in your web browse to see
 what your site will look like.
 
 Verify that your website is available at a URL like:
-https://yourgithubuser.github.io/PortlandStateJavaSummer2022
+https://yourgithubuser.github.io/PortlandStateJavaWinter2023
 
 ## How can I improve this repository?
 
