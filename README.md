@@ -176,10 +176,8 @@ $ ./createStudentProject.sh
 
 (Note that in this document, I always prefix executables with `./` to
 ensure that the executable can be found even if you don't have `.` on
-your `PATH`.  Note also that for people who are developing on Windows
-machines, there is a `createStudentProject.cmd` that does the same thing as
-the shell script, but doesn't have as nice error checking.  Students
-have not been able to get the shell script to work under cygwin.  It
+your `PATH`.  The project creation scripts must be run on a UNIX machine such as the MCECS Linux machines.  However,
+the projects may be _developed_ on any machine that runs the supported version of Java.  For instance, it
 is okay to create the project on Linux and then develop it on Windows,
 using GitHub to share code across machines.)
 
