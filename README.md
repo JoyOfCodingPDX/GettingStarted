@@ -48,20 +48,14 @@ However, it is very useful to leverage git (and GitHub) to
 easily move that code between multiple machines.  It would enable you
 to develop your code on your local machine and test it on the PSU CS
 Department's machines before you submit it.  This is possible to do
-with GitHub, but it requires some extra steps.  GitHub provides some
-[really good
-documentation](https://help.github.com/en/articles/duplicating-a-repository)
-on how to this, and I'll summarize it here.
+with GitHub, but it requires some extra steps.
 
 First, create a [GitHub "student
 developer"](https://education.github.com/pack) account that gives you
 free private repositories.  Then [create a private GitHub
-repository](https://help.github.com/en/articles/creating-a-new-repository)
+repository from this "template" repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)
 for your source code for this course.  (In this example, the
-repository is named "PortlandStateJavaWinter2023".)  Note that you do
-**not** want to "Initialize this repository with a README".  You want
-to create a completely empty repository so that you can initially
-populate it from my (this) repository.
+repository is named "PortlandStateJavaWinter2023".)
 
 Again, please ensure that all of your code for the assignments is in a 
 **private** GitHub repository.  GitHub makes it very easy for people to
@@ -72,7 +66,7 @@ current students not leverage former students' code to inform their
 projects.  If you have questions about your code that you'd like me to
 answer, please feel free to [make me a collaborator](https://docs.github.com/en/github/setting-up-and-managing-your-github-user-account/managing-access-to-your-personal-repositories/inviting-collaborators-to-a-personal-repository)
 on your private repository.  I will try my best to engage you in a 
-discussion about  your code.
+discussion about your code.
 
 The below `git` command line examples are expressed using UNIX syntax.  They
 are known to work on the CS Department's Linux machines and on macOS.  Students
@@ -82,36 +76,6 @@ username/password credentials.  Authenticating with [ssh keys](https://docs.gith
 or with [personal access tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 is recommended.)
 
-Now, here comes some magic.  Make a "bare" clone of my repository.  
-
-```sh
-$ git clone --bare https://github.com/DavidWhitlock/PortlandStateJavaGettingStarted.git
-```
-
-Note that the name of the directory created by the bare clone is
-`PortlandStateJavaGettingStarted.git`; it is not the same as a regular
-clone of the repository.  This "bare" clone is disconnected from the remote
-repository hosted on GitHub, which is what we want because starting today your code
-will be different from mine.
-
-Then push the bare clone to your newly-created private repository.
-
-```sh
-$ cd PortlandStateJavaGettingStarted.git
-$ git push --mirror https://github.com/YourGitHubUser/PortlandStateJavaWinter2023.git
-```
-
-If you view your repository on GitHub, you should see the changes
-mirrored from my repository.
-
-Now you can delete the bare clone and make a local clone your
-repository to work with.
-
-```sh
-$ cd ..
-$ rm -rf PortlandStateJavaGettingStarted.git
-$ git clone https://github.com/YourGitHubUser/PortlandStateJavaWinter2023.git
-```
 
 ### What do I need to do before I can use this repository?
 
@@ -347,6 +311,13 @@ instructor.  This script invokes a Java program that zips up the source code and
 that the tests provide sufficient code coverage.  Make sure that all of your code compiles before you submit it.
 The Grader will not to attempt to debug your code.  Your grade will be reduced significantly if your code does not
 compile and the Grader has to read it.
+
+Additionally, please remove any debugging or "println" output from your program 
+before you submit it.  Such output can be very helpful during development, but can complicate the job of the Grader who
+has to wade through extra text to identify the intended output of your program.  The Grader reserves the right to deduct
+points from projects whose output is difficult to interpret.  You are encouraged to write unit tests to reproduce and 
+validate defects discovered during development.  If you choose to include debugging statements, they should be enbled 
+by a Java system property. 
 
 The `submit.sh` script takes one argument, the name of the Project to submit.  The Project name (number) will determine
 the directory that contains the project's code.  For instance, you can submit Project 1 by running the following command
