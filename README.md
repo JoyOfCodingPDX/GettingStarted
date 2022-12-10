@@ -28,12 +28,9 @@ git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) on
 your development machine to gain experience with the `git` command line tools (or the [GitHub 
 Desktop](https://desktop.github.com/) tools).  If you are not able to get Git working on your development
 machine, [IntelliJ has really great support for Git](https://www.jetbrains.com/help/idea/using-git-integration.html)
-and makes it easy to perform fundamental clone/commit/push/pull Git operations.  (Note that IntelliJ
-does not make it easy to perform the "bare clone" steps described below.  If you're exclusively using IntelliJ
-for Git on your development machine, you should perform the "bare clone" steps on the PSU Linux machines to
-populate your development Git repository.)
+and makes it easy to perform fundamental clone/commit/push/pull Git operations.
 
-After you have configured Git on your development machine, you need to make a clone of the repository in which
+After you have configured Git on your development machine, you need to create a repository of your own in which
 you can do your work.
 If you simply make a `git clone` of this GitHub repository on your
 local machine, you can commit changes to your local repository, but
@@ -45,7 +42,7 @@ repository, we don't want the source code that you wrote for your
 projects to be available publicly for everyone to see.
 
 However, it is very useful to leverage git (and GitHub) to
-easily move that code between multiple machines.  It would enable you
+easily move that code between multiple machines.  It enables you
 to develop your code on your local machine and test it on the PSU CS
 Department's machines before you submit it.  This is possible to do
 with GitHub, but it requires some extra steps.
@@ -96,9 +93,9 @@ by issuing the `java -version` command:
 
 ```sh
 $ java -version
-openjdk version "16.0.1" 2021-04-20
-OpenJDK Runtime Environment (build 16.0.1+9-24)
-OpenJDK 64-Bit Server VM (build 16.0.1+9-24, mixed mode, sharing)
+openjdk version "17.0.4.1" 2022-08-12
+OpenJDK Runtime Environment Temurin-17.0.4.1+1 (build 17.0.4.1+1)
+OpenJDK 64-Bit Server VM Temurin-17.0.4.1+1 (build 17.0.4.1+1, mixed mode, sharing)
 ```
 
 #### How do I configure the JDK on the PSU Linux machines?
@@ -521,7 +518,7 @@ project.
 Running `mvn site` from the root directory of this repository will
 generate a website that provides lots of information (reports, etc.) 
 about the Maven projects.  Note that in order for your multi-project
-Maven site to generate correctly, the sub-projects must specify that
+Maven site to generate correctly, the subprojects must specify that
 their parent project is the `PortlandStateJavaWinter2023` project in
 your group:
 
@@ -542,7 +539,6 @@ it will take precedence over the generated `index.html` file) and
 pushing it to GitHub:
 
 ```
-$ git checkout 62fc42c5b0cf4ddddf78e7568b008bedc9037b38
 $ git branch gh-pages
 $ git checkout gh-pages
 $ git rm README.md
