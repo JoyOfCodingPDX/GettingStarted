@@ -435,7 +435,7 @@ When created, the `pom.xml` files for the projects specify a parent of _my_ top-
   <parent>
     <artifactId>cs410j</artifactId>
     <groupId>io.github.davidwhitlock.cs410J</groupId>
-    <version>2023.0.0-SNAPSHOT</version>
+    <version>2023.0.0</version>
   </parent>
 ```
 
