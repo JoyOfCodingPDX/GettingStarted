@@ -18,4 +18,4 @@ else
     fi
 fi
 
-createProjectFromArchetype ${loginId} "phonebill-web"
+createProjectFromArchetype ${loginId} "airline-web"
