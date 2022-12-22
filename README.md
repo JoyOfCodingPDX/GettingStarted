@@ -1,4 +1,4 @@
-[![Java CI with Maven](https://github.com/YourGitHubId/PortlandStateJavaSummer2022/actions/workflows/maven.yml/badge.svg)](https://github.com/YourGitHubId/PortlandStateJavaSummer2022/actions/workflows/maven.yml)
+[![Java CI with Maven](https://github.com/YourGitHubId/PortlandStateJavaWinter2023/actions/workflows/maven.yml/badge.svg)](https://github.com/YourGitHubId/PortlandStateJavaWinter2023/actions/workflows/maven.yml)
 
 # Getting Started with Advanced Programming with Java
 
@@ -28,12 +28,9 @@ git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) on
 your development machine to gain experience with the `git` command line tools (or the [GitHub 
 Desktop](https://desktop.github.com/) tools).  If you are not able to get Git working on your development
 machine, [IntelliJ has really great support for Git](https://www.jetbrains.com/help/idea/using-git-integration.html)
-and makes it easy to perform fundamental clone/commit/push/pull Git operations.  (Note that IntelliJ
-does not make it easy to perform the "bare clone" steps described below.  If you're exclusively using IntelliJ
-for Git on your development machine, you should perform the "bare clone" steps on the PSU Linux machines to
-populate your development Git repository.)
+and makes it easy to perform fundamental clone/commit/push/pull Git operations.
 
-After you have configured Git on your development machine, you need to make a clone of the repository in which
+After you have configured Git on your development machine, you need to create a repository of your own in which
 you can do your work.
 If you simply make a `git clone` of this GitHub repository on your
 local machine, you can commit changes to your local repository, but
@@ -45,23 +42,17 @@ repository, we don't want the source code that you wrote for your
 projects to be available publicly for everyone to see.
 
 However, it is very useful to leverage git (and GitHub) to
-easily move that code between multiple machines.  It would enable you
+easily move that code between multiple machines.  It enables you
 to develop your code on your local machine and test it on the PSU CS
 Department's machines before you submit it.  This is possible to do
-with GitHub, but it requires some extra steps.  GitHub provides some
-[really good
-documentation](https://help.github.com/en/articles/duplicating-a-repository)
-on how to this, and I'll summarize it here.
+with GitHub, but it requires some extra steps.
 
 First, create a [GitHub "student
 developer"](https://education.github.com/pack) account that gives you
 free private repositories.  Then [create a private GitHub
-repository](https://help.github.com/en/articles/creating-a-new-repository)
+repository from this "template" repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)
 for your source code for this course.  (In this example, the
-repository is named "PortlandStateJavaSummer2022".)  Note that you do
-**not** want to "Initialize this repository with a README".  You want
-to create a completely empty repository so that you can initially
-populate it from my (this) repository.
+repository is named "PortlandStateJavaWinter2023".)
 
 Again, please ensure that all of your code for the assignments is in a 
 **private** GitHub repository.  GitHub makes it very easy for people to
@@ -72,7 +63,7 @@ current students not leverage former students' code to inform their
 projects.  If you have questions about your code that you'd like me to
 answer, please feel free to [make me a collaborator](https://docs.github.com/en/github/setting-up-and-managing-your-github-user-account/managing-access-to-your-personal-repositories/inviting-collaborators-to-a-personal-repository)
 on your private repository.  I will try my best to engage you in a 
-discussion about  your code.
+discussion about your code.
 
 The below `git` command line examples are expressed using UNIX syntax.  They
 are known to work on the CS Department's Linux machines and on macOS.  Students
@@ -82,36 +73,6 @@ username/password credentials.  Authenticating with [ssh keys](https://docs.gith
 or with [personal access tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 is recommended.)
 
-Now, here comes some magic.  Make a "bare" clone of my repository.  
-
-```sh
-$ git clone --bare https://github.com/DavidWhitlock/PortlandStateJavaGettingStarted.git
-```
-
-Note that the name of the directory created by the bare clone is
-`PortlandStateJavaGettingStarted.git`; it is not the same as a regular
-clone of the repository.  This "bare" clone is disconnected from the remote
-repository hosted on GitHub, which is what we want because starting today your code
-will be different from mine.
-
-Then push the bare clone to your newly-created private repository.
-
-```sh
-$ cd PortlandStateJavaGettingStarted.git
-$ git push --mirror https://github.com/YourGitHubUser/PortlandStateJavaSummer2022.git
-```
-
-If you view your repository on GitHub, you should see the changes
-mirrored from my repository.
-
-Now you can delete the bare clone and make a local clone your
-repository to work with.
-
-```sh
-$ cd ..
-$ rm -rf PortlandStateJavaGettingStarted.git
-$ git clone https://github.com/YourGitHubUser/PortlandStateJavaSummer2022.git
-```
 
 ### What do I need to do before I can use this repository?
 
@@ -119,7 +80,7 @@ The following command lines assume that you are running in the
 directory created by cloning the repository.
 
 ```sh
-$ cd PortlandStateJavaSummer2022
+$ cd PortlandStateJavaWinter2023
 ```
 
 ### How do I use the Java Development Kit?
@@ -132,9 +93,9 @@ by issuing the `java -version` command:
 
 ```sh
 $ java -version
-openjdk version "16.0.1" 2021-04-20
-OpenJDK Runtime Environment (build 16.0.1+9-24)
-OpenJDK 64-Bit Server VM (build 16.0.1+9-24, mixed mode, sharing)
+openjdk version "17.0.4.1" 2022-08-12
+OpenJDK Runtime Environment Temurin-17.0.4.1+1 (build 17.0.4.1+1)
+OpenJDK 64-Bit Server VM Temurin-17.0.4.1+1 (build 17.0.4.1+1, mixed mode, sharing)
 ```
 
 #### How do I configure the JDK on the PSU Linux machines?
@@ -212,10 +173,8 @@ $ ./createStudentProject.sh
 
 (Note that in this document, I always prefix executables with `./` to
 ensure that the executable can be found even if you don't have `.` on
-your `PATH`.  Note also that for people who are developing on Windows
-machines, there is a `createStudentProject.cmd` that does the same thing as
-the shell script, but doesn't have as nice error checking.  Students
-have not been able to get the shell script to work under cygwin.  It
+your `PATH`.  The project creation scripts must be run on a UNIX machine such as the MCECS Linux machines.  However,
+the projects may be _developed_ on any machine that runs the supported version of Java.  For instance, it
 is okay to create the project on Linux and then develop it on Windows,
 using GitHub to share code across machines.)
 
@@ -246,7 +205,7 @@ clone by adding the directory to git.
 
 ```sh
 $ ./mvnw clean     # Remove files that shouldn't be committed to version control
-$ cd ..            # to PortlandStateJavaSummer2022 directory
+$ cd ..            # to PortlandStateJavaWinter2023 directory
 $ git add student
 $ git commit -m "Added source files for student project"
 ```
@@ -299,7 +258,7 @@ After `ssh`ing to one of the CS Department's Linux machines, you can
 make a clone of your GitHub repository using with:
 
 ```
-$ git clone https://github.com/YourGitHubId/PortlandStateJavaSummer2022.git
+$ git clone https://github.com/YourGitHubId/PortlandStateJavaWinter2023.git
 ```
 
 ### How can I get changes that other people make into my clone?
@@ -313,7 +272,7 @@ First, configure your repository to have this repository to be a
 "remote" named "upstream".
 
 ```sh
-$ cd PortlandStateJavaSummer2022
+$ cd PortlandStateJavaWinter2023
 $ git remote add upstream https://github.com/DavidWhitlock/PortlandStateJavaGettingStarted.git
 ```
 
@@ -347,6 +306,13 @@ instructor.  This script invokes a Java program that zips up the source code and
 that the tests provide sufficient code coverage.  Make sure that all of your code compiles before you submit it.
 The Grader will not to attempt to debug your code.  Your grade will be reduced significantly if your code does not
 compile and the Grader has to read it.
+
+Additionally, please remove any debugging or "println" output from your program 
+before you submit it.  Such output can be very helpful during development, but can complicate the job of the Grader who
+has to wade through extra text to identify the intended output of your program.  The Grader reserves the right to deduct
+points from projects whose output is difficult to interpret.  You are encouraged to write unit tests to reproduce and 
+validate defects discovered during development.  If you choose to include debugging statements, they should be enbled 
+by a Java system property. 
 
 The `submit.sh` script takes one argument, the name of the Project to submit.  The Project name (number) will determine
 the directory that contains the project's code.  For instance, you can submit Project 1 by running the following command
@@ -384,7 +350,7 @@ After your code has been successfully submitted, the `submit.sh` script will
 [tag](https://git-scm.com/book/en/v2/Git-Basics-Tagging) the current revision of 
 your git repository. The name of the tag indicates which project was submitted and
 the date/time it was submitted.  For example, submitting Project1 at 9 AM on May 1st
-would tag the current revision of the repository with `submit-Project1-20220501T09:00:58`.
+would tag the current revision of the repository with `submit-Project1-20230501T09:00:58`.
 This tag allows you to create a [branch](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
 from the specific revision of your code that was submitted, which makes debugging problems
 in submitted code much easier.  Note that the `submit.sh` will issue an error if there are
@@ -400,24 +366,26 @@ $ git push --tags
 
 To push individual tag:
 ```shell
-$ git push origin submit-Project1-20220501T09:00:58
+$ git push origin submit-Project1-20230501T09:00:58
 ```
 
 ### About how long do the projects take to complete?
 
 Starting in the Winter of 2022, we started gathering data from students
 regarding the approximate number of hours they spend working on each project.
+Note that there are not as many submissions for the XML project because it only
+applies to the 11-week version of the course, which is not offered in the Summer.
 The following is a summary of the data gathered to date.  
 
-|  | App Classes | Text File | Pretty Print | REST | Android |
-| :--- | ---: | ---: | ---: | ---: | ---: |
-| Count | 21 | 20 | 19 | 17 | 17 |
-| Average | 17 hours | 16 hours | 18 hours | 26 hours | 25 hours |
-| Maximum | 48 hours | 30 hours | 30 hours | 70 hours | 48 hours |
-| Top 25% | 21 hours | 21 hours | 24 hours | 30 hours | 30 hours |
-| Median | 14 hours | 15 hours | 16 hours | 20 hours | 25 hours |
-| Bottom 25% | 10 hours | 10 hours | 13 hours | 15 hours | 20 hours |
-| Minimum | 7 hours | 5 hours | 8 hours | 8 hours | 14 hours |
+|            | App Classes | Text File | Pretty Print |     Koans |      XML |     REST |  Android |
+|:-----------|------------:|----------:|-------------:|----------:|---------:|---------:|---------:|
+| Count      |          53 |        51 |           49 |        41 |       18 |       45 |       46 |
+| Average    |    21 hours |  19 hours |     21 hours |  20 hours | 22 hours | 29 hours | 25 hours |
+| Maximum    |    60 hours | 120 hours |     72 hours | 100 hours | 60 hours | 80 hours | 60 hours |
+| Top 25%    |    25 hours |  24 hours |     25 hours |  24 hours | 25 hours | 37 hours | 30 hours |
+| Median     |    20 hours |  17 hours |     16 hours |  15 hours | 20 hours | 24 hours | 24 hours |
+| Bottom 25% |    13 hours |  11 hours |     11 hours |  10 hours | 15 hours | 15 hours | 17 hours |
+| Minimum    |     7 hours |   0 hours |      8 hours |   4 hours |  8 hours |  8 hours |  7 hours |
 
 You may want to consider it as you plan your projects.  Recall, though, that
 this data is self-reported.  Your experience might be different from that
@@ -447,8 +415,8 @@ As you create Maven projects in this repository, you may encounter warnings like
 
 ```
 [WARNING] 
-[WARNING] Some problems were encountered while building the effective model for edu.pdx.cs410J.whitlock:phonebill:jar:2022.0.0
-[WARNING] 'parent.relativePath' of POM edu.pdx.cs410J.whitlock:phonebill:2022.0.0 (PortlandStateJavaSummer2022/phonebill/pom.xml) points at edu.pdx.cs410J.whitlock:PortlandStateJavaSummer2022 instead of io.github.davidwhitlock.cs410J:cs410j, please verify your project structure @ line 3, column 11
+[WARNING] Some problems were encountered while building the effective model for edu.pdx.cs410J.whitlock:airline:jar:2023.0.0
+[WARNING] 'parent.relativePath' of POM edu.pdx.cs410J.whitlock:airline:2023.0.0 (PortlandStateJavaWinter2023/airline/pom.xml) points at edu.pdx.cs410J.whitlock:PortlandStateJavaWinter2023 instead of io.github.davidwhitlock.cs410J:cs410j, please verify your project structure @ line 3, column 11
 [WARNING] 
 [WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
 [WARNING] 
@@ -467,7 +435,7 @@ When created, the `pom.xml` files for the projects specify a parent of _my_ top-
   <parent>
     <artifactId>cs410j</artifactId>
     <groupId>io.github.davidwhitlock.cs410J</groupId>
-    <version>2022.1.0</version>
+    <version>2023.0.0</version>
   </parent>
 ```
 
@@ -476,9 +444,9 @@ is my top-level POM) to something like:
 
 ```xml
   <parent>
-    <artifactId>PortlandStateJavaSummer2022</artifactId>
+    <artifactId>PortlandStateJavaWinter2023</artifactId>
     <groupId>edu.pdx.cs410J.your-mcecs-user-id</groupId>
-    <version>2022.0.0</version>
+    <version>2023.0.0</version>
   </parent>
 ```
 
@@ -508,7 +476,7 @@ In order to debug code running as an executable jar, you must specify the `-agen
 to the `-jar` option:
 
 ```
-java -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=*:5005 -jar target/student-2022.0.0.jar 
+java -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=*:5005 -jar target/student-2023.0.0.jar 
 ```
 
 The above `-agentlib` option causes the JVM to output a (rather cryptic) informational message indicating that the JVM
@@ -550,15 +518,15 @@ project.
 Running `mvn site` from the root directory of this repository will
 generate a website that provides lots of information (reports, etc.) 
 about the Maven projects.  Note that in order for your multi-project
-Maven site to generate correctly, the sub-projects must specify that
-their parent project is the `PortlandStateJavaSummer2022` project in
+Maven site to generate correctly, the subprojects must specify that
+their parent project is the `PortlandStateJavaWinter2023` project in
 your group:
 
 ```xml
   <parent>
-    <artifactId>PortlandStateJavaSummer2022</artifactId>
+    <artifactId>PortlandStateJavaWinter2023</artifactId>
     <groupId>edu.pdx.cs410J.your-mcecs-user-id</groupId>
-    <version>2022.0.0</version>
+    <version>2023.0.0</version>
   </parent>
 ```
 
@@ -571,7 +539,6 @@ it will take precedence over the generated `index.html` file) and
 pushing it to GitHub:
 
 ```
-$ git checkout 62fc42c5b0cf4ddddf78e7568b008bedc9037b38
 $ git branch gh-pages
 $ git checkout gh-pages
 $ git rm README.md
@@ -595,7 +562,7 @@ You can open `target/staging/index.html` in your web browse to see
 what your site will look like.
 
 Verify that your website is available at a URL like:
-https://yourgithubuser.github.io/PortlandStateJavaSummer2022
+https://yourgithubuser.github.io/PortlandStateJavaWinter2023
 
 ## How can I improve this repository?
 
