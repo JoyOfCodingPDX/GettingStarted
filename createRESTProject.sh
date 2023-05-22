@@ -18,4 +18,4 @@ else
     fi
 fi
 
-createProjectFromArchetype ${loginId} "airline-web"
+createProjectFromArchetype ${loginId} "apptbook-web"
