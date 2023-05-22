@@ -1,4 +1,4 @@
-[![Java CI with Maven](https://github.com/YourGitHubId/PortlandStateJavaWinter2023/actions/workflows/maven.yml/badge.svg)](https://github.com/YourGitHubId/PortlandStateJavaWinter2023/actions/workflows/maven.yml)
+[![Java CI with Maven](https://github.com/YourGitHubId/PortlandStateJavaSummer2023/actions/workflows/maven.yml/badge.svg)](https://github.com/YourGitHubId/PortlandStateJavaSummer2023/actions/workflows/maven.yml)
 
 # Getting Started with Advanced Programming with Java
 
@@ -52,7 +52,7 @@ developer"](https://education.github.com/pack) account that gives you
 free private repositories.  Then [create a private GitHub
 repository from this "template" repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)
 for your source code for this course.  (In this example, the
-repository is named "PortlandStateJavaWinter2023".)
+repository is named "PortlandStateJavaSummer2023".)
 
 Again, please ensure that all of your code for the assignments is in a 
 **private** GitHub repository.  GitHub makes it very easy for people to
@@ -80,7 +80,7 @@ The following command lines assume that you are running in the
 directory created by cloning the repository.
 
 ```sh
-$ cd PortlandStateJavaWinter2023
+$ cd PortlandStateJavaSummer2023
 ```
 
 ### How do I use the Java Development Kit?
@@ -205,7 +205,7 @@ clone by adding the directory to git.
 
 ```sh
 $ ./mvnw clean     # Remove files that shouldn't be committed to version control
-$ cd ..            # to PortlandStateJavaWinter2023 directory
+$ cd ..            # to PortlandStateJavaSummer2023 directory
 $ git add student
 $ git commit -m "Added source files for student project"
 ```
@@ -258,7 +258,7 @@ After `ssh`ing to one of the CS Department's Linux machines, you can
 make a clone of your GitHub repository using with:
 
 ```
-$ git clone https://github.com/YourGitHubId/PortlandStateJavaWinter2023.git
+$ git clone https://github.com/YourGitHubId/PortlandStateJavaSummer2023.git
 ```
 
 ### How can I get changes that other people make into my clone?
@@ -272,7 +272,7 @@ First, configure your repository to have this repository to be a
 "remote" named "upstream".
 
 ```sh
-$ cd PortlandStateJavaWinter2023
+$ cd PortlandStateJavaSummer2023
 $ git remote add upstream https://github.com/DavidWhitlock/PortlandStateJavaGettingStarted.git
 ```
 
@@ -371,7 +371,7 @@ $ git push origin submit-Project1-20230501T09:00:58
 
 ### About how long do the projects take to complete?
 
-Starting in the Winter of 2022, we started gathering data from students
+Starting in the Summer of 2022, we started gathering data from students
 regarding the approximate number of hours they spend working on each project.
 Note that there are not as many submissions for the XML project because it only
 applies to the 11-week version of the course, which is not offered in the Summer.
@@ -416,7 +416,7 @@ As you create Maven projects in this repository, you may encounter warnings like
 ```
 [WARNING] 
 [WARNING] Some problems were encountered while building the effective model for edu.pdx.cs410J.whitlock:airline:jar:2023.0.0
-[WARNING] 'parent.relativePath' of POM edu.pdx.cs410J.whitlock:airline:2023.0.0 (PortlandStateJavaWinter2023/airline/pom.xml) points at edu.pdx.cs410J.whitlock:PortlandStateJavaWinter2023 instead of io.github.davidwhitlock.cs410J:cs410j, please verify your project structure @ line 3, column 11
+[WARNING] 'parent.relativePath' of POM edu.pdx.cs410J.whitlock:airline:2023.0.0 (PortlandStateJavaSummer2023/airline/pom.xml) points at edu.pdx.cs410J.whitlock:PortlandStateJavaSummer2023 instead of io.github.davidwhitlock.cs410J:cs410j, please verify your project structure @ line 3, column 11
 [WARNING] 
 [WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
 [WARNING] 
@@ -444,7 +444,7 @@ is my top-level POM) to something like:
 
 ```xml
   <parent>
-    <artifactId>PortlandStateJavaWinter2023</artifactId>
+    <artifactId>PortlandStateJavaSummer2023</artifactId>
     <groupId>edu.pdx.cs410J.your-mcecs-user-id</groupId>
     <version>2023.0.0</version>
   </parent>
@@ -519,12 +519,12 @@ Running `mvn site` from the root directory of this repository will
 generate a website that provides lots of information (reports, etc.) 
 about the Maven projects.  Note that in order for your multi-project
 Maven site to generate correctly, the subprojects must specify that
-their parent project is the `PortlandStateJavaWinter2023` project in
+their parent project is the `PortlandStateJavaSummer2023` project in
 your group:
 
 ```xml
   <parent>
-    <artifactId>PortlandStateJavaWinter2023</artifactId>
+    <artifactId>PortlandStateJavaSummer2023</artifactId>
     <groupId>edu.pdx.cs410J.your-mcecs-user-id</groupId>
     <version>2023.0.0</version>
   </parent>
@@ -562,7 +562,7 @@ You can open `target/staging/index.html` in your web browse to see
 what your site will look like.
 
 Verify that your website is available at a URL like:
-https://yourgithubuser.github.io/PortlandStateJavaWinter2023
+https://yourgithubuser.github.io/PortlandStateJavaSummer2023
 
 ## How can I improve this repository?
 

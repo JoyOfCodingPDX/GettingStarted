@@ -15,13 +15,13 @@ accordingly
     <version>2023.1.0-SNAPSHOT</version>
   </parent>
   <groupId>edu.pdx.cs410J.YourUserId</groupId>
-  <artifactId>PortlandStateJavaWinter2023</artifactId>
+  <artifactId>PortlandStateJavaSummer2023</artifactId>
   <version>2023.0.0</version>
 
   <packaging>pom</packaging>
-  <name>PSUJavaWinter2023</name>
-  <description>Source code written in the Winter 2023 offering of Advanced Programming with Java</description>
-  <url>http://YourGitHubUserInLowerCase.github.io/PortlandStateJavaWinter2023</url>
+  <name>PSUJavaSummer2023</name>
+  <description>Source code written in the Summer 2023 offering of Advanced Programming with Java</description>
+  <url>http://YourGitHubUserInLowerCase.github.io/PortlandStateJavaSummer2023</url>
 
   <modules>
   </modules>
@@ -33,7 +33,7 @@ accordingly
   </organization>
   <issueManagement>
     <system>github</system>
-    <url>https://github.com/YourGitHubUser/PortlandStateJavaWinter2023/issues</url>
+    <url>https://github.com/YourGitHubUser/PortlandStateJavaSummer2023/issues</url>
   </issueManagement>
   <licenses>
     <license>
@@ -76,7 +76,7 @@ accordingly
       <plugin>
         <artifactId>maven-site-plugin</artifactId>
         <configuration>
-          <topSiteURL>scm:git:git@github.com:YourGithubUser/PortlandStateJavaWinter2023.git</topSiteURL>
+          <topSiteURL>scm:git:git@github.com:YourGithubUser/PortlandStateJavaSummer2023.git</topSiteURL>
         </configuration>
       </plugin>
       <plugin>
@@ -92,7 +92,7 @@ accordingly
   </build>
 
   <scm>
-    <connection>scm:git:git@github.com:YourGithubUser/PortlandStateJavaWinter2023.git</connection>
+    <connection>scm:git:git@github.com:YourGithubUser/PortlandStateJavaSummer2023.git</connection>
   </scm>
   <distributionManagement>
     <snapshotRepository>
@@ -102,7 +102,7 @@ accordingly
     <site>
       <id>gh-pages</id>
       <name>GitHub Pages</name>
-      <url>scm:git:git@github.com:YourGithubUser/PortlandStateJavaWinter2023.git</url>
+      <url>scm:git:git@github.com:YourGithubUser/PortlandStateJavaSummer2023.git</url>
     </site>
   </distributionManagement>
 
