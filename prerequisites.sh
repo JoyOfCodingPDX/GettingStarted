@@ -19,8 +19,7 @@ function runningOnPSUMachine() {
     if [[ -n "$psuHostname" ]]; then
         echo "You are running on PSU machine: ${psuHostname}"
     else
-	echo "This script must be run on a PSU Linux machine"
-	return 1
+      	return 1
     fi
 
     if [[ -r "/u/whitlock/jars/grader.jar" ]]; then
@@ -72,6 +71,16 @@ function createProjectFromArchetype() {
 	projectName=$3
     else 
 	projectName=${archetypeName}
+    fi
+
+    if ! runningOnPSUMachine; then
+        echo "** This script can only be run on a PSU CECS Linux Machine"
+        exit 1
+    fi
+
+    if ! checkForJava; then
+        echo "** Java is not configured correctly in your environment"
+        exit 1
     fi
 
     echo "** Creating ${archetypeName} project for ${loginId}"
