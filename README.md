@@ -218,6 +218,19 @@ If the build completes successful, you can use your favorite editor (I
 highly recommend [IntelliJ](https://www.jetbrains.com/idea/)) to work 
 on the project.
 
+#### mvnw doesn't work with Git Bash on Windows
+
+The Git Bash tool provides a UNIX command line environment on Windows that has support for `git`.  However, attempting
+to run the UNIX `mvnw` script under Git Bash will likely result in this cryptic error:
+
+```shell
+curl: (3) URL using bad/illegal format or missing URL
+Error: Could not find or load main class org.apache.maven.wrapper.MavenWrapperMain
+Caused by: java.lang.ClassNotFoundException: org.apache.maven.wrapper.MavenWrapperMain
+```
+
+If you encounter this error, run `mvnw.cmd` on Git Bash instead of `mvnw`.
+
 ### How can I commit my code to this repository?
 
 After creating a Maven project, you can add the code it to your local
@@ -259,6 +272,12 @@ like `java.lang.String`.  There will be a lot of red in the IDE.
 
 Some students have used [IntelliJ to run Maven commands](https://www.jetbrains.com/help/idea/work-with-maven-goals.html)
 which alleviated the need for them to install a JDK and Git in their local development environment. 
+
+IntelliJ alerts the developer to code that requires attention, but not everything labelled as an "error" actually causes
+problems.  In general, if you are able to run unit tests in IntelliJ and successfully build `mvnw clean verify`, your
+code is likely in good shape.  There are a couple of "errors" that IntelliJ identifies that are safe to ignore:
+   * `Plugin ‘org.apache.maven.plugins:maven-surefire-report-plugin:3.0.0-M7’ not found` can be remediated by running `mvnw verify` and `mvnw site`
+   * `Cannot resolve symbol ‘grader’` in a `pom.xml` file can be safely ignored
 
 ### How can I get a copy of this code on the CS Department's Linux machines?
 
