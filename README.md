@@ -1,4 +1,4 @@
-[![Java CI with Maven](https://github.com/YourGitHubId/PortlandStateJavaWinter2023/actions/workflows/maven.yml/badge.svg)](https://github.com/YourGitHubId/PortlandStateJavaWinter2023/actions/workflows/maven.yml)
+[![Java CI with Maven](https://github.com/YourGitHubId/PortlandStateJavaSummer2023/actions/workflows/maven.yml/badge.svg)](https://github.com/YourGitHubId/PortlandStateJavaSummer2023/actions/workflows/maven.yml)
 
 # Getting Started with Advanced Programming with Java
 
@@ -19,6 +19,26 @@ Prior to following these instructions, you may want to review the
 and
 [screencast](https://www.youtube.com/watch?v=VZXEwcgigaw&list=SPyM7S4CZk9WPrtC8AclCNxOBA8buEJdib)
 from the [course's website](http://web.cecs.pdx.edu/~whitlock/).
+
+# Contents
+1. [How do I use this repository?](#how-do-i-use-this-repository)
+    1. [What do I need to do before I can use this repository?](#what-do-i-need-to-do-before-i-can-use-this-repository)
+    2. [How do I use the Java Development Kit?](#how-do-i-use-the-java-development-kit)
+        1. [How do I configure the JDK on the PSU Linux machines?](#how-do-i-configure-the-jdk-on-the-psu-linux-machines)
+        2. [How do I install the JDK on my personal machine?](#how-do-i-install-the-jdk-on-my-personal-machine)
+    3. [How do I configure information about myself?](#how-do-i-configure-information-about-myself)
+    4. [How do I create and run my own Java projects?](#how-do-i-create-and-run-my-own-java-projects)
+    5. [How can I commit my code to this repository?](#how-can-i-commit-my-code-to-this-repository)
+    6. [How do I work with code from this repository using IntelliJ?](#how-do-i-work-with-code-from-this-repository-using-intellij)
+    7. [How can I get a copy of this code on the CS Department's Linux machines?](#how-can-i-get-a-copy-of-this-code-on-the-cs-departments-linux-machines)
+    8. [How can I get changes that other people make into my clone?](#how-can-i-get-changes-that-other-people-make-into-my-clone)
+2. [How do I submit my projects?](#how-do-i-submit-my-projects)
+    1. [About how long do the projects take to complete?](#about-how-long-do-the-projects-take-to-complete)
+3. [How do I use the "parent POM"?](#how-do-i-use-the-parent-pom)
+    1. [What's the deal with warnings about an incorrect parent POM?](#whats-the-deal-with-warnings-about-an-incorrect-parent-pom)
+4. [How can I use a debugger to uncover the source of problems with my projects?](#how-can-i-use-a-debugger-to-uncover-the-source-of-problems-with-my-projects)
+5. [How can I create a website for the projects in this repository?](#how-can-i-create-a-website-for-the-projects-in-this-repository)
+6. [How can I improve this repository?](#how-can-i-improve-this-repository)
 
 ## How do I use this repository?
 
@@ -52,7 +72,7 @@ developer"](https://education.github.com/pack) account that gives you
 free private repositories.  Then [create a private GitHub
 repository from this "template" repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)
 for your source code for this course.  (In this example, the
-repository is named "PortlandStateJavaWinter2023".)
+repository is named "PortlandStateJavaSummer2023".)
 
 Again, please ensure that all of your code for the assignments is in a 
 **private** GitHub repository.  GitHub makes it very easy for people to
@@ -80,7 +100,7 @@ The following command lines assume that you are running in the
 directory created by cloning the repository.
 
 ```sh
-$ cd PortlandStateJavaWinter2023
+$ cd PortlandStateJavaSummer2023
 ```
 
 ### How do I use the Java Development Kit?
@@ -198,6 +218,19 @@ If the build completes successful, you can use your favorite editor (I
 highly recommend [IntelliJ](https://www.jetbrains.com/idea/)) to work 
 on the project.
 
+#### mvnw doesn't work with Git Bash on Windows
+
+The Git Bash tool provides a UNIX command line environment on Windows that has support for `git`.  However, attempting
+to run the UNIX `mvnw` script under Git Bash will likely result in this cryptic error:
+
+```shell
+curl: (3) URL using bad/illegal format or missing URL
+Error: Could not find or load main class org.apache.maven.wrapper.MavenWrapperMain
+Caused by: java.lang.ClassNotFoundException: org.apache.maven.wrapper.MavenWrapperMain
+```
+
+If you encounter this error, run `mvnw.cmd` on Git Bash instead of `mvnw`.
+
 ### How can I commit my code to this repository?
 
 After creating a Maven project, you can add the code it to your local
@@ -205,7 +238,7 @@ clone by adding the directory to git.
 
 ```sh
 $ ./mvnw clean     # Remove files that shouldn't be committed to version control
-$ cd ..            # to PortlandStateJavaWinter2023 directory
+$ cd ..            # to PortlandStateJavaSummer2023 directory
 $ git add student
 $ git commit -m "Added source files for student project"
 ```
@@ -240,6 +273,12 @@ like `java.lang.String`.  There will be a lot of red in the IDE.
 Some students have used [IntelliJ to run Maven commands](https://www.jetbrains.com/help/idea/work-with-maven-goals.html)
 which alleviated the need for them to install a JDK and Git in their local development environment. 
 
+IntelliJ alerts the developer to code that requires attention, but not everything labelled as an "error" actually causes
+problems.  In general, if you are able to run unit tests in IntelliJ and successfully build `mvnw clean verify`, your
+code is likely in good shape.  There are a couple of "errors" that IntelliJ identifies that are safe to ignore:
+   * `Plugin ‘org.apache.maven.plugins:maven-surefire-report-plugin:3.0.0-M7’ not found` can be remediated by running `mvnw verify` and `mvnw site`
+   * `Cannot resolve symbol ‘grader’` in a `pom.xml` file can be safely ignored
+
 ### How can I get a copy of this code on the CS Department's Linux machines?
 
 While your projects can be developed on any machine, they must be
@@ -258,7 +297,7 @@ After `ssh`ing to one of the CS Department's Linux machines, you can
 make a clone of your GitHub repository using with:
 
 ```
-$ git clone https://github.com/YourGitHubId/PortlandStateJavaWinter2023.git
+$ git clone https://github.com/YourGitHubId/PortlandStateJavaSummer2023.git
 ```
 
 ### How can I get changes that other people make into my clone?
@@ -272,7 +311,7 @@ First, configure your repository to have this repository to be a
 "remote" named "upstream".
 
 ```sh
-$ cd PortlandStateJavaWinter2023
+$ cd PortlandStateJavaSummer2023
 $ git remote add upstream https://github.com/DavidWhitlock/PortlandStateJavaGettingStarted.git
 ```
 
@@ -371,7 +410,7 @@ $ git push origin submit-Project1-20230501T09:00:58
 
 ### About how long do the projects take to complete?
 
-Starting in the Winter of 2022, we started gathering data from students
+Starting in the Summer of 2022, we started gathering data from students
 regarding the approximate number of hours they spend working on each project.
 Note that there are not as many submissions for the XML project because it only
 applies to the 11-week version of the course, which is not offered in the Summer.
@@ -415,8 +454,8 @@ As you create Maven projects in this repository, you may encounter warnings like
 
 ```
 [WARNING] 
-[WARNING] Some problems were encountered while building the effective model for edu.pdx.cs410J.whitlock:airline:jar:2023.0.0
-[WARNING] 'parent.relativePath' of POM edu.pdx.cs410J.whitlock:airline:2023.0.0 (PortlandStateJavaWinter2023/airline/pom.xml) points at edu.pdx.cs410J.whitlock:PortlandStateJavaWinter2023 instead of io.github.davidwhitlock.cs410J:cs410j, please verify your project structure @ line 3, column 11
+[WARNING] Some problems were encountered while building the effective model for edu.pdx.cs410J.whitlock:apptbook:jar:2023.0.0
+[WARNING] 'parent.relativePath' of POM edu.pdx.cs410J.whitlock:apptbook:2023.0.0 (PortlandStateJavaSummer2023/apptbook/pom.xml) points at edu.pdx.cs410J.whitlock:PortlandStateJavaSummer2023 instead of io.github.davidwhitlock.cs410J:cs410j, please verify your project structure @ line 3, column 11
 [WARNING] 
 [WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
 [WARNING] 
@@ -435,7 +474,7 @@ When created, the `pom.xml` files for the projects specify a parent of _my_ top-
   <parent>
     <artifactId>cs410j</artifactId>
     <groupId>io.github.davidwhitlock.cs410J</groupId>
-    <version>2023.0.0</version>
+    <version>2023.1.0</version>
   </parent>
 ```
 
@@ -444,7 +483,7 @@ is my top-level POM) to something like:
 
 ```xml
   <parent>
-    <artifactId>PortlandStateJavaWinter2023</artifactId>
+    <artifactId>PortlandStateJavaSummer2023</artifactId>
     <groupId>edu.pdx.cs410J.your-mcecs-user-id</groupId>
     <version>2023.0.0</version>
   </parent>
@@ -519,12 +558,12 @@ Running `mvn site` from the root directory of this repository will
 generate a website that provides lots of information (reports, etc.) 
 about the Maven projects.  Note that in order for your multi-project
 Maven site to generate correctly, the subprojects must specify that
-their parent project is the `PortlandStateJavaWinter2023` project in
+their parent project is the `PortlandStateJavaSummer2023` project in
 your group:
 
 ```xml
   <parent>
-    <artifactId>PortlandStateJavaWinter2023</artifactId>
+    <artifactId>PortlandStateJavaSummer2023</artifactId>
     <groupId>edu.pdx.cs410J.your-mcecs-user-id</groupId>
     <version>2023.0.0</version>
   </parent>
@@ -562,7 +601,7 @@ You can open `target/staging/index.html` in your web browse to see
 what your site will look like.
 
 Verify that your website is available at a URL like:
-https://yourgithubuser.github.io/PortlandStateJavaWinter2023
+https://yourgithubuser.github.io/PortlandStateJavaSummer2023
 
 ## How can I improve this repository?
 

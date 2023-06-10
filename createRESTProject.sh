@@ -2,11 +2,6 @@
 
 source prerequisites.sh
 
-if ! checkForJava; then
-    echo "** Java is not configured correctly in your environment"
-    exit 1
-fi
-
 if [[ $# -gt 0 ]]; then
     loginId=$1
 
@@ -18,4 +13,4 @@ else
     fi
 fi
 
-createProjectFromArchetype ${loginId} "airline-web"
+createProjectFromArchetype ${loginId} "apptbook-web"
