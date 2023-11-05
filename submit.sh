@@ -29,10 +29,10 @@ elif [[ "$project" == "koans"  ]]; then
   directory="koans"
   mavenGoals="clean exec:java"
 
-elif [[ "$project" == "Project4"  ]]; then
+elif [[ "$project" == "Project5"  ]]; then
   directory="apptbook-web"
 
-elif [[ "$project" == "Project5"  ]]; then
+elif [[ "$project" == "Project6"  ]]; then
   directory="apptbook-android"
   submitClass="SubmitAndroidProject"
   srcDirectory="app"
