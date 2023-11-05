@@ -93,7 +93,7 @@ function createProjectFromArchetype() {
 	   -DgroupId=edu.pdx.cs410J.${loginId} \
 	   -DartifactId=${projectName} \
 	   -Dpackage=edu.pdx.cs410J.${loginId} \
-	   -Dversion=2023.0.0
+	   -Dversion=1.0.0
 
     chmod +x ${projectName}/mvnw
 }
