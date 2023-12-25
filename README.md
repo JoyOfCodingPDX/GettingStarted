@@ -1,11 +1,10 @@
 [![Java CI with Maven](https://github.com/YourGitHubId/PortlandStateJavaWinter2024/actions/workflows/maven.yml/badge.svg)](https://github.com/YourGitHubId/PortlandStateJavaWinter2024/actions/workflows/maven.yml)
 
-# Getting Started with Advanced Programming with Java
+# Getting Started with Contemporary Software Development
 
-This repository helps students in [Advanced Programming with
-Java](http://web.cecs.pdx.edu/~whitlock/) get started with the
-programming assignments.  Most notably, it makes it so students do
-not need to install [Apache Maven](https://maven.apache.org/install.html)
+This repository helps students in [Contemporary Sotfware Development](http://web.cecs.pdx.edu/~whitlock/) get started with the
+programming assignments.  Most notably, it gives students experience working with Git repositories and removed
+the need to install [Apache Maven](https://maven.apache.org/install.html)
 on their local machines (or the PSU machines) in order to create and
 build the programming projects.  It makes liberal use of the [Maven
 Wrapper](https://github.com/takari/maven-wrapper) script which
@@ -76,8 +75,8 @@ repository is named "PortlandStateJavaWinter2024".)
 
 Again, please ensure that all of your code for the assignments is in a 
 **private** GitHub repository.  GitHub makes it very easy for people to
-find your code, and you do **not** want to have your work plagiarized.  
-After the course is over, if you want to make your repository public to
+find your code, and you do **not** want to have your work plagiarized.  After
+the course is over, if you want to make your repository public to
 help contribute to your coding portfolio, that's fine.  I do ask that 
 current students not leverage former students' code to inform their 
 projects.  If you have questions about your code that you'd like me to
@@ -606,8 +605,7 @@ https://yourgithubuser.github.io/PortlandStateJavaWinter2024
 ## How can I improve this repository?
 
 This repository is kind of thrown together, and it ought to evolve to
-meet the needs of the students who take Advanced Programming with
-Java.  
+meet the needs of the students who take Contemporary Software Development.  
 
 Feel free to [create issues](../../issues) for this repository if you find
 something missing or confusing.
