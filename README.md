@@ -1,11 +1,10 @@
-[![Java CI with Maven](https://github.com/YourGitHubId/PortlandStateJavaSummer2023/actions/workflows/maven.yml/badge.svg)](https://github.com/YourGitHubId/PortlandStateJavaSummer2023/actions/workflows/maven.yml)
+[![Java CI with Maven](https://github.com/YourGitHubId/PortlandStateJavaWinter2024/actions/workflows/maven.yml/badge.svg)](https://github.com/YourGitHubId/PortlandStateJavaWinter2024/actions/workflows/maven.yml)
 
-# Getting Started with Advanced Programming with Java
+# Getting Started with Contemporary Software Development
 
-This repository helps students in [Advanced Programming with
-Java](http://web.cecs.pdx.edu/~whitlock/) get started with the
-programming assignments.  Most notably, it makes it so students do
-not need to install [Apache Maven](https://maven.apache.org/install.html)
+This repository helps students in [Contemporary Sotfware Development](http://web.cecs.pdx.edu/~whitlock/) get started with the
+programming assignments.  Most notably, it gives students experience working with Git repositories and removed
+the need to install [Apache Maven](https://maven.apache.org/install.html)
 on their local machines (or the PSU machines) in order to create and
 build the programming projects.  It makes liberal use of the [Maven
 Wrapper](https://github.com/takari/maven-wrapper) script which
@@ -72,12 +71,12 @@ developer"](https://education.github.com/pack) account that gives you
 free private repositories.  Then [create a private GitHub
 repository from this "template" repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)
 for your source code for this course.  (In this example, the
-repository is named "PortlandStateJavaSummer2023".)
+repository is named "PortlandStateJavaWinter2024".)
 
 Again, please ensure that all of your code for the assignments is in a 
 **private** GitHub repository.  GitHub makes it very easy for people to
-find your code, and you do **not** want to have your work plagiarized.  
-After the course is over, if you want to make your repository public to
+find your code, and you do **not** want to have your work plagiarized.  After
+the course is over, if you want to make your repository public to
 help contribute to your coding portfolio, that's fine.  I do ask that 
 current students not leverage former students' code to inform their 
 projects.  If you have questions about your code that you'd like me to
@@ -100,7 +99,7 @@ The following command lines assume that you are running in the
 directory created by cloning the repository.
 
 ```sh
-$ cd PortlandStateJavaSummer2023
+$ cd PortlandStateJavaWinter2024
 ```
 
 ### How do I use the Java Development Kit?
@@ -238,7 +237,7 @@ clone by adding the directory to git.
 
 ```sh
 $ ./mvnw clean     # Remove files that shouldn't be committed to version control
-$ cd ..            # to PortlandStateJavaSummer2023 directory
+$ cd ..            # to PortlandStateJavaWinter2024 directory
 $ git add student
 $ git commit -m "Added source files for student project"
 ```
@@ -297,7 +296,7 @@ After `ssh`ing to one of the CS Department's Linux machines, you can
 make a clone of your GitHub repository using with:
 
 ```
-$ git clone https://github.com/YourGitHubId/PortlandStateJavaSummer2023.git
+$ git clone https://github.com/YourGitHubId/PortlandStateJavaWinter2024.git
 ```
 
 ### How can I get changes that other people make into my clone?
@@ -311,7 +310,7 @@ First, configure your repository to have this repository to be a
 "remote" named "upstream".
 
 ```sh
-$ cd PortlandStateJavaSummer2023
+$ cd PortlandStateJavaWinter2024
 $ git remote add upstream https://github.com/DavidWhitlock/PortlandStateJavaGettingStarted.git
 ```
 
@@ -389,7 +388,7 @@ After your code has been successfully submitted, the `submit.sh` script will
 [tag](https://git-scm.com/book/en/v2/Git-Basics-Tagging) the current revision of 
 your git repository. The name of the tag indicates which project was submitted and
 the date/time it was submitted.  For example, submitting Project1 at 9 AM on May 1st
-would tag the current revision of the repository with `submit-Project1-20230501T09:00:58`.
+would tag the current revision of the repository with `submit-Project1-20240501T09:00:58`.
 This tag allows you to create a [branch](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
 from the specific revision of your code that was submitted, which makes debugging problems
 in submitted code much easier.  Note that the `submit.sh` will issue an error if there are
@@ -405,7 +404,7 @@ $ git push --tags
 
 To push individual tag:
 ```shell
-$ git push origin submit-Project1-20230501T09:00:58
+$ git push origin submit-Project1-20240501T09:00:58
 ```
 
 ### About how long do the projects take to complete?
@@ -454,8 +453,8 @@ As you create Maven projects in this repository, you may encounter warnings like
 
 ```
 [WARNING] 
-[WARNING] Some problems were encountered while building the effective model for edu.pdx.cs410J.whitlock:apptbook:jar:2023.0.0
-[WARNING] 'parent.relativePath' of POM edu.pdx.cs410J.whitlock:apptbook:2023.0.0 (PortlandStateJavaSummer2023/apptbook/pom.xml) points at edu.pdx.cs410J.whitlock:PortlandStateJavaSummer2023 instead of io.github.davidwhitlock.cs410J:cs410j, please verify your project structure @ line 3, column 11
+[WARNING] Some problems were encountered while building the effective model for edu.pdx.cs410J.whitlock:apptbook:jar:1.0.0
+[WARNING] 'parent.relativePath' of POM edu.pdx.cs410J.whitlock:apptbook:1.0.0 (PortlandStateJavaWinter2024/apptbook/pom.xml) points at edu.pdx.cs410J.whitlock:PortlandStateJavaWinter2024 instead of io.github.davidwhitlock.cs410J:cs410j, please verify your project structure @ line 3, column 11
 [WARNING] 
 [WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
 [WARNING] 
@@ -474,7 +473,7 @@ When created, the `pom.xml` files for the projects specify a parent of _my_ top-
   <parent>
     <artifactId>cs410j</artifactId>
     <groupId>io.github.davidwhitlock.cs410J</groupId>
-    <version>2023.1.0</version>
+    <version>2024.0.0</version>
   </parent>
 ```
 
@@ -483,9 +482,9 @@ is my top-level POM) to something like:
 
 ```xml
   <parent>
-    <artifactId>PortlandStateJavaSummer2023</artifactId>
+    <artifactId>PortlandStateJava</artifactId>
     <groupId>edu.pdx.cs410J.your-mcecs-user-id</groupId>
-    <version>2023.0.0</version>
+    <version>1.0.0</version>
   </parent>
 ```
 
@@ -515,7 +514,7 @@ In order to debug code running as an executable jar, you must specify the `-agen
 to the `-jar` option:
 
 ```
-java -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=*:5005 -jar target/student-2023.0.0.jar 
+java -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=*:5005 -jar target/student-1.0.0.jar 
 ```
 
 The above `-agentlib` option causes the JVM to output a (rather cryptic) informational message indicating that the JVM
@@ -558,14 +557,14 @@ Running `mvn site` from the root directory of this repository will
 generate a website that provides lots of information (reports, etc.) 
 about the Maven projects.  Note that in order for your multi-project
 Maven site to generate correctly, the subprojects must specify that
-their parent project is the `PortlandStateJavaSummer2023` project in
+their parent project is the `PortlandStateJavaWinter2024` project in
 your group:
 
 ```xml
   <parent>
-    <artifactId>PortlandStateJavaSummer2023</artifactId>
+    <artifactId>PortlandStateJava</artifactId>
     <groupId>edu.pdx.cs410J.your-mcecs-user-id</groupId>
-    <version>2023.0.0</version>
+    <version>1.0.0</version>
   </parent>
 ```
 
@@ -601,13 +600,12 @@ You can open `target/staging/index.html` in your web browse to see
 what your site will look like.
 
 Verify that your website is available at a URL like:
-https://yourgithubuser.github.io/PortlandStateJavaSummer2023
+https://yourgithubuser.github.io/PortlandStateJavaWinter2024
 
 ## How can I improve this repository?
 
 This repository is kind of thrown together, and it ought to evolve to
-meet the needs of the students who take Advanced Programming with
-Java.  
+meet the needs of the students who take Contemporary Software Development.  
 
 Feel free to [create issues](../../issues) for this repository if you find
 something missing or confusing.
