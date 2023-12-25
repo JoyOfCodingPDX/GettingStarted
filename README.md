@@ -389,7 +389,7 @@ After your code has been successfully submitted, the `submit.sh` script will
 [tag](https://git-scm.com/book/en/v2/Git-Basics-Tagging) the current revision of 
 your git repository. The name of the tag indicates which project was submitted and
 the date/time it was submitted.  For example, submitting Project1 at 9 AM on May 1st
-would tag the current revision of the repository with `submit-Project1-20230501T09:00:58`.
+would tag the current revision of the repository with `submit-Project1-20240501T09:00:58`.
 This tag allows you to create a [branch](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
 from the specific revision of your code that was submitted, which makes debugging problems
 in submitted code much easier.  Note that the `submit.sh` will issue an error if there are
@@ -405,7 +405,7 @@ $ git push --tags
 
 To push individual tag:
 ```shell
-$ git push origin submit-Project1-20230501T09:00:58
+$ git push origin submit-Project1-20240501T09:00:58
 ```
 
 ### About how long do the projects take to complete?
@@ -474,7 +474,7 @@ When created, the `pom.xml` files for the projects specify a parent of _my_ top-
   <parent>
     <artifactId>cs410j</artifactId>
     <groupId>io.github.davidwhitlock.cs410J</groupId>
-    <version>2023.1.0</version>
+    <version>2024.0.0</version>
   </parent>
 ```
 
