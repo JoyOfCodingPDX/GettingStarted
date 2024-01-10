@@ -179,12 +179,7 @@ $ git push
 The primary purpose of this repository is to make it easy to create
 the skeleton Java projects that are used to start your assignment.
 Scripts such as `createStudentProject.sh` will run the appropriate Maven
-commands to get you started.  Each of these scripts takes a single
-argument which is your MCECS user id.  This one-word user id (mine is
-`whitlock`) is used to uniquely identify your code and is included in
-the name of the Java package for the project.  (It is important that 
-you consistently use this user id in the course.  For instance, please
-use your MCECS user id when you run the `survey.sh`script.)
+commands to get you started.
 
 ```sh
 $ ./createStudentProject.sh
@@ -192,7 +187,7 @@ $ ./createStudentProject.sh
 
 (Note that in this document, I always prefix executables with `./` to
 ensure that the executable can be found even if you don't have `.` on
-your `PATH`.  The project creation scripts must be run on a UNIX machine such as the MCECS Linux machines.  However,
+your `PATH`.  The survey and project creation scripts must be run on a UNIX machine such as the MCECS Linux machines.  However,
 the projects may be _developed_ on any machine that runs the supported version of Java.  For instance, it
 is okay to create the project on Linux and then develop it on Windows,
 using GitHub to share code across machines.)
