@@ -16,7 +16,7 @@ fi
 
 
 
-java -cp /u/whitlock/jars/grader.jar edu.pdx.cs410J.grader.Survey
+java -cp /u/whitlock/jars/grader.jar edu.pdx.cs.joy.grader.Survey
 
 echo ""
 echo "** Thank you for filling out the survey"

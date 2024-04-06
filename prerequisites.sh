@@ -90,9 +90,9 @@ function createProjectFromArchetype() {
 	   -DarchetypeGroupId=io.github.davidwhitlock.cs410J \
 	   -DarchetypeArtifactId=${archetypeName}-archetype \
 	   -DarchetypeVersion=2024.0.1 \
-	   -DgroupId=edu.pdx.cs410J.${loginId} \
+	   -DgroupId=edu.pdx.cs.joy.${loginId} \
 	   -DartifactId=${projectName} \
-	   -Dpackage=edu.pdx.cs410J.${loginId} \
+	   -Dpackage=edu.pdx.cs.joy.${loginId} \
 	   -Dversion=1.0.0
 
     chmod +x ${projectName}/mvnw

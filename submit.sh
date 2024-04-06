@@ -68,7 +68,7 @@ if [ -f $pomFile ]; then
   cd -
 fi
 
-java -cp /u/whitlock/jars/grader.jar edu.pdx.cs410J.grader.${submitClass} -comment "${comment}" "${project}" "${xmlFile}" "${projectDirectory}/${srcDirectory}"
+java -cp /u/whitlock/jars/grader.jar edu.pdx.cs.joy.grader.${submitClass} -comment "${comment}" "${project}" "${xmlFile}" "${projectDirectory}/${srcDirectory}"
 
 submitTime=`date +%Y%m%dT%I%M%S`
 tag="submit-${project}-${submitTime}"
