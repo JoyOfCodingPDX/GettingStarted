@@ -14,7 +14,7 @@ accordingly
     <groupId>io.github.davidwhitlock.cs410J</groupId>
     <version>2024.0.1</version>
   </parent>
-  <groupId>edu.pdx.cs410J.YourUserId</groupId>
+  <groupId>edu.pdx.cs.joy.YourUserId</groupId>
   <artifactId>JoyOfCoding</artifactId>
   <version>1.0.0</version>
 
