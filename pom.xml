@@ -15,13 +15,13 @@ accordingly
     <version>2024.0.1</version>
   </parent>
   <groupId>edu.pdx.cs410J.YourUserId</groupId>
-  <artifactId>PortlandStateJava</artifactId>
+  <artifactId>JoyOfCoding</artifactId>
   <version>1.0.0</version>
 
   <packaging>pom</packaging>
   <name>PSUJavaWinter2024</name>
-  <description>Source code written in the Winter 2024 offering of Contemporary Software Development</description>
-  <url>http://YourGitHubUserInLowerCase.github.io/PortlandStateJavaWinter2024</url>
+  <description>Source code written in the Summer 2024 offering of The Joy of Coding</description>
+  <url>http://YourGitHubUserInLowerCase.github.io/JoyOfCodingWinter2024</url>
 
   <modules>
   </modules>
@@ -33,7 +33,7 @@ accordingly
   </organization>
   <issueManagement>
     <system>github</system>
-    <url>https://github.com/YourGitHubUser/PortlandStateJavaWinter2024/issues</url>
+    <url>https://github.com/YourGitHubUser/JoyOfCodingWinter2024/issues</url>
   </issueManagement>
   <licenses>
     <license>
@@ -76,7 +76,7 @@ accordingly
       <plugin>
         <artifactId>maven-site-plugin</artifactId>
         <configuration>
-          <topSiteURL>scm:git:git@github.com:YourGithubUser/PortlandStateJavaWinter2024.git</topSiteURL>
+          <topSiteURL>scm:git:git@github.com:YourGithubUser/JoyOfCodingWinter2024.git</topSiteURL>
         </configuration>
       </plugin>
       <plugin>
@@ -92,7 +92,7 @@ accordingly
   </build>
 
   <scm>
-    <connection>scm:git:git@github.com:YourGithubUser/PortlandStateJavaWinter2024.git</connection>
+    <connection>scm:git:git@github.com:YourGithubUser/JoyOfCodingWinter2024.git</connection>
   </scm>
   <distributionManagement>
     <snapshotRepository>
@@ -102,7 +102,7 @@ accordingly
     <site>
       <id>gh-pages</id>
       <name>GitHub Pages</name>
-      <url>scm:git:git@github.com:YourGithubUser/PortlandStateJavaWinter2024.git</url>
+      <url>scm:git:git@github.com:YourGithubUser/JoyOfCodingWinter2024.git</url>
     </site>
   </distributionManagement>
 
