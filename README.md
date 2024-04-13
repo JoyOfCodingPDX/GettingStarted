@@ -449,7 +449,7 @@ As you create Maven projects in this repository, you may encounter warnings like
 ```
 [WARNING] 
 [WARNING] Some problems were encountered while building the effective model for edu.pdx.cs.joy.whitlock:apptbook:jar:1.0.0
-[WARNING] 'parent.relativePath' of POM edu.pdx.cs.joy.whitlock:apptbook:1.0.0 (JoyOfCodingWinter2024/apptbook/pom.xml) points at edu.pdx.cs.joy.whitlock:JoyOfCodingWinter2024 instead of io.github.davidwhitlock.joy:cs410j, please verify your project structure @ line 3, column 11
+[WARNING] 'parent.relativePath' of POM edu.pdx.cs.joy.whitlock:apptbook:1.0.0 (JoyOfCodingWinter2024/apptbook/pom.xml) points at edu.pdx.cs.joy.whitlock:JoyOfCodingWinter2024 instead of io.github.davidwhitlock.joy:joy, please verify your project structure @ line 3, column 11
 [WARNING] 
 [WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
 [WARNING] 
@@ -484,7 +484,7 @@ is my top-level POM) to something like:
 ```
 
 Note that you should only make this change to the `pom.xml` files for the projects that you create (like `koans`).  
-The `<parent>` of the top-level `pom.xml` should still refer to my `cs410j` POM.  This allows you to inherit Maven
+The `<parent>` of the top-level `pom.xml` should still refer to my `joy` POM.  This allows you to inherit Maven
 plugin settings that are necessary for the course assignments.
 
 ## How can I use a debugger to uncover the source of problems with my projects?
