@@ -449,7 +449,7 @@ As you create Maven projects in this repository, you may encounter warnings like
 ```
 [WARNING] 
 [WARNING] Some problems were encountered while building the effective model for edu.pdx.cs.joy.whitlock:apptbook:jar:1.0.0
-[WARNING] 'parent.relativePath' of POM edu.pdx.cs.joy.whitlock:apptbook:1.0.0 (JoyOfCodingWinter2024/apptbook/pom.xml) points at edu.pdx.cs.joy.whitlock:JoyOfCodingWinter2024 instead of io.github.davidwhitlock.cs410J:cs410j, please verify your project structure @ line 3, column 11
+[WARNING] 'parent.relativePath' of POM edu.pdx.cs.joy.whitlock:apptbook:1.0.0 (JoyOfCodingWinter2024/apptbook/pom.xml) points at edu.pdx.cs.joy.whitlock:JoyOfCodingWinter2024 instead of io.github.davidwhitlock.joy:cs410j, please verify your project structure @ line 3, column 11
 [WARNING] 
 [WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
 [WARNING] 
@@ -466,9 +466,9 @@ When created, the `pom.xml` files for the projects specify a parent of _my_ top-
 
 ```xml
   <parent>
-    <artifactId>cs410j</artifactId>
-    <groupId>io.github.davidwhitlock.cs410J</groupId>
-    <version>2024.0.1</version>
+    <artifactId>joy</artifactId>
+    <groupId>io.github.davidwhitlock.joy</groupId>
+    <version>1.0.0-SNAPSHOT</version>
   </parent>
 ```
 
