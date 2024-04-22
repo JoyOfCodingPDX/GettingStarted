@@ -10,18 +10,18 @@ accordingly
 
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <artifactId>cs410j</artifactId>
-    <groupId>io.github.davidwhitlock.cs410J</groupId>
-    <version>2024.0.1</version>
+    <artifactId>joy</artifactId>
+    <groupId>io.github.davidwhitlock.joy</groupId>
+    <version>1.0.0</version>
   </parent>
   <groupId>edu.pdx.cs.joy.YourUserId</groupId>
   <artifactId>JoyOfCoding</artifactId>
   <version>1.0.0</version>
 
   <packaging>pom</packaging>
-  <name>PSUJavaWinter2024</name>
+  <name>PSUJavaSummer2024</name>
   <description>Source code written in the Summer 2024 offering of The Joy of Coding</description>
-  <url>http://YourGitHubUserInLowerCase.github.io/JoyOfCodingWinter2024</url>
+  <url>http://YourGitHubUserInLowerCase.github.io/JoyOfCodingSummer2024</url>
 
   <modules>
   </modules>
@@ -33,7 +33,7 @@ accordingly
   </organization>
   <issueManagement>
     <system>github</system>
-    <url>https://github.com/YourGitHubUser/JoyOfCodingWinter2024/issues</url>
+    <url>https://github.com/YourGitHubUser/JoyOfCodingSummer2024/issues</url>
   </issueManagement>
   <licenses>
     <license>
@@ -76,7 +76,7 @@ accordingly
       <plugin>
         <artifactId>maven-site-plugin</artifactId>
         <configuration>
-          <topSiteURL>scm:git:git@github.com:YourGithubUser/JoyOfCodingWinter2024.git</topSiteURL>
+          <topSiteURL>scm:git:git@github.com:YourGithubUser/JoyOfCodingSummer2024.git</topSiteURL>
         </configuration>
       </plugin>
       <plugin>
@@ -92,7 +92,7 @@ accordingly
   </build>
 
   <scm>
-    <connection>scm:git:git@github.com:YourGithubUser/JoyOfCodingWinter2024.git</connection>
+    <connection>scm:git:git@github.com:YourGithubUser/JoyOfCodingSummer2024.git</connection>
   </scm>
   <distributionManagement>
     <snapshotRepository>
@@ -102,7 +102,7 @@ accordingly
     <site>
       <id>gh-pages</id>
       <name>GitHub Pages</name>
-      <url>scm:git:git@github.com:YourGithubUser/JoyOfCodingWinter2024.git</url>
+      <url>scm:git:git@github.com:YourGithubUser/JoyOfCodingSummer2024.git</url>
     </site>
   </distributionManagement>
 

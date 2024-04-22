@@ -87,9 +87,9 @@ function createProjectFromArchetype() {
 
     ./mvnw --batch-mode archetype:generate \
 	   -DinteractiveMode=false \
-	   -DarchetypeGroupId=io.github.davidwhitlock.cs410J \
+	   -DarchetypeGroupId=io.github.davidwhitlock.joy \
 	   -DarchetypeArtifactId=${archetypeName}-archetype \
-	   -DarchetypeVersion=2024.0.1 \
+	   -DarchetypeVersion=1.0.0 \
 	   -DgroupId=edu.pdx.cs.joy.${loginId} \
 	   -DartifactId=${projectName} \
 	   -Dpackage=edu.pdx.cs.joy.${loginId} \
