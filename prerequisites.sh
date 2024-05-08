@@ -89,7 +89,7 @@ function createProjectFromArchetype() {
 	   -DinteractiveMode=false \
 	   -DarchetypeGroupId=io.github.davidwhitlock.joy \
 	   -DarchetypeArtifactId=${archetypeName}-archetype \
-	   -DarchetypeVersion=1.0.0 \
+	   -DarchetypeVersion=2.0.0 \
 	   -DgroupId=edu.pdx.cs.joy.${loginId} \
 	   -DartifactId=${projectName} \
 	   -Dpackage=edu.pdx.cs.joy.${loginId} \
