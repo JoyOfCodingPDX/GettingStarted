@@ -66,9 +66,10 @@ function checkForJava() {
 function createProjectFromArchetype() {
     loginId=$1
     archetypeName=$2
+    archetypeVersion=$3
 
-    if [[ $# -gt 2 ]]; then
-	projectName=$3
+    if [[ $# -gt 3 ]]; then
+	projectName=$4
     else 
 	projectName=${archetypeName}
     fi
@@ -89,7 +90,7 @@ function createProjectFromArchetype() {
 	   -DinteractiveMode=false \
 	   -DarchetypeGroupId=io.github.davidwhitlock.joy \
 	   -DarchetypeArtifactId=${archetypeName}-archetype \
-	   -DarchetypeVersion=2.1.0 \
+	   -DarchetypeVersion=${archetypeVersion} \
 	   -DgroupId=edu.pdx.cs.joy.${loginId} \
 	   -DartifactId=${projectName} \
 	   -Dpackage=edu.pdx.cs.joy.${loginId} \

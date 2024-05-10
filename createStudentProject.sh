@@ -13,5 +13,5 @@ else
     fi	
 fi
 
-createProjectFromArchetype ${loginId} "student"
+createProjectFromArchetype ${loginId} "student" "2.1.0"
 
