@@ -13,4 +13,4 @@ else
     fi
 fi
 
-createProjectFromArchetype ${loginId} "apptbook-web" "2.1.0"
+createProjectFromArchetype ${loginId} "apptbook-web" "2.2.0"
