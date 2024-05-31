@@ -392,14 +392,33 @@ your changes before submitting.
 
 Once the `submit.sh` has completed, and the tag for the repository has been created, the tag will need to be pushed to the remote repository (your Github repository). 
 
-To push all tags:
+Push all tags:
 ```shell
 $ git push --tags
 ```
 
-To push individual tag:
+Or push an individual tag:
 ```shell
 $ git push origin submit-Project1-20240501T09:00:58
+```
+
+To fix a bug in submitted code, create a new branch of your repository from the `submit` tag on your development system:
+```shell
+$ git fetch    # Fetch the tag(s) from GitHub ("origin") into your local clone 
+$ git checkout -b fix-Project1 submit-Project1-20240501T09:00:58   # Create a branch to make fixes
+$ git push --set-upstream origin fix-Project1    # Push the branch to GitHub
+# Make code changes, commit them to git, and push them to the fix-Project1 branch
+```
+
+When you're ready to resubmit, check out the bugfix branch on the PSU machine:
+```shell
+$ git fetch   # Fetch the branch from GitHub ("origin")
+$ git checkout -b fix-Project1 origin/fix-Project1   # Create a new branch on PSU machine
+```
+
+After submitting, check out the `main` branch to resume work on the next project:
+```shell
+$ git checkout main
 ```
 
 ### About how long do the projects take to complete?
@@ -534,7 +553,12 @@ export MAVEN_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=
 ```
 
 ```shell
-REM In Windows command environment 
+# In a Windows PowerShell environment 
+$Env:MAVEN_OPTS = '-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=*:5005'
+```
+
+```shell
+REM In a Windows command environment 
 set MAVEN_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=*:5005
 ```
 
