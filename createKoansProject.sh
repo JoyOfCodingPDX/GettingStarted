@@ -13,4 +13,4 @@ else
     fi
 fi
 
-createProjectFromArchetype ${loginId} "java-koans" "2.1.1phonebill" "koans"
+createProjectFromArchetype ${loginId} "java-koans" "2.1.1" "koans"
