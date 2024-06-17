@@ -15,4 +15,4 @@ fi
 projectName=$1
 teamName=$2
 
-createProjectFromArchetype ${teamName} "kata" "2.1.0" ${projectName}
+createProjectFromArchetype ${teamName} "kata" "2.1.1" ${projectName}
