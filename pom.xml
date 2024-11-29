@@ -19,21 +19,21 @@ accordingly
   <version>1.0.0</version>
 
   <packaging>pom</packaging>
-  <name>JoyOfCodingSummer2024</name>
-  <description>Source code written in the Summer 2024 offering of The Joy of Coding</description>
-  <url>http://YourGitHubUserInLowerCase.github.io/JoyOfCodingSummer2024</url>
+  <name>JoyOfCodingWinter2025</name>
+  <description>Source code written in the Summer 2025 offering of The Joy of Coding</description>
+  <url>http://YourGitHubUserInLowerCase.github.io/JoyOfCodingWinter2025</url>
 
   <modules>
   </modules>
 
-  <inceptionYear>2024</inceptionYear>
+  <inceptionYear>2025</inceptionYear>
   <organization>
     <name>Portland State University</name>
     <url>http://www.pdx.edu</url>
   </organization>
   <issueManagement>
     <system>github</system>
-    <url>https://github.com/YourGitHubUser/JoyOfCodingSummer2024/issues</url>
+    <url>https://github.com/YourGitHubUser/JoyOfCodingWinter2025/issues</url>
   </issueManagement>
   <licenses>
     <license>
@@ -76,7 +76,7 @@ accordingly
       <plugin>
         <artifactId>maven-site-plugin</artifactId>
         <configuration>
-          <topSiteURL>scm:git:git@github.com:YourGithubUser/JoyOfCodingSummer2024.git</topSiteURL>
+          <topSiteURL>scm:git:git@github.com:YourGithubUser/JoyOfCodingWinter2025.git</topSiteURL>
         </configuration>
       </plugin>
       <plugin>
@@ -92,7 +92,7 @@ accordingly
   </build>
 
   <scm>
-    <connection>scm:git:git@github.com:YourGithubUser/JoyOfCodingSummer2024.git</connection>
+    <connection>scm:git:git@github.com:YourGithubUser/JoyOfCodingWinter2025.git</connection>
   </scm>
   <distributionManagement>
     <snapshotRepository>
@@ -102,7 +102,7 @@ accordingly
     <site>
       <id>gh-pages</id>
       <name>GitHub Pages</name>
-      <url>scm:git:git@github.com:YourGithubUser/JoyOfCodingSummer2024.git</url>
+      <url>scm:git:git@github.com:YourGithubUser/JoyOfCodingWinter2025.git</url>
     </site>
   </distributionManagement>
 
