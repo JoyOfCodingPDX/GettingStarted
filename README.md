@@ -430,14 +430,14 @@ applies to the 11-week version of the course, which is not offered in the Summer
 The following is a summary of the data gathered to date.  
 
 |            | App Classes | Text File | Pretty Print |     Koans |      XML |      REST |  Android |
-| :--------- | ----------: | --------: | -----------: | --------: | -------: | --------: | -------: |
-| Count      |          91 |        91 |           88 |        75 |       55 |        82 |       82 |
-| Average    |    20 hours |  20 hours |     23 hours |  21 hours | 24 hours |  30 hours | 26 hours |
-| Maximum    |    60 hours | 120 hours |     72 hours | 100 hours | 60 hours | 129 hours | 90 hours |
-| Top 25%    |    25 hours |  24 hours |     30 hours |  24 hours | 30 hours |  40 hours | 30 hours |
-| Median     |    20 hours |  18 hours |     19 hours |  20 hours | 21 hours |  25 hours | 25 hours |
-| Bottom 25% |    14 hours |  12 hours |     13 hours |  12 hours | 16 hours |  15 hours | 17 hours |
-| Minimum    |     7 hours |   0 hours |      2 hours |   4 hours |  8 hours |   8 hours |  7 hours |
+|:-----------|------------:|----------:|-------------:|----------:|---------:|----------:|---------:|
+| Count      |         116 |       116 |          112 |        97 |       55 |       104 |      105 |
+| Average    |    20 hours |  20 hours |     50 hours |  20 hours | 24 hours |  30 hours | 25 hours |
+| Maximum    |    60 hours | 120 hours |   3030 hours | 100 hours | 60 hours | 129 hours | 90 hours |
+| Top 25%    |    25 hours |  25 hours |     30 hours |  24 hours | 30 hours |  40 hours | 30 hours |
+| Median     |    20 hours |  19 hours |     20 hours |  16 hours | 21 hours |  25 hours | 24 hours |
+| Bottom 25% |    12 hours |  12 hours |     12 hours |  10 hours | 16 hours |  15 hours | 17 hours |
+| Minimum    |     3 hours |   0 hours |      2 hours |   4 hours |  8 hours |   8 hours |  7 hours |
 
 You may want to consider it as you plan your projects.  Recall, though, that
 this data is self-reported.  Your experience might be different from that
