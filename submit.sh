@@ -35,7 +35,7 @@ elif [[ "$project" == "Project4"  ]]; then
 elif [[ "$project" == "Project5"  ]]; then
   directory="phonebill-android"
   submitClass="SubmitAndroidProject"
-  srcDirectory="app"
+  srcDirectory="."
 
 else
   directory="phonebill"
