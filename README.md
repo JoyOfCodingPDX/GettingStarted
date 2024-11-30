@@ -426,8 +426,8 @@ The following is a summary of the data gathered to date.
 |            | App Classes | Text File | Pretty Print |     Koans |      XML |      REST |  Android |
 |:-----------|------------:|----------:|-------------:|----------:|---------:|----------:|---------:|
 | Count      |         116 |       116 |          112 |        97 |       55 |       104 |      105 |
-| Average    |    20 hours |  20 hours |     50 hours |  20 hours | 24 hours |  30 hours | 25 hours |
-| Maximum    |    60 hours | 120 hours |   3030 hours | 100 hours | 60 hours | 129 hours | 90 hours |
+| Average    |    20 hours |  20 hours |     23 hours |  20 hours | 24 hours |  30 hours | 25 hours |
+| Maximum    |    60 hours | 120 hours |     72 hours | 100 hours | 60 hours | 129 hours | 90 hours |
 | Top 25%    |    25 hours |  25 hours |     30 hours |  24 hours | 30 hours |  40 hours | 30 hours |
 | Median     |    20 hours |  19 hours |     20 hours |  16 hours | 21 hours |  25 hours | 24 hours |
 | Bottom 25% |    12 hours |  12 hours |     12 hours |  10 hours | 16 hours |  15 hours | 17 hours |
