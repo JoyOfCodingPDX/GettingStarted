@@ -29,16 +29,16 @@ elif [[ "$project" == "koans"  ]]; then
   directory="koans"
   mavenGoals="clean exec:java"
 
-elif [[ "$project" == "Project4"  ]]; then
-  directory="phonebill-web"
-
 elif [[ "$project" == "Project5"  ]]; then
-  directory="phonebill-android"
+  directory="airline-web"
+
+elif [[ "$project" == "Project6"  ]]; then
+  directory="airline-android"
   submitClass="SubmitAndroidProject"
   srcDirectory="."
 
 else
-  directory="phonebill"
+  directory="airline"
 fi
 
 if [ $# -gt 1 ]; then
