@@ -107,14 +107,14 @@ $ cd JoyOfCodingWinter2025
 The Java Development Kit (JDK) provides tools for compiling, packaging, and
 running Java applications.  
 
-This course requires at least Java 11.  You can determine which version of Java is configured in your environment
+This course requires at least Java 17.  You can determine which version of Java is configured in your environment
 by issuing the `java -version` command:
 
 ```sh
 $ java -version
-openjdk version "17.0.4.1" 2022-08-12
-OpenJDK Runtime Environment Temurin-17.0.4.1+1 (build 17.0.4.1+1)
-OpenJDK 64-Bit Server VM Temurin-17.0.4.1+1 (build 17.0.4.1+1, mixed mode, sharing)
+openjdk version "21.0.5" 2024-10-15
+OpenJDK Runtime Environment (build 21.0.5+11-Ubuntu-1ubuntu124.04)
+OpenJDK 64-Bit Server VM (build 21.0.5+11-Ubuntu-1ubuntu124.04, mixed mode, sharing)
 ```
 
 #### How do I configure the JDK on the PSU Linux machines?
@@ -124,14 +124,8 @@ Regardless of where your code is developed, it will be tested on the [MCECS Linu
 from the PSU Linux machines, so you'll need to make sure that your environment on these machines
 is configured to run the right version of Java.
 
-There are a couple of ways to configure your MCECS Linux environment to use the JDK.  The easiest is
-to use the `addpkg` command, which provides a graphical user interface for selecting software packages
-to add to your execution path.  After launching the `addpkg` command, scroll down and select the `openjdk16`
-package, and click "OK".  You may need to log out of the machine and log back in for the changes to take effect.
-
-Alternatively, if you are familiar with configuring the UNIX execution PATH, you can configure the `JAVA_HOME`
-environment variable to refer to the directory in which the JDK is installed and then add `$JAVA_HOME/bin` to 
-your `PATH` environment variable.  Feel free to consult `/u/whitlock/.bashrc` for examples.
+The PSU Linux machines are regularly patched and have a fairly recent version of Java installed.  Log into the PSU Linux
+cluster and run the `java -version` as mentioned above to determine which version of Java will be used. 
 
 #### How do I install the JDK on my personal machine?
 
