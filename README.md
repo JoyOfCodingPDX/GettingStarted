@@ -1,4 +1,4 @@
-[![Java CI with Maven](https://github.com/YourGitHubId/JoyOfCodingSummer2024/actions/workflows/maven.yml/badge.svg)](https://github.com/YourGitHubId/JoyOfCodingSummer2024/actions/workflows/maven.yml)
+[![Java CI with Maven](https://github.com/YourGitHubId/JoyOfCodingWinter2025/actions/workflows/maven.yml/badge.svg)](https://github.com/YourGitHubId/JoyOfCodingWinter2025/actions/workflows/maven.yml)
 
 # Getting Started with The Joy of Coding with Java and Android
 
@@ -71,7 +71,7 @@ developer"](https://education.github.com/pack) account that gives you
 free private repositories.  Then [create a private GitHub
 repository from this "template" repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)
 for your source code for this course.  (In this example, the
-repository is named "JoyOfCodingSummer2024".)
+repository is named "JoyOfCodingWinter2025".)
 
 Again, please ensure that all of your code for the assignments is in a 
 **private** GitHub repository.  GitHub makes it very easy for people to
@@ -99,7 +99,7 @@ The following command lines assume that you are running in the
 directory created by cloning the repository.
 
 ```sh
-$ cd JoyOfCodingSummer2024
+$ cd JoyOfCodingWinter2025
 ```
 
 ### How do I use the Java Development Kit?
@@ -107,14 +107,14 @@ $ cd JoyOfCodingSummer2024
 The Java Development Kit (JDK) provides tools for compiling, packaging, and
 running Java applications.  
 
-This course requires at least Java 11.  You can determine which version of Java is configured in your environment
+This course requires at least Java 17.  You can determine which version of Java is configured in your environment
 by issuing the `java -version` command:
 
 ```sh
 $ java -version
-openjdk version "17.0.4.1" 2022-08-12
-OpenJDK Runtime Environment Temurin-17.0.4.1+1 (build 17.0.4.1+1)
-OpenJDK 64-Bit Server VM Temurin-17.0.4.1+1 (build 17.0.4.1+1, mixed mode, sharing)
+openjdk version "21.0.5" 2024-10-15
+OpenJDK Runtime Environment (build 21.0.5+11-Ubuntu-1ubuntu124.04)
+OpenJDK 64-Bit Server VM (build 21.0.5+11-Ubuntu-1ubuntu124.04, mixed mode, sharing)
 ```
 
 #### How do I configure the JDK on the PSU Linux machines?
@@ -124,14 +124,8 @@ Regardless of where your code is developed, it will be tested on the [MCECS Linu
 from the PSU Linux machines, so you'll need to make sure that your environment on these machines
 is configured to run the right version of Java.
 
-There are a couple of ways to configure your MCECS Linux environment to use the JDK.  The easiest is
-to use the `addpkg` command, which provides a graphical user interface for selecting software packages
-to add to your execution path.  After launching the `addpkg` command, scroll down and select the `openjdk16`
-package, and click "OK".  You may need to log out of the machine and log back in for the changes to take effect.
-
-Alternatively, if you are familiar with configuring the UNIX execution PATH, you can configure the `JAVA_HOME`
-environment variable to refer to the directory in which the JDK is installed and then add `$JAVA_HOME/bin` to 
-your `PATH` environment variable.  Feel free to consult `/u/whitlock/.bashrc` for examples.
+The PSU Linux machines are regularly patched and have a fairly recent version of Java installed.  Log into the PSU Linux
+cluster and run the `java -version` as mentioned above to determine which version of Java will be used. 
 
 #### How do I install the JDK on my personal machine?
 
@@ -232,7 +226,7 @@ clone by adding the directory to git.
 
 ```sh
 $ ./mvnw clean     # Remove files that shouldn't be committed to version control
-$ cd ..            # to JoyOfCodingSummer2024 directory
+$ cd ..            # to JoyOfCodingWinter2025 directory
 $ git add student
 $ git commit -m "Added source files for student project"
 ```
@@ -291,7 +285,7 @@ After `ssh`ing to one of the CS Department's Linux machines, you can
 make a clone of your GitHub repository using with:
 
 ```
-$ git clone https://github.com/YourGitHubId/JoyOfCodingSummer2024.git
+$ git clone https://github.com/YourGitHubId/JoyOfCodingWinter2025.git
 ```
 
 ### How can I get changes that other people make into my clone?
@@ -305,7 +299,7 @@ First, configure your repository to have this repository to be a
 "remote" named "upstream".
 
 ```sh
-$ cd JoyOfCodingSummer2024
+$ cd JoyOfCodingWinter2025
 $ git remote add upstream https://github.com/JoyOfCodingPDX/GettingStarted.git
 ```
 
@@ -383,7 +377,7 @@ After your code has been successfully submitted, the `submit.sh` script will
 [tag](https://git-scm.com/book/en/v2/Git-Basics-Tagging) the current revision of 
 your git repository. The name of the tag indicates which project was submitted and
 the date/time it was submitted.  For example, submitting Project1 at 9 AM on May 1st
-would tag the current revision of the repository with `submit-Project1-20240501T09:00:58`.
+would tag the current revision of the repository with `submit-Project1-20250117T09:00:58`.
 This tag allows you to create a [branch](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
 from the specific revision of your code that was submitted, which makes debugging problems
 in submitted code much easier.  Note that the `submit.sh` will issue an error if there are
@@ -399,13 +393,13 @@ $ git push --tags
 
 Or push an individual tag:
 ```shell
-$ git push origin submit-Project1-20240501T09:00:58
+$ git push origin submit-Project1-20250117T09:00:58
 ```
 
 To fix a bug in submitted code, create a new branch of your repository from the `submit` tag on your development system:
 ```shell
 $ git fetch    # Fetch the tag(s) from GitHub ("origin") into your local clone 
-$ git checkout -b fix-Project1 submit-Project1-20240501T09:00:58   # Create a branch to make fixes
+$ git checkout -b fix-Project1 submit-Project1-20250117T09:00:58   # Create a branch to make fixes
 $ git push --set-upstream origin fix-Project1    # Push the branch to GitHub
 # Make code changes, commit them to git, and push them to the fix-Project1 branch
 ```
@@ -430,14 +424,14 @@ applies to the 11-week version of the course, which is not offered in the Summer
 The following is a summary of the data gathered to date.  
 
 |            | App Classes | Text File | Pretty Print |     Koans |      XML |      REST |  Android |
-| :--------- | ----------: | --------: | -----------: | --------: | -------: | --------: | -------: |
-| Count      |          91 |        91 |           88 |        75 |       55 |        82 |       82 |
-| Average    |    20 hours |  20 hours |     23 hours |  21 hours | 24 hours |  30 hours | 26 hours |
+|:-----------|------------:|----------:|-------------:|----------:|---------:|----------:|---------:|
+| Count      |         116 |       116 |          112 |        97 |       55 |       104 |      105 |
+| Average    |    20 hours |  20 hours |     23 hours |  20 hours | 24 hours |  30 hours | 25 hours |
 | Maximum    |    60 hours | 120 hours |     72 hours | 100 hours | 60 hours | 129 hours | 90 hours |
-| Top 25%    |    25 hours |  24 hours |     30 hours |  24 hours | 30 hours |  40 hours | 30 hours |
-| Median     |    20 hours |  18 hours |     19 hours |  20 hours | 21 hours |  25 hours | 25 hours |
-| Bottom 25% |    14 hours |  12 hours |     13 hours |  12 hours | 16 hours |  15 hours | 17 hours |
-| Minimum    |     7 hours |   0 hours |      2 hours |   4 hours |  8 hours |   8 hours |  7 hours |
+| Top 25%    |    25 hours |  25 hours |     30 hours |  24 hours | 30 hours |  40 hours | 30 hours |
+| Median     |    20 hours |  19 hours |     20 hours |  16 hours | 21 hours |  25 hours | 24 hours |
+| Bottom 25% |    12 hours |  12 hours |     12 hours |  10 hours | 16 hours |  15 hours | 17 hours |
+| Minimum    |     3 hours |   0 hours |      2 hours |   4 hours |  8 hours |   8 hours |  7 hours |
 
 You may want to consider it as you plan your projects.  Recall, though, that
 this data is self-reported.  Your experience might be different from that
@@ -467,8 +461,8 @@ As you create Maven projects in this repository, you may encounter warnings like
 
 ```
 [WARNING] 
-[WARNING] Some problems were encountered while building the effective model for edu.pdx.cs.joy.whitlock:phonebill:jar:1.0.0
-[WARNING] 'parent.relativePath' of POM edu.pdx.cs.joy.whitlock:phonebill:1.0.0 (JoyOfCodingSummer2024/phonebill/pom.xml) points at edu.pdx.cs.joy.whitlock:JoyOfCodingSummer2024 instead of io.github.davidwhitlock.joy:joy, please verify your project structure @ line 3, column 11
+[WARNING] Some problems were encountered while building the effective model for edu.pdx.cs.joy.whitlock:airline:jar:1.0.0
+[WARNING] 'parent.relativePath' of POM edu.pdx.cs.joy.whitlock:airline:1.0.0 (JoyOfCodingWinter2025/airline/pom.xml) points at edu.pdx.cs.joy.whitlock:JoyOfCodingWinter2025 instead of io.github.davidwhitlock.joy:joy, please verify your project structure @ line 3, column 11
 [WARNING] 
 [WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
 [WARNING] 
@@ -576,7 +570,7 @@ Running `mvn site` from the root directory of this repository will
 generate a website that provides lots of information (reports, etc.) 
 about the Maven projects.  Note that in order for your multi-project
 Maven site to generate correctly, the subprojects must specify that
-their parent project is the `JoyOfCodingSummer2024` project in
+their parent project is the `JoyOfCodingWinter2025` project in
 your group:
 
 ```xml
@@ -619,7 +613,7 @@ You can open `target/staging/index.html` in your web browse to see
 what your site will look like.
 
 Verify that your website is available at a URL like:
-https://yourgithubuser.github.io/JoyOfCodingSummer2024
+https://yourgithubuser.github.io/JoyOfCodingWinter2025
 
 ## How can I improve this repository?
 
