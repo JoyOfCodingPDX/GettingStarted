@@ -13,4 +13,4 @@ else
     fi
 fi
 
-createProjectFromArchetype ${loginId} "airline" "2.2.0airline"
+createProjectFromArchetype ${loginId} "airline" "2.2.0"
