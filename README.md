@@ -1,4 +1,4 @@
-[![Java CI with Maven](https://github.com/YourGitHubId/JoyOfCodingWinter2025/actions/workflows/maven.yml/badge.svg)](https://github.com/YourGitHubId/JoyOfCodingWinter2025/actions/workflows/maven.yml)
+[![Java CI with Maven](https://github.com/YourGitHubId/JoyOfCodingSummer2025/actions/workflows/maven.yml/badge.svg)](https://github.com/YourGitHubId/JoyOfCodingSummer2025/actions/workflows/maven.yml)
 
 # Getting Started with The Joy of Coding with Java and Android
 
@@ -71,7 +71,7 @@ developer"](https://education.github.com/pack) account that gives you
 free private repositories.  Then [create a private GitHub
 repository from this "template" repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)
 for your source code for this course.  (In this example, the
-repository is named "JoyOfCodingWinter2025".)
+repository is named "JoyOfCodingSummer2025".)
 
 Again, please ensure that all of your code for the assignments is in a 
 **private** GitHub repository.  GitHub makes it very easy for people to
@@ -99,7 +99,7 @@ The following command lines assume that you are running in the
 directory created by cloning the repository.
 
 ```sh
-$ cd JoyOfCodingWinter2025
+$ cd JoyOfCodingSummer2025
 ```
 
 ### How do I use the Java Development Kit?
@@ -226,7 +226,7 @@ clone by adding the directory to git.
 
 ```sh
 $ ./mvnw clean     # Remove files that shouldn't be committed to version control
-$ cd ..            # to JoyOfCodingWinter2025 directory
+$ cd ..            # to JoyOfCodingSummer2025 directory
 $ git add student
 $ git commit -m "Added source files for student project"
 ```
@@ -285,7 +285,7 @@ After `ssh`ing to one of the CS Department's Linux machines, you can
 make a clone of your GitHub repository using with:
 
 ```
-$ git clone https://github.com/YourGitHubId/JoyOfCodingWinter2025.git
+$ git clone https://github.com/YourGitHubId/JoyOfCodingSummer2025.git
 ```
 
 ### How can I get changes that other people make into my clone?
@@ -299,7 +299,7 @@ First, configure your repository to have this repository to be a
 "remote" named "upstream".
 
 ```sh
-$ cd JoyOfCodingWinter2025
+$ cd JoyOfCodingSummer2025
 $ git remote add upstream https://github.com/JoyOfCodingPDX/GettingStarted.git
 ```
 
@@ -461,8 +461,8 @@ As you create Maven projects in this repository, you may encounter warnings like
 
 ```
 [WARNING] 
-[WARNING] Some problems were encountered while building the effective model for edu.pdx.cs.joy.whitlock:airline:jar:1.0.0
-[WARNING] 'parent.relativePath' of POM edu.pdx.cs.joy.whitlock:airline:1.0.0 (JoyOfCodingWinter2025/airline/pom.xml) points at edu.pdx.cs.joy.whitlock:JoyOfCodingWinter2025 instead of io.github.davidwhitlock.joy:joy, please verify your project structure @ line 3, column 11
+[WARNING] Some problems were encountered while building the effective model for edu.pdx.cs.joy.whitlock:apptbook:jar:1.0.0
+[WARNING] 'parent.relativePath' of POM edu.pdx.cs.joy.whitlock:apptbook:1.0.0 (JoyOfCodingSummer2025/apptbook/pom.xml) points at edu.pdx.cs.joy.whitlock:JoyOfCodingSummer2025 instead of io.github.davidwhitlock.joy:joy, please verify your project structure @ line 3, column 11
 [WARNING] 
 [WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
 [WARNING] 
@@ -481,7 +481,7 @@ When created, the `pom.xml` files for the projects specify a parent of _my_ top-
   <parent>
     <artifactId>joy</artifactId>
     <groupId>io.github.davidwhitlock.joy</groupId>
-    <version>1.0.0</version>
+    <version>1.2.2</version>
   </parent>
 ```
 
@@ -570,7 +570,7 @@ Running `mvn site` from the root directory of this repository will
 generate a website that provides lots of information (reports, etc.) 
 about the Maven projects.  Note that in order for your multi-project
 Maven site to generate correctly, the subprojects must specify that
-their parent project is the `JoyOfCodingWinter2025` project in
+their parent project is the `JoyOfCodingSummer2025` project in
 your group:
 
 ```xml
@@ -613,7 +613,7 @@ You can open `target/staging/index.html` in your web browse to see
 what your site will look like.
 
 Verify that your website is available at a URL like:
-https://yourgithubuser.github.io/JoyOfCodingWinter2025
+https://yourgithubuser.github.io/JoyOfCodingSummer2025
 
 ## How can I improve this repository?
 
