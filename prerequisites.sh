@@ -50,8 +50,8 @@ function checkForJava() {
     
     if [[ "$_java" ]]; then
         version=$("$_java" -version 2>&1 | awk -F '"' '/version/ {print $2}')
-        minimumVersion="11"
-        echo You are running Java version "$version"
+        minimumVersion="21"
+        echo "You are running Java version \"$version\""
         if [[ "$version" > "$minimumVersion" ]]; then
             echo This version of Java is sufficient for this course
             return 0
