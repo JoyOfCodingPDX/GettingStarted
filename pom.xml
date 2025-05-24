@@ -12,7 +12,7 @@ accordingly
   <parent>
     <artifactId>joy</artifactId>
     <groupId>io.github.davidwhitlock.joy</groupId>
-    <version>1.2.0</version>
+    <version>1.2.2-SNAPSHOT</version>
   </parent>
   <groupId>edu.pdx.cs.joy.YourUserId</groupId>
   <artifactId>JoyOfCoding</artifactId>
