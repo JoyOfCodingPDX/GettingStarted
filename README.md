@@ -525,7 +525,7 @@ In order to debug code running as an executable jar, you must specify the `-agen
 to the `-jar` option:
 
 ```
-java -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=*:5005 -jar target/student-1.0.0.jar 
+java "-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=*:5005" -jar target/student-1.0.0.jar 
 ```
 
 The above `-agentlib` option causes the JVM to output a (rather cryptic) informational message indicating that the JVM
@@ -546,7 +546,7 @@ don't add the `-agentlib` option to the `mvnw` command line.  Instead, you speci
 
 ```shell
 # On UNIX
-export MAVEN_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=*:5005
+export MAVEN_OPTS="-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=*:5005"
 ```
 
 ```shell
