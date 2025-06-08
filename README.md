@@ -382,7 +382,10 @@ This tag allows you to create a [branch](https://git-scm.com/book/en/v2/Git-Bran
 from the specific revision of your code that was submitted, which makes debugging problems
 in submitted code much easier.  Note that the `submit.sh` will issue an error if there are
 uncommitted changes in your local clone of the repository.  So, be sure to commit all of
-your changes before submitting. 
+your changes before submitting.  Additionally, the `submit.sh` script will check to see if there are any changes
+in the remote `origin` repository that you have not pulled into your local clone.  If there are, the script will issue
+an error message and request that you perform a `git pull` to get the latest changes from the remote repository.  This
+ensures that you are submitting the most recent version of your code.
 
 Once the `submit.sh` has completed, and the tag for the repository has been created, the tag will need to be pushed to the remote repository (your Github repository). 
 

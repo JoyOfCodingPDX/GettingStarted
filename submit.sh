@@ -61,6 +61,18 @@ if [[ ${localChanges} ]]; then
   exit 1
 fi
 
+echo "Fetching latest changes from origin Git repository"
+branch=`git rev-parse --abbrev-ref HEAD`
+unmergedFiles=`git fetch origin && git log --quiet HEAD..origin/${branch}`
+if [[ ${unmergedFiles} ]]; then
+  echo ${unmergedFiles}
+  echo ""
+  echo "** The above revisions have not been merged into the ${branch} branch"
+  echo "   of your local repository"
+  echo "** Please perform a \"git pull\" to merge these changes before submitting"
+  exit 1
+fi
+
 if [ -f $pomFile ]; then
   cd ${projectDirectory}
   chmod +x ./mvnw
