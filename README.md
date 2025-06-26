@@ -168,6 +168,9 @@ $ git commit -m "Added information about myself from the survey program"
 $ git push
 ```
 
+Sending the Grader information about yourself by running the `survey.sh` script counts as your
+["Initiation of Attendance"](https://www.pdx.edu/registration/faculty-guide-initiation-attendance) for the course.
+
 ### How do I create and run my own Java projects?
 
 The primary purpose of this repository is to make it easy to create
