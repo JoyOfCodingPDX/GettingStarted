@@ -431,13 +431,13 @@ The following is a summary of the data gathered to date.
 
 |            | App Classes | Text File | Pretty Print |     Koans |      XML |      REST |  Android |
 |:-----------|------------:|----------:|-------------:|----------:|---------:|----------:|---------:|
-| Count      |         142 |       142 |          138 |       122 |       80 |       129 |      130 |
-| Average    |    21 hours |  20 hours |     23 hours |  19 hours | 24 hours |  30 hours | 26 hours |
+| Count      |         168 |       169 |          164 |       145 |       80 |       154 |      152 |
+| Average    |    21 hours |  20 hours |     22 hours |  19 hours | 24 hours |  30 hours | 26 hours |
 | Maximum    |    60 hours | 120 hours |     76 hours | 100 hours | 60 hours | 129 hours | 90 hours |
-| Top 25%    |    25 hours |  25 hours |     30 hours |  23 hours | 30 hours |  40 hours | 30 hours |
-| Median     |    20 hours |  20 hours |     20 hours |  16 hours | 20 hours |  25 hours | 24 hours |
+| Top 25%    |    25 hours |  25 hours |     30 hours |  22 hours | 30 hours |  40 hours | 30 hours |
+| Median     |    20 hours |  20 hours |     20 hours |  15 hours | 20 hours |  25 hours | 24 hours |
 | Bottom 25% |    12 hours |  12 hours |     12 hours |  10 hours | 15 hours |  16 hours | 17 hours |
-| Minimum    |     3 hours |   0 hours |      2 hours |   4 hours |  6 hours |   7 hours |  5 hours |
+| Minimum    |     3 hours |   0 hours |      2 hours |   4 hours |  6 hours |   6 hours |  5 hours |
 
 You may want to consider it as you plan your projects.  Recall, though, that
 this data is self-reported.  Your experience might be different from that
