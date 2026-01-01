@@ -13,4 +13,4 @@ else
     fi
 fi
 
-createProjectFromArchetype ${loginId} "phonebill-web" "3.0.4-SNAPSHOT"
+createProjectFromArchetype ${loginId} "phonebill-web" "3.0.4"
