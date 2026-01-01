@@ -457,7 +457,7 @@ When created, the `pom.xml` files for the projects specify a parent of _my_ top-
   <parent>
     <artifactId>joy</artifactId>
     <groupId>io.github.davidwhitlock.joy</groupId>
-    <version>1.2.2</version>
+    <version>1.2.4</version>
   </parent>
 ```
 
