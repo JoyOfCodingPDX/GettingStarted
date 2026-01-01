@@ -13,4 +13,4 @@ else
     fi
 fi
 
-createProjectFromArchetype ${loginId} "apptbook" "2.2.2"
+createProjectFromArchetype ${loginId} "phonebill" "2.3.0"
