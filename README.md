@@ -291,36 +291,6 @@ make a clone of your GitHub repository using with:
 $ git clone https://github.com/YourGitHubId/JoyOfCodingWinter2026.git
 ```
 
-### How can I get changes that other people make into my clone?
-
-You can expect that the scripts and information in this repository
-will change and evolve over time.  You may want these changes in your
-repository.  Here's what you need to do to incorporate changes made in
-this "upstream" repository into your own repository.
-
-First, configure your repository to have this repository to be a
-"remote" named "upstream".
-
-```sh
-$ cd JoyOfCodingWinter2026
-$ git remote add upstream https://github.com/JoyOfCodingPDX/GettingStarted.git
-```
-
-Then, you can "pull" and "merge" changes from the upstream repository
-in to your own local clone.
-
-```sh
-$ git pull upstream main
-```
-
-After you've resolved any conflicts caused by changes to your
-repository and changes to the upstream repository.  You can push those
-changes back to GitHub ("origin") with:
-
-```sh
-$ git push
-```
-
 ## How do I submit my projects?
 
 The reason that this course can scale to support so many students is that many of the time-consuming "overhead"
