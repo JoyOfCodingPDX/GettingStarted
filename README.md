@@ -562,13 +562,15 @@ pages that are hosted by GitHub and can easily be published via
 GitHub.  You can post the website for your Maven projects by first
 creating a `gh-pages` branch (from the initial revision of the 
 repository), removing the `README.md` file on that branch (because
-it will take precedence over the generated `index.html` file) and
-pushing it to GitHub:
+it will take precedence over the generated `index.html` file), 
+removing `*.zip` from `.gitignore` (because the Maven process will add
+.zip files to the `gh-pages` branch) and pushing it to GitHub:
 
 ```
 $ git branch gh-pages
 $ git checkout gh-pages
 $ git rm README.md
+$ git add .gitignore
 $ git commit -m "Remove README.md on gh-pages branch" README.md
 $ git push --set-upstream origin gh-pages
 $ git checkout main
