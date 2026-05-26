@@ -591,6 +591,15 @@ what your site will look like.
 Verify that your website is available at a URL like:
 https://yourgithubuser.github.io/JoyOfCodingWinter2026
 
+Using the `scm-publish:publish-scm` Maven plugin and a `gh-pages` branch to host your website is a great way to get started.
+You can also use the [configure-pages](https://github.com/marketplace/actions/configure-github-pages), 
+[upload-pages-artifact](https://github.com/actions/upload-pages-artifact), and 
+[deploy-pages](https://github.com/actions/deploy-pages) GitHub Actions to automatically publish your site whenever you
+push changes to the `main` branch.  An example of this can be found in the 
+[.github/workflows/pages.yml](https://github.com/JoyOfCodingPDX/JoyOfCoding/blob/main/.github/workflows/pages.yml) file 
+in the JoyOfCoding repository.
+
+
 ## How can I improve this repository?
 
 This repository is kind of thrown together, and it ought to evolve to
