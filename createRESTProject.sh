@@ -13,4 +13,4 @@ else
     fi
 fi
 
-createProjectFromArchetype ${loginId} "airline-web" "3.0.5-SNAPSHOT"
+createProjectFromArchetype ${loginId} "airline-web" "3.1.0-SNAPSHOT"
