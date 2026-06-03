@@ -1,4 +1,4 @@
-[![Java CI with Maven](https://github.com/YourGitHubId/JoyOfCodingWinter2026/actions/workflows/maven.yml/badge.svg)](https://github.com/YourGitHubId/JoyOfCodingWinter2026/actions/workflows/maven.yml)
+[![Java CI with Maven](https://github.com/YourGitHubId/JoyOfCodingSummer2026/actions/workflows/maven.yml/badge.svg)](https://github.com/YourGitHubId/JoyOfCodingSummer2026/actions/workflows/maven.yml)
 
 # Getting Started with The Joy of Coding with Java and Android
 
@@ -71,7 +71,7 @@ developer"](https://education.github.com/pack) account that gives you
 free private repositories.  Then [create a private GitHub
 repository from this "template" repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)
 for your source code for this course.  (In this example, the
-repository is named "JoyOfCodingWinter2026".)
+repository is named "JoyOfCodingSummer2026".)
 
 Again, please ensure that all of your code for the assignments is in a 
 **private** GitHub repository.  GitHub makes it very easy for people to
@@ -99,7 +99,7 @@ The following command lines assume that you are running in the
 directory created by cloning the repository.
 
 ```sh
-$ cd JoyOfCodingWinter2026
+$ cd JoyOfCodingSummer2026
 ```
 
 ### How do I use the Java Development Kit?
@@ -229,7 +229,7 @@ clone by adding the directory to git.
 
 ```sh
 $ ./mvnw clean     # Remove files that shouldn't be committed to version control
-$ cd ..            # to JoyOfCodingWinter2026 directory
+$ cd ..            # to JoyOfCodingSummer2026 directory
 $ git add student
 $ git commit -m "Added source files for student project"
 ```
@@ -288,7 +288,7 @@ After `ssh`ing to one of the CS Department's Linux machines, you can
 make a clone of your GitHub repository using with:
 
 ```
-$ git clone https://github.com/YourGitHubId/JoyOfCodingWinter2026.git
+$ git clone https://github.com/YourGitHubId/JoyOfCodingSummer2026.git
 ```
 
 ## How do I submit my projects?
@@ -437,8 +437,8 @@ As you create Maven projects in this repository, you may encounter warnings like
 
 ```
 [WARNING] 
-[WARNING] Some problems were encountered while building the effective model for edu.pdx.cs.joy.whitlock:phonebill:jar:1.0.0
-[WARNING] 'parent.relativePath' of POM edu.pdx.cs.joy.whitlock:phonebill:1.0.0 (JoyOfCodingWinter2026/phonebill/pom.xml) points at edu.pdx.cs.joy.whitlock:JoyOfCodingWinter2026 instead of io.github.davidwhitlock.joy:joy, please verify your project structure @ line 3, column 11
+[WARNING] Some problems were encountered while building the effective model for edu.pdx.cs.joy.whitlock:airline:jar:1.0.0
+[WARNING] 'parent.relativePath' of POM edu.pdx.cs.joy.whitlock:airline:1.0.0 (JoyOfCodingSummer2026/airline/pom.xml) points at edu.pdx.cs.joy.whitlock:JoyOfCodingSummer2026 instead of io.github.davidwhitlock.joy:joy, please verify your project structure @ line 3, column 11
 [WARNING] 
 [WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
 [WARNING] 
@@ -546,7 +546,7 @@ Running `mvn site` from the root directory of this repository will
 generate a website that provides lots of information (reports, etc.) 
 about the Maven projects.  Note that in order for your multi-project
 Maven site to generate correctly, the subprojects must specify that
-their parent project is the `JoyOfCodingWinter2026` project in
+their parent project is the `JoyOfCodingSummer2026` project in
 your group:
 
 ```xml
@@ -589,7 +589,16 @@ You can open `target/staging/index.html` in your web browse to see
 what your site will look like.
 
 Verify that your website is available at a URL like:
-https://yourgithubuser.github.io/JoyOfCodingWinter2026
+https://yourgithubuser.github.io/JoyOfCodingSummer2026
+
+Using the `scm-publish:publish-scm` Maven plugin and a `gh-pages` branch to host your website is a great way to get started.
+You can also use the [configure-pages](https://github.com/marketplace/actions/configure-github-pages), 
+[upload-pages-artifact](https://github.com/actions/upload-pages-artifact), and 
+[deploy-pages](https://github.com/actions/deploy-pages) GitHub Actions to automatically publish your site whenever you
+push changes to the `main` branch.  An example of this can be found in the 
+[.github/workflows/pages.yml](https://github.com/JoyOfCodingPDX/JoyOfCoding/blob/main/.github/workflows/pages.yml) file 
+in the JoyOfCoding repository.
+
 
 ## How can I improve this repository?
 
