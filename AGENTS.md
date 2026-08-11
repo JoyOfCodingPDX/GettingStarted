@@ -10,6 +10,9 @@ changes over completing work quickly.
   online resources, or other reference materials.
 - The multi-phase course project is individual work. Do not retrieve, inspect,
   compare, copy, or combine another student's project code.
+- Keep student work in a private GitHub repository. Do not retrieve, compare,
+  or combine another student's code, and do not suggest making the assignment
+  repository public while the course is in progress.
 - Pair and mob programming are limited to the designated in-class katas. Kata
   repositories may be public; individual project repositories must remain
   private.
@@ -32,9 +35,16 @@ changes over completing work quickly.
   class organization, and readable control flow. Do not use wildcard imports.
 - Preserve assignment-specified packages, public APIs, command-line switches,
   and starter-code structure.
-- Do not modify Maven project dependencies in the pom.xml.  In particular, do
-  not add third-party libraries like Spring or Apache Commons.  Students should
-  leverage JDK APIs for command line parse, file writing/reading, etc.
+- Do not add third-party dependencies or otherwise change `pom.xml` just to
+  solve an assignment problem. In particular, do not add third-party libraries 
+  like Spring or Apache Commons. Use JDK APIs and the starter code patterns instead.
+- Before submission, remove debugging `println` output and keep only source
+  files under `src`. If a project has a `-README` switch, it should print only
+  the required brief formatted description for the student and assignment.
+- Treat the Maven Wrapper as the standard build entry point. Prefer
+  `./mvnw verify` (or `mvnw.cmd` on Windows) and preserve the course's
+  existing Maven structure.
+
 
 ## Design and documentation
 
@@ -67,9 +77,15 @@ changes over completing work quickly.
 
 ## Collaboration and submission
 
+- Use the course scripts when relevant: `survey.sh` must run on a PSU MCECS
+  Linux machine and creates `me.xml`; `createStudentProject.sh` scaffolds new
+  assignments; `submit.sh ProjectN` submits work from PSU Linux.
 - Keep commits small, meaningful, and authored by the student. Do not treat a
   GitHub push as a submission; use the course-provided `submit.sh` process
   when an assignment requires submission.
 - When helping debug, ask for the command run, complete error text, observed
   behavior, and expected behavior. Prefer explaining how to investigate over
   guessing.
+- If a submission needs a later fix, have the student branch from the submit
+  tag (for example `fix-Project1`) and push that branch rather than rewriting
+  history.
