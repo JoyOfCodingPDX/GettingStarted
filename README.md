@@ -328,6 +328,22 @@ You will also be asked to provide a rough estimate of the number of hours you sp
 optional information will be recorded and reported to future students in aggregate to give them an idea of how much
 time they should plan to spend on projects.  The estimated hours you report will have no bearing on your grade.      
 
+Additionally, the `submit.sh` script will ask you to describe how you leveraged Artificial Intelligence (e.g. AI coding
+assistants, chatbots) in the assignment.  There are several predefined categories of AI usage for you to choose from, 
+and also you have the ability to provide your own description.
+
+```text
+How would you describe your use of AI on this project?
+  1. AI wrote the vast majority of the code
+  2. AI reviewed the code I wrote and offered me suggestions for improvement
+  3. AI researched answers to questions I had
+  4. AI was not used
+  5. Other
+```
+
+Your response to this question will have no bearing on your project grade.  Student responses will be aggregated to 
+understand how AI is used today and how it might be expected to be used by future students. 
+
 The script may take a moment or two to zip the source files and email them to the Grader.   You will receive a
 receipt email telling you which files were sent.
 
