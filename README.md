@@ -1,4 +1,4 @@
-[![Java CI with Maven](https://github.com/YourGitHubId/JoyOfCodingSummer2026/actions/workflows/maven.yml/badge.svg)](https://github.com/YourGitHubId/JoyOfCodingSummer2026/actions/workflows/maven.yml)
+[![Java CI with Maven](https://github.com/YourGitHubId/JoyOfCodingWinter2027/actions/workflows/maven.yml/badge.svg)](https://github.com/YourGitHubId/JoyOfCodingWinter2027/actions/workflows/maven.yml)
 
 # Getting Started with The Joy of Coding with Java and Android
 
@@ -71,7 +71,7 @@ developer"](https://education.github.com/pack) account that gives you
 free private repositories.  Then [create a private GitHub
 repository from this "template" repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)
 for your source code for this course.  (In this example, the
-repository is named "JoyOfCodingSummer2026".)
+repository is named "JoyOfCodingWinter2027".)
 
 Again, please ensure that all of your code for the assignments is in a 
 **private** GitHub repository.  GitHub makes it very easy for people to
@@ -99,7 +99,7 @@ The following command lines assume that you are running in the
 directory created by cloning the repository.
 
 ```sh
-$ cd JoyOfCodingSummer2026
+$ cd JoyOfCodingWinter2027
 ```
 
 ### How do I use the Java Development Kit?
@@ -229,7 +229,7 @@ clone by adding the directory to git.
 
 ```sh
 $ ./mvnw clean     # Remove files that shouldn't be committed to version control
-$ cd ..            # to JoyOfCodingSummer2026 directory
+$ cd ..            # to JoyOfCodingWinter2027 directory
 $ git add student
 $ git commit -m "Added source files for student project"
 ```
@@ -288,7 +288,7 @@ After `ssh`ing to one of the CS Department's Linux machines, you can
 make a clone of your GitHub repository using with:
 
 ```
-$ git clone https://github.com/YourGitHubId/JoyOfCodingSummer2026.git
+$ git clone https://github.com/YourGitHubId/JoyOfCodingWinter2027.git
 ```
 
 ## How do I submit my projects?
@@ -327,6 +327,22 @@ You will be prompted to confirm the files that you want to submit.
 You will also be asked to provide a rough estimate of the number of hours you spent working on the project.  This 
 optional information will be recorded and reported to future students in aggregate to give them an idea of how much
 time they should plan to spend on projects.  The estimated hours you report will have no bearing on your grade.      
+
+Additionally, the `submit.sh` script will ask you to describe how you leveraged Artificial Intelligence (e.g. AI coding
+assistants, chatbots) in the assignment.  There are several predefined categories of AI usage for you to choose from, 
+and also you have the ability to provide your own description.
+
+```text
+How would you describe your use of AI on this project?
+  1. AI wrote the vast majority of the code
+  2. AI reviewed the code I wrote and offered me suggestions for improvement
+  3. AI researched answers to questions I had
+  4. AI was not used
+  5. Other
+```
+
+Your response to this question will have no bearing on your project grade.  Student responses will be aggregated to 
+understand how AI is used today and how it might be expected to be used by future students. 
 
 The script may take a moment or two to zip the source files and email them to the Grader.   You will receive a
 receipt email telling you which files were sent.
@@ -437,8 +453,8 @@ As you create Maven projects in this repository, you may encounter warnings like
 
 ```
 [WARNING] 
-[WARNING] Some problems were encountered while building the effective model for edu.pdx.cs.joy.whitlock:airline:jar:1.0.0
-[WARNING] 'parent.relativePath' of POM edu.pdx.cs.joy.whitlock:airline:1.0.0 (JoyOfCodingSummer2026/airline/pom.xml) points at edu.pdx.cs.joy.whitlock:JoyOfCodingSummer2026 instead of io.github.davidwhitlock.joy:joy, please verify your project structure @ line 3, column 11
+[WARNING] Some problems were encountered while building the effective model for edu.pdx.cs.joy.whitlock:apptbook:jar:1.0.0
+[WARNING] 'parent.relativePath' of POM edu.pdx.cs.joy.whitlock:apptbook:1.0.0 (JoyOfCodingWinter2027/apptbook/pom.xml) points at edu.pdx.cs.joy.whitlock:JoyOfCodingWinter2027 instead of io.github.davidwhitlock.joy:joy, please verify your project structure @ line 3, column 11
 [WARNING] 
 [WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
 [WARNING] 
@@ -457,7 +473,7 @@ When created, the `pom.xml` files for the projects specify a parent of _my_ top-
   <parent>
     <artifactId>joy</artifactId>
     <groupId>io.github.davidwhitlock.joy</groupId>
-    <version>1.2.4</version>
+    <version>1.3.1-SNAPSHOT</version>
   </parent>
 ```
 
@@ -546,7 +562,7 @@ Running `mvn site` from the root directory of this repository will
 generate a website that provides lots of information (reports, etc.) 
 about the Maven projects.  Note that in order for your multi-project
 Maven site to generate correctly, the subprojects must specify that
-their parent project is the `JoyOfCodingSummer2026` project in
+their parent project is the `JoyOfCodingWinter2027` project in
 your group:
 
 ```xml
@@ -589,7 +605,7 @@ You can open `target/staging/index.html` in your web browse to see
 what your site will look like.
 
 Verify that your website is available at a URL like:
-https://yourgithubuser.github.io/JoyOfCodingSummer2026
+https://yourgithubuser.github.io/JoyOfCodingWinter2027
 
 Using the `scm-publish:publish-scm` Maven plugin and a `gh-pages` branch to host your website is a great way to get started.
 You can also use the [configure-pages](https://github.com/marketplace/actions/configure-github-pages), 
