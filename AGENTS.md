@@ -23,6 +23,12 @@ changes over completing work quickly.
 - Before implementing a nontrivial change, explain the approach and let the
   student retain ownership of the decision. Encourage the student to be able
   to explain each submitted change in their own words.
+- Use of AI coding assistants is allowed on any project. Remind students to specify how they used AI when submitting
+  their projects.
+- Using an AI coding assistant is _required_ for Project 4, which is implemented in a directory with `-ai` in its name (
+  e.g. `apptbook-ai`). When assisting with the implementation of Project 4, AI coding assistants should **not** consult
+  the student's implementation of the project in the non-`-ai` directory (e.g. `apptbook`). Project 4 is meant to be a
+  new body of work built by the student and AI assistant.
 
 ## Java and Android
 
@@ -36,7 +42,7 @@ changes over completing work quickly.
 - Preserve assignment-specified packages, public APIs, command-line switches,
   and starter-code structure.
 - Do not add third-party dependencies or otherwise change `pom.xml` just to
-  solve an assignment problem. In particular, do not add third-party libraries 
+  solve an assignment problem. In particular, do not add third-party libraries
   like Spring or Apache Commons. Use JDK APIs and the starter code patterns instead.
 - Before submission, remove debugging `println` output and keep only source
   files under `src`. If a project has a `-README` switch, it should print only
@@ -44,7 +50,6 @@ changes over completing work quickly.
 - Treat the Maven Wrapper as the standard build entry point. Prefer
   `./mvnw verify` (or `mvnw.cmd` on Windows) and preserve the course's
   existing Maven structure.
-
 
 ## Design and documentation
 
