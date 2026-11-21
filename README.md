@@ -415,15 +415,15 @@ Note that there are not as many submissions for the XML project because it only
 applies to the 11-week version of the course, which is not offered in the Summer.
 The following is a summary of the data gathered to date.  
 
-|            | App Classes | Text File | Pretty Print |     Koans |      XML |      REST |  Android |
-|:-----------|------------:|----------:|-------------:|----------:|---------:|----------:|---------:|
-| Count      |         168 |       169 |          164 |       145 |       80 |       154 |      152 |
-| Average    |    21 hours |  20 hours |     22 hours |  19 hours | 24 hours |  30 hours | 26 hours |
-| Maximum    |    60 hours | 120 hours |     76 hours | 100 hours | 60 hours | 129 hours | 90 hours |
-| Top 25%    |    25 hours |  25 hours |     30 hours |  22 hours | 30 hours |  40 hours | 30 hours |
-| Median     |    20 hours |  20 hours |     20 hours |  15 hours | 20 hours |  25 hours | 24 hours |
-| Bottom 25% |    12 hours |  12 hours |     12 hours |  10 hours | 15 hours |  16 hours | 17 hours |
-| Minimum    |     3 hours |   0 hours |      2 hours |   4 hours |  6 hours |   6 hours |  5 hours |
+|  | Koans | App Classes | Text File | Pretty Print | AI Assisted | REST | Android |
+| :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Count | 169 | 194 | 194 | 189 | 0 | 178 | 176 |
+| Average | 18 hours | 20 hours | 20 hours | 23 hours | n/a | 29 hours | 25 hours |
+| Maximum | 115 hours | 60 hours | 120 hours | 120 hours | n/a | 129 hours | 90 hours |
+| Top 25% | 20 hours | 25 hours | 25 hours | 30 hours | n/a | 40 hours | 30 hours |
+| Median | 15 hours | 20 hours | 20 hours | 20 hours | n/a | 25 hours | 24 hours |
+| Bottom 25% | 10 hours | 12 hours | 12 hours | 12 hours | n/a | 16 hours | 16 hours |
+| Minimum | 4 hours | 3 hours | 0 hours | 2 hours | n/a | 6 hours | 5 hours |
 
 You may want to consider it as you plan your projects.  Recall, though, that
 this data is self-reported.  Your experience might be different from that
