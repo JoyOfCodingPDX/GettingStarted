@@ -419,11 +419,11 @@ The following is a summary of the data gathered to date.
 | :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | Count | 169 | 194 | 194 | 189 | 0 | 178 | 176 |
 | Average | 18 hours | 20 hours | 20 hours | 23 hours | n/a | 29 hours | 25 hours |
-| Maximum | 115 hours | 60 hours | 120 hours | 120 hours | n/a | 129 hours | 90 hours |
+| Top 5% | 41 hours | 42 hours | 40 hours | 50 hours | n/a | 60 hours | 50 hours |
 | Top 25% | 20 hours | 25 hours | 25 hours | 30 hours | n/a | 40 hours | 30 hours |
 | Median | 15 hours | 20 hours | 20 hours | 20 hours | n/a | 25 hours | 24 hours |
 | Bottom 25% | 10 hours | 12 hours | 12 hours | 12 hours | n/a | 16 hours | 16 hours |
-| Minimum | 4 hours | 3 hours | 0 hours | 2 hours | n/a | 6 hours | 5 hours |
+| Bottom 5% | 6 hours | 7 hours | 6 hours | 8 hours | n/a | 10 hours | 8 hours |
 
 You may want to consider it as you plan your projects.  Recall, though, that
 this data is self-reported.  Your experience might be different from that
