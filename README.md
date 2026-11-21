@@ -1,4 +1,4 @@
-[![Java CI with Maven](https://github.com/YourGitHubId/JoyOfCodingSummer2026/actions/workflows/maven.yml/badge.svg)](https://github.com/YourGitHubId/JoyOfCodingSummer2026/actions/workflows/maven.yml)
+[![Java CI with Maven](https://github.com/YourGitHubId/JoyOfCodingWinter2027/actions/workflows/maven.yml/badge.svg)](https://github.com/YourGitHubId/JoyOfCodingWinter2027/actions/workflows/maven.yml)
 
 # Getting Started with The Joy of Coding with Java and Android
 
@@ -71,7 +71,7 @@ developer"](https://education.github.com/pack) account that gives you
 free private repositories.  Then [create a private GitHub
 repository from this "template" repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)
 for your source code for this course.  (In this example, the
-repository is named "JoyOfCodingSummer2026".)
+repository is named "JoyOfCodingWinter2027".)
 
 Again, please ensure that all of your code for the assignments is in a 
 **private** GitHub repository.  GitHub makes it very easy for people to
@@ -99,7 +99,7 @@ The following command lines assume that you are running in the
 directory created by cloning the repository.
 
 ```sh
-$ cd JoyOfCodingSummer2026
+$ cd JoyOfCodingWinter2027
 ```
 
 ### How do I use the Java Development Kit?
@@ -229,7 +229,7 @@ clone by adding the directory to git.
 
 ```sh
 $ ./mvnw clean     # Remove files that shouldn't be committed to version control
-$ cd ..            # to JoyOfCodingSummer2026 directory
+$ cd ..            # to JoyOfCodingWinter2027 directory
 $ git add student
 $ git commit -m "Added source files for student project"
 ```
@@ -288,7 +288,7 @@ After `ssh`ing to one of the CS Department's Linux machines, you can
 make a clone of your GitHub repository using with:
 
 ```
-$ git clone https://github.com/YourGitHubId/JoyOfCodingSummer2026.git
+$ git clone https://github.com/YourGitHubId/JoyOfCodingWinter2027.git
 ```
 
 ## How do I submit my projects?
@@ -327,6 +327,22 @@ You will be prompted to confirm the files that you want to submit.
 You will also be asked to provide a rough estimate of the number of hours you spent working on the project.  This 
 optional information will be recorded and reported to future students in aggregate to give them an idea of how much
 time they should plan to spend on projects.  The estimated hours you report will have no bearing on your grade.      
+
+Additionally, the `submit.sh` script will ask you to describe how you leveraged Artificial Intelligence (e.g. AI coding
+assistants, chatbots) in the assignment.  There are several predefined categories of AI usage for you to choose from, 
+and also you have the ability to provide your own description.
+
+```text
+How would you describe your use of AI on this project?
+  1. AI wrote the vast majority of the code
+  2. AI reviewed the code I wrote and offered me suggestions for improvement
+  3. AI researched answers to questions I had
+  4. AI was not used
+  5. Other
+```
+
+Your response to this question will have no bearing on your project grade.  Student responses will be aggregated to 
+understand how AI is used today and how it might be expected to be used by future students. 
 
 The script may take a moment or two to zip the source files and email them to the Grader.   You will receive a
 receipt email telling you which files were sent.
@@ -399,15 +415,15 @@ Note that there are not as many submissions for the XML project because it only
 applies to the 11-week version of the course, which is not offered in the Summer.
 The following is a summary of the data gathered to date.  
 
-|            | App Classes | Text File | Pretty Print |     Koans |      XML |      REST |  Android |
-|:-----------|------------:|----------:|-------------:|----------:|---------:|----------:|---------:|
-| Count      |         168 |       169 |          164 |       145 |       80 |       154 |      152 |
-| Average    |    21 hours |  20 hours |     22 hours |  19 hours | 24 hours |  30 hours | 26 hours |
-| Maximum    |    60 hours | 120 hours |     76 hours | 100 hours | 60 hours | 129 hours | 90 hours |
-| Top 25%    |    25 hours |  25 hours |     30 hours |  22 hours | 30 hours |  40 hours | 30 hours |
-| Median     |    20 hours |  20 hours |     20 hours |  15 hours | 20 hours |  25 hours | 24 hours |
-| Bottom 25% |    12 hours |  12 hours |     12 hours |  10 hours | 15 hours |  16 hours | 17 hours |
-| Minimum    |     3 hours |   0 hours |      2 hours |   4 hours |  6 hours |   6 hours |  5 hours |
+|  | Koans | App Classes | Text File | Pretty Print | AI Assisted | REST | Android |
+| :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Count | 169 | 194 | 194 | 189 | 0 | 178 | 176 |
+| Average | 18 hours | 20 hours | 20 hours | 23 hours | n/a | 29 hours | 25 hours |
+| Top 5% | 41 hours | 42 hours | 40 hours | 50 hours | n/a | 60 hours | 50 hours |
+| Top 25% | 20 hours | 25 hours | 25 hours | 30 hours | n/a | 40 hours | 30 hours |
+| Median | 15 hours | 20 hours | 20 hours | 20 hours | n/a | 25 hours | 24 hours |
+| Bottom 25% | 10 hours | 12 hours | 12 hours | 12 hours | n/a | 16 hours | 16 hours |
+| Bottom 5% | 6 hours | 7 hours | 6 hours | 8 hours | n/a | 10 hours | 8 hours |
 
 You may want to consider it as you plan your projects.  Recall, though, that
 this data is self-reported.  Your experience might be different from that
@@ -437,8 +453,8 @@ As you create Maven projects in this repository, you may encounter warnings like
 
 ```
 [WARNING] 
-[WARNING] Some problems were encountered while building the effective model for edu.pdx.cs.joy.whitlock:airline:jar:1.0.0
-[WARNING] 'parent.relativePath' of POM edu.pdx.cs.joy.whitlock:airline:1.0.0 (JoyOfCodingSummer2026/airline/pom.xml) points at edu.pdx.cs.joy.whitlock:JoyOfCodingSummer2026 instead of io.github.davidwhitlock.joy:joy, please verify your project structure @ line 3, column 11
+[WARNING] Some problems were encountered while building the effective model for edu.pdx.cs.joy.whitlock:apptbook:jar:1.0.0
+[WARNING] 'parent.relativePath' of POM edu.pdx.cs.joy.whitlock:apptbook:1.0.0 (JoyOfCodingWinter2027/apptbook/pom.xml) points at edu.pdx.cs.joy.whitlock:JoyOfCodingWinter2027 instead of io.github.davidwhitlock.joy:joy, please verify your project structure @ line 3, column 11
 [WARNING] 
 [WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
 [WARNING] 
@@ -457,7 +473,7 @@ When created, the `pom.xml` files for the projects specify a parent of _my_ top-
   <parent>
     <artifactId>joy</artifactId>
     <groupId>io.github.davidwhitlock.joy</groupId>
-    <version>1.2.4</version>
+    <version>1.3.1-SNAPSHOT</version>
   </parent>
 ```
 
@@ -546,7 +562,7 @@ Running `mvn site` from the root directory of this repository will
 generate a website that provides lots of information (reports, etc.) 
 about the Maven projects.  Note that in order for your multi-project
 Maven site to generate correctly, the subprojects must specify that
-their parent project is the `JoyOfCodingSummer2026` project in
+their parent project is the `JoyOfCodingWinter2027` project in
 your group:
 
 ```xml
@@ -589,7 +605,7 @@ You can open `target/staging/index.html` in your web browse to see
 what your site will look like.
 
 Verify that your website is available at a URL like:
-https://yourgithubuser.github.io/JoyOfCodingSummer2026
+https://yourgithubuser.github.io/JoyOfCodingWinter2027
 
 Using the `scm-publish:publish-scm` Maven plugin and a `gh-pages` branch to host your website is a great way to get started.
 You can also use the [configure-pages](https://github.com/marketplace/actions/configure-github-pages), 
